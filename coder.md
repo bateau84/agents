@@ -6,20 +6,7 @@ permission:
   read: allow
   edit:
     "*": allow
-    "docs/architecture/**": deny
-  write:
-    "*": allow
-    "docs/architecture/**": deny
-  bash:
-    "go *": allow
-    "git *": allow
-    "gh *": allow
-    "sed *": allow
-    "grep *": allow
-    "python *": allow
-    "npm *": allow
-    "npx *": allow
-    "node *": allow
+  bash: allow
 ---
 
 ## Role

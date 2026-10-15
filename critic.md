@@ -4,15 +4,8 @@ mode: subagent
 tags: [spoke, quality-gate]
 permission:
   read: allow
-  write: deny
-  edit: deny
-  bash:
-    "awk *": allow
-    "go *": allow
-    "git *": allow
-    "grep *": allow
-    "sed *": allow
-    "python *": allow
+  write: ask
+  bash: ask
 ---
 
 ## Role

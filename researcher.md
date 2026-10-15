@@ -4,17 +4,9 @@ mode: subagent
 tags: [spoke, research]
 permission:
   read: allow
-  write: deny
-  edit: deny
+  edit: ask
   webfetch: allow
-  bash:
-    "go *": allow
-    "git *": allow
-    "grep *": allow
-    "sed *": allow
-    "python *": allow
-    "npm *": allow
-    "curl *": allow
+  bash: ask
 ---
 
 ## Role

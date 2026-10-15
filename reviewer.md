@@ -4,17 +4,8 @@ mode: subagent
 tags: [spoke, review]
 permission:
   read: allow
-  write: deny
-  edit: deny
-  bash:
-    "go *": allow
-    "git *": allow
-    "grep *": allow
-    "find *": allow
-    "cat *": allow
-    "head *": allow
-    "tail *": allow
-    "wc *": allow
+  edit: ask
+  bash: ask
 ---
 
 ## Role
