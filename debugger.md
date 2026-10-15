@@ -4,48 +4,8 @@ mode: subagent
 tags: [spoke, diagnosis]
 permission:
   read: allow
-  write: deny
-  edit: deny
-  bash:
-    "go *": allow
-    "npm *": allow
-    "npx *": allow
-    "node *": allow
-    "git *": allow
-    "gh *": allow
-    "grep *": allow
-    "find *": allow
-    "cat *": allow
-    "head *": allow
-    "tail *": allow
-    "less *": allow
-    "wc *": allow
-    "ls *": allow
-    "stat *": allow
-    "file *": allow
-    "diff *": allow
-    "sed *": allow
-    "awk *": allow
-    "jq *": allow
-    "curl *": allow
-    "python *": allow
-    "docker *": allow
-    "kubectl *": allow
-    "ps *": allow
-    "lsof *": allow
-    "ss *": allow
-    "netstat *": allow
-    "env *": allow
-    "printenv *": allow
-    "which *": allow
-    "type *": allow
-    "du *": allow
-    "df *": allow
-    "xxd *": allow
-    "strings *": allow
-    "strace *": allow
-    "dmesg *": allow
-    "journalctl *": allow
+  write: allow
+  bash: allow
 ---
 
 ## Role

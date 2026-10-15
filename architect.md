@@ -10,13 +10,7 @@ permission:
   edit:
     "*": deny
     "docs/architecture/**": allow
-  bash:
-    "go *": allow
-    "npm *": allow
-    "git *": allow
-    "sed *": allow
-    "grep *": allow
-    "python *": allow
+  bash: ask
 ---
 
 ## Role

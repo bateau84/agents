@@ -6,11 +6,8 @@ permission:
   read: allow
   edit:
     "*": deny
-    "docs/plans/**": allow
-  write:
-    "*": deny
-    "docs/plans/**": allow
-  bash: deny
+    "ephemeral-reports/plans/**": allow
+  bash: ask
 ---
 
 ## Role

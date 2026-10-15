@@ -5,10 +5,7 @@ tags: [hub, orchestrator]
 tool:
   task: true
 permission:
-  read:
-    "*": deny
-    "docs/**": allow
-  write: deny
+  read: allow
   edit: deny
   skill:
     "*": deny

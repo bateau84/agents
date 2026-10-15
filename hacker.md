@@ -5,29 +5,8 @@ mode: subagent
 tags: [spoke, security]
 permission:
   read: allow
-  write:
-    "*": deny
-    "docs/ephemeral-reports/hacker/**": allow
-  edit:
-    "*": deny
-    "docs/ephemeral-reports/hacker/**": allow
-  bash:
-    "go *": allow
-    "go vet *": allow
-    "go list *": allow
-    "govulncheck *": allow
-    "osv-scanner *": allow
-    "git *": allow
-    "grep *": allow
-    "sed *": allow
-    "python *": allow
-    "semgrep *": allow
-    "gitleaks *": allow
-    "trufflehog *": allow
-    "trivy *": allow
-    "npm audit*": allow
-    "curl *": deny
-    "wget *": deny
+  edit: ask
+  bash: ask
 ---
 
 ## Role

@@ -9,22 +9,8 @@ permission:
   read: allow
   glob: allow
   grep: allow
-  write: deny
-  edit: deny
-  bash:
-    "*": deny
-    "git *": allow
-    "gh pr *": allow
-    "gh run *": allow
-    "gh issue *": allow
-    "grep *": allow
-    "find *": allow
-    "ls *": allow
-    "cat *": allow
-    "head *": allow
-    "tail *": allow
-    "wc *": allow
-    "tree *": allow
+  edit: ask
+  bash: ask
   task: allow
 ---
 

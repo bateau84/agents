@@ -6,43 +6,12 @@ tags: [primary, design]
 permission:
   read: allow
   write:
-    "*": allow
+    "*": ask
     "docs/design/**": allow
   edit:
-    "*": allow
+    "*": ask
     "docs/design/**": allow
-  bash:
-    "*/start-server.sh *": allow
-    "*/stop-server.sh *": allow
-    "cat *": allow
-    "chmod *": allow
-    "jq *": allow
-    "curl *": allow
-    "ls *": allow
-    "grep *": allow
-    "find *": allow
-    "head *": allow
-    "tail *": allow
-    "wc *": allow
-    "python *": allow
-  skill:
-    "*": deny
-    "experience-design": allow
-    "interaction-design": allow
-    "information-architecture": allow
-    "user-flow-design": allow
-    "accessibility-design": allow
-    "design-specification": allow
-    "cli-design": allow
-    "tui-design": allow
-    "web-ui-design": allow
-    "desktop-ui-design": allow
-    "visual-interface-design": allow
-    "prototyping": allow
-    "design-validation": allow
-    "hallmark": allow
-    "accessibility": allow
-    "documentation": allow
+  bash: ask
 ---
 
 ## Role
