@@ -55,7 +55,7 @@ Stop at the first rung that holds:
 4. An already-installed dependency. Never add one for what a few lines can do.
 5. The minimum custom code that works.
 
-- A bug fix is a root-cause fix: grep every caller of the function you're about to touch and fix the shared function once, not each caller.
+- A bug fix should address the cause, not conceal the symptom. Inspect relevant callers and shared behavior; fix once at the right seam rather than duplicating patches.
 - If the requested work looks unnecessary, say so rather than silently skipping it.
 - Mark a deliberate shortcut with its ceiling and upgrade path: `// shortcut: naive O(n²) scan, index it if N grows`.
 
@@ -94,7 +94,7 @@ Load the skills that match the task before starting:
 | Task                                          | Skills                                                                                                                                  |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Go implementation                             | `golang-how-to` (loads the right sub-skills)                                                                                            |
-| Go, focused                                   | `golang-design-patterns` + `golang-error-handling`                                                                                      |
+| Go, focused                                   | `golang-design-patterns` or `golang-error-handling`, only when the change needs that guidance                                          |
 | Go tests                                      | `golang-testing`                                                                                                                        |
 | Go API/Swagger docs                           | `golang-swagger`                                                                                                                        |
 | Python implementation                         | `python-how-to` (loads the right sub-skills)                                                                                            |
@@ -102,11 +102,11 @@ Load the skills that match the task before starting:
 | Test-driven workflow (any language)           | `test-driven-development`                                                                                                               |
 | Logging/metrics/tracing (any language)        | `observability`                                                                                                                         |
 | Git merge/rebase/cherry-pick conflict         | `git-conflicts`                                                                                                                         |
-| Any task involving a git commit               | `git-commit-discipline`: load at the start of the task, and commit each completed task or subtask rather than leaving it all to the end |
+| Any task involving a git commit               | `git-commit-discipline`: commit coherent changes; don't force one commit per tiny subtask                                             |
 | UI implementation from a design               | `design-implementation`                                                                                                                 |
 | Proving an assembled feature works end to end | `product-acceptance` (prove mode) plus the language testing skills                                                                      |
 
-If a task involves Go code and tests, load both `golang-how-to` and `golang-testing`. Load before starting, not after.
+For Go implementation, use `golang-how-to` to select relevant guidance. Load `golang-testing` when writing or changing tests; don't load unrelated skills solely for completeness.
 
 ## Output
 
