@@ -63,7 +63,7 @@ Stop at the first rung that holds:
 
 After each coherent change, run the cheapest relevant build or test check; expand validation when a change or accepted outcome requires it:
 
-- Go: `go build ./...` or `go test ./...`
+- Go: relevant package tests/build first (for example `go test ./path/to/package`); use `./...` when the affected behavior needs repository-wide coverage
 - Python: `python -m pytest <relevant_test>` or `ruff check .`
 - TypeScript: `npx tsc --noEmit` or `npm test`
 
