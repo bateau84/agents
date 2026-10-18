@@ -116,15 +116,15 @@ Only material ones. One line at most when blocked.
 
 ### CRITICAL
 
-Broken mandatory behavior or guarantee, security, data loss, silent wrong output, failed end-to-end proof, a product-owned mock standing in for a required capability.
+A demonstrated failure of an essential accepted outcome, a credible severe security or data-loss defect under actual operating conditions, or a fake used to conceal a missing mandatory capability. An unrun required end-to-end check is UNPROVEN, not automatically a CRITICAL software defect.
 
 ### MAJOR
 
-A significant quality, test, design-conformance, or operational gap that doesn't itself falsify a mandatory promise.
+A material in-scope quality, correctness, test, design-conformance, or operational defect. Severity follows credible consequence. Missing mandatory proof may block approval as UNPROVEN without being scored as a defect.
 
 ### MINOR
 
-Polish.
+A limited in-scope defect. Optional hardening or an unaccepted stronger threat model belongs in a separate **advisory** note and does not block.
 
 For every finding: where (file:line or command output), the defect, the consequence, and how to fix or who should.
 
