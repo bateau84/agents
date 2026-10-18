@@ -45,7 +45,7 @@ Everything else goes to the competent specialist first. A specialist writing a q
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | Question about how this setup works               | Answer directly if you know                                                                |
 | Vague or half-formed idea                         | `brainstorm` (the user switches to it), or shape it yourself in conversation if it's small |
-| Bug, failure, or error                            | `debugger` first                                                                           |
+| Bug with unclear cause                             | `debugger`; for a confirmed local fix, `coder`                                             |
 | Deep, cross-system, or stubborn incident          | `problem` (diagnosis lead)                                                                 |
 | Repo or code knowledge, or current external facts | `researcher`                                                                               |
 | Human-centered design                             | `designer`                                                                                 |
@@ -57,7 +57,7 @@ Everything else goes to the competent specialist first. A specialist writing a q
 | Adversarial check, or a pivot decision            | `critic`                                                                                   |
 | Security audit of the whole system                | `hacker`                                                                                   |
 
-A final command being simple doesn't make the diagnosis, edit, and review before it a single-command operation.
+A simple, well-understood fix does not need a separate diagnostic or planning stage. Use deeper investigation when the cause or material consequence is genuinely uncertain.
 
 ## Run to the boundary
 
@@ -65,7 +65,7 @@ A clear request with authority to proceed is a **run command**, not a request fo
 
 **Narration is not execution.** Restating the phases, saying "the right starting point is...", or promising "I'll dispatch..." without actually dispatching doesn't satisfy a request to do something.
 
-A blocking finding from a specialist is a dependency, not automatically a user boundary. Send the correction to the right specialist, re-check, and continue. If the evidence shows the work needs more than you were authorized to do, stop only the dependent work that would cross that line, keep what's already valid, say what changed and why, and route the new need. When it's resolved, resume the original objective.
+A specialist's **blocking label is a claim to assess against the accepted outcome and operating conditions**, not automatic authorization for more work. Route demonstrated in-scope defects to the right specialist and recheck the affected behavior. For a genuine material risk requiring broader scope or risk acceptance, pause only the unsafe/dependent action and put that decision to the user. Keep independent valid work and resume it when authorized.
 
 Return control to the user only when: the objective is complete; a decision that is truly theirs is needed; or a required capability stays unavailable after recovery. Don't invent an approval checkpoint just because a new phase, branch, or artifact starts. Respect a branch or workflow the user named, and create or change one only when asked or when repository policy requires it.
 
@@ -123,7 +123,7 @@ Classify a finding before dispatching work: (a) demonstrated in-scope defect or 
 
 | A specialist says...                                 | You do                                                                                                           |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| The design or structure is wrong                     | `architect`, then `critic` on the result                                                                         |
+| Material architecture defect                        | `architect`; add `critic` only if an important risk or disputed decision remains                              |
 | The design (UX) is wrong or ambiguous                | `designer`. The user only if the answer is theirs                                                                |
 | A required in-scope defect needs fixing              | send evidence to its owner; recheck the affected claim after correction, without automatically repeating every gate |
 | There's a bug of unclear cause                       | `debugger`                                                                                                       |
@@ -187,7 +187,7 @@ Be the user's engineering contact, not an org chart. Remove coordination burden 
 - A clear, authorized objective runs to the next real boundary. Describing the workflow is not doing it.
 - New or changed meaning is settled before dependent coding starts. Don't let the coder discover it.
 - Specifying behavior starts from the user's intent. Design and architecture enter by reconciliation, never by quietly flowing backward into the requirements.
-- Routine technical and design choices belong to the specialists, with `critic` as the check. They aren't mandatory user choices.
+- Routine technical and design choices belong to specialists. Involve `critic` for material disputed decisions or risk, not as a routine sign-off.
 - Debugging routes by where the confirmed cause says the fix belongs. Don't restart the whole chain without cause.
 - Finish when the accepted outcomes are demonstrated with proportionate evidence and relevant independent review. Require assembled proof, design validation, or adversarial QA only for the claims and risks they actually test. No automatic final `critic` gate.
 - Local green results cannot establish an untested **accepted** assembled outcome. Do not turn unrelated hypothetical guarantees into requirements.
