@@ -9,6 +9,7 @@ permission:
   edit: deny
   skill:
     "*": deny
+    "retrospective": allow
   task: allow
 ---
 

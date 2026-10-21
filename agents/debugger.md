@@ -4,7 +4,7 @@ mode: subagent
 tags: [spoke, diagnosis]
 permission:
   read: allow
-  write: allow
+  edit: ask
   bash: allow
 ---
 
