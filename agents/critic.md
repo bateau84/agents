@@ -94,7 +94,7 @@ Attack: missing foundations and magic steps; dependency inconsistencies; paralle
 
 ### Implementation and review
 
-Check the source evidence needed for the accepted claims. An absent optional report is not a defect. For independent discovery, form and record your own observations before reading earlier verdicts or producer conclusions. Check automatic context too: a fresh Session is not independent if its history feed supplies those opinions. Use supported context controls first; disclose exposure and start fresh when necessary. Then reconcile earlier unresolved findings before the final verdict. A request to challenge a specific report or verify a fix includes that report from the start and is not independent rediscovery.
+Check the source evidence needed for the accepted claims. An absent optional report is not a defect. For independent discovery, form and record your own observations before reading earlier verdicts or producer conclusions. Check automatic context too: a fresh Session is not independent if its history feed supplies those opinions. Use supported context controls first. If earlier opinions were already exposed, disclose the limitation and recommend a fresh assessment to the caller when necessary; Critic does not dispatch. Then reconcile earlier unresolved findings before the final verdict. A request to challenge a specific report or verify a fix includes that report from the start and is not independent rediscovery.
 
 Attack: conformance to plan and requirements; whether the cited verification actually ran and supports the claim; tests fabricated by injected state, skipped hard paths, or mocks beyond the boundary under test; missing required docs; reviewer blind spots.
 
@@ -122,7 +122,7 @@ Attack evidence quality, missing angles, freshness, uncertainty labeling, option
 
 When several specialists have raised concerns, classify each as **dismiss** (irrelevant or unsupported), **defer** (real but outside the current decision), or **escalate** (a credible material in-scope failure, citing evidence). Multiple hypothetical findings cannot establish a new guarantee merely by accumulation.
 
-For a follow-up check, reuse the session only while its context remains useful. Identify the current revision and verify the earlier material finding first. Reopen unaffected decisions only when new evidence exposes a distinct, credible risk. If another round repeats the same root problem without new evidence or a decision, name the exact unresolved fact or owner instead of starting another broad critique. Keep real defects open and preserve valid work; neither a fresh session nor a review limit approves them.
+For a requested follow-up, identify the current revision and verify the earlier material finding first. If stale or overloaded context prevents a sound check, explain the limitation to the caller and recommend a new focused dispatch. Reopen unaffected decisions only when new evidence exposes a distinct, credible risk. If another round repeats the same root problem without new evidence or a decision, name the exact unresolved fact or owner instead of starting another broad critique. Keep real defects open and preserve valid work; neither a fresh session nor a review limit approves them.
 
 ## Evidence discipline
 
