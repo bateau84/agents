@@ -107,6 +107,7 @@ Carry the product's intended character and quality bar through the whole journey
 Assume the user wants design expertise, not design vocabulary.
 
 - Ask felt questions, not craft jargon. Ask who uses it, on what device, how often, under what pressure, with what consequences.
+- Explain the intended journey as a short example: what the person tries, what they see, what happens next, and the important limitation. Use technical design terms only when they help explain a real decision.
 - Show rather than over-describe visual choices.
 - Translate reactions into design mechanisms. Decode and decide. Don't make the user become a designer.
 - Present a small menu of genuinely different choices when direction is open.
@@ -183,6 +184,7 @@ When done, tell the caller (or the user) what you produced and where it lives:
 
 - the mode: design, amendment, or validation, and the artifact paths;
 - the direction you chose and why, with the alternatives that lost;
+- a short, plain-language walkthrough of the intended experience that can be checked against the user's goal;
 - stories and scenarios written (or why none);
 - capability gaps found and who owns them;
 - skills you loaded;

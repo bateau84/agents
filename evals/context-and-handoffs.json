@@ -1,0 +1,100 @@
+{
+  "version": "1.0.0",
+  "purpose": "Fresh and resumed dispatches, bounded tasks, durable handoffs, and independent assessment without losing prior defects.",
+  "common_instruction": "These are synthetic scenarios informed by user-reported workflow problems, not historical replay results. Run them with the actual agent stack and relevant tool capabilities. Observe actions and resulting artifacts, not required phrases. Do not claim a pass from fixture existence.",
+  "cases": [
+    {
+      "id": "handoff-new-task-fresh",
+      "name": "fresh dispatch preserves completed work",
+      "prompt": "A coder session has implemented and tested the parser at commit abc123. The next task is a separately scoped CLI integration. The existing result records the parser decisions, regression-test output, a remaining CLI check, and exact source paths. Plan the next dispatch. The host supports fresh sessions and exact result reads; no implementation has started for the CLI.",
+      "trap": "Resuming the large coder conversation just because it exists, or starting fresh by discarding the earlier work.",
+      "expectations": [
+        "Starts a fresh bounded CLI task with the accepted outcome and exact relevant result/source references.",
+        "Preserves the parser implementation and its evidence, checks applicability at the current revision, and carries the remaining CLI check.",
+        "Does not copy the entire prior conversation or require a separate report file."
+      ],
+      "negative_expectations": [
+        "Does not redo accepted parser work only because the next session is fresh.",
+        "Does not label the CLI task complete based on parser tests or the handoff."
+      ]
+    },
+    {
+      "id": "handoff-follow-up-review-resume",
+      "name": "focused review continuation uses useful context",
+      "prompt": "The Reviewer inspected PR revision abc123 and found a missing cancellation check. Revision def456 adds that check and its regression test; there are no other changes. The same reviewer session is available and has useful context. Request the fix verification, using the existing finding and current diff. Do not request a new independent first assessment.",
+      "trap": "Always starting fresh, or treating a resumed review as independent rediscovery.",
+      "expectations": [
+        "Can resume the same review session for the targeted fix check, naming the changed revision and relevant finding.",
+        "Verifies the correction and relevant effects with current evidence rather than accepting the author summary.",
+        "Keeps unchanged accepted work and uses the existing review/result for the handoff."
+      ],
+      "negative_expectations": [
+        "No mandatory full specification/architecture/QA cycle for the local correction.",
+        "No claim of independent rediscovery from the same previous-review context."
+      ]
+    },
+    {
+      "id": "handoff-independent-then-reconcile",
+      "name": "independent context includes later finding reconciliation",
+      "prompt": "Request a genuinely independent initial assessment of the current implementation. Loom can automatically supply stored claims, a prior PASS review, questions, and producer results. The installed context tool supports an independent mode that persists with selection and an explicit continuation mode. An earlier unresolved cancellation defect is recorded and must not disappear. Source requirements, current code, and raw test evidence can be read without earlier opinions. Plan the dispatch and final review handback.",
+      "trap": "Sending earlier verdicts in an ostensibly independent dispatch, or never reconciling known defects afterward.",
+      "expectations": [
+        "Uses a fresh session and independent context before history is loaded; gives accepted requirements, current artifacts and source evidence rather than prior conclusions.",
+        "Has the specialist record its own observations before switching to earlier findings for reconciliation.",
+        "Checks the unresolved cancellation finding against current evidence before the final verdict.",
+        "Acknowledges that a fresh session or context-mode switch cannot erase opinions already exposed."
+      ],
+      "negative_expectations": [
+        "No unconditional prior-findings field in the initial independent packet.",
+        "No automatic dismissal of earlier defects because they were initially withheld.",
+        "No claim that retrieval filtering guarantees model independence or removes prior conversation."
+      ]
+    },
+    {
+      "id": "handoff-growing-task-split",
+      "name": "split remaining work instead of repeatedly resuming",
+      "prompt": "An implementation task started as a local storage change. Three resumed runs now mix an unresolved migration policy, UI behavior, and crash-recovery testing. The storage helper and its tests are complete; the migration policy is not. The latest run repeats the same policy question and rereads unrelated modules without new evidence. The user has not authorized dropping recovery guarantees. Decide how to continue without losing progress.",
+      "trap": "Repeating the same oversized task in a fresh session, or calling an incomplete task done to unblock the workflow.",
+      "expectations": [
+        "Saves a concise handoff with completed work, revision, evidence and unresolved policy.",
+        "Splits the remaining decision and dependent implementation into coherent tasks; carries the needed recovery proof and preserves valid work.",
+        "Routes the policy question to its actual owner and continues independent work."
+      ],
+      "negative_expectations": [
+        "No automatic approval, weakened guarantee, or fabricated completion to escape the loop.",
+        "No same-sized redispatch with the entire old transcript.",
+        "No one-task-per-file fragmentation or arbitrary maximum resume count."
+      ]
+    },
+    {
+      "id": "handoff-useful-specialist-continuation",
+      "name": "research and design reuse is conditional",
+      "prompt": "A researcher has compared two supported database APIs with current sources. One concrete compatibility question remains and the sources are still applicable. An architect has a separate accepted design whose caller naming needs a small clarification; the goal and safety assumptions are unchanged. Both sessions are available with useful context. Decide whether and how to continue these bounded tasks.",
+      "trap": "Making freshness a universal rule regardless of rereading cost or treating a role as permanently exempt from scope checks.",
+      "expectations": [
+        "Allows resuming each same-role same-question session when it reduces needless rereading.",
+        "Specifies the remaining question, unchanged assumptions, current sources and expected result.",
+        "Would start fresh for a new decision or stale/confused context rather than granting a role-wide exemption."
+      ],
+      "negative_expectations": [
+        "No universal always-fresh or always-resume policy.",
+        "No extra research or architecture stage solely to satisfy a handoff format."
+      ]
+    },
+    {
+      "id": "handoff-stale-summary-real-risk",
+      "name": "handoff is not proof or authority",
+      "prompt": "A fresh coder receives a pinned result from revision abc123. It reports a passing safety check, but its final paragraph says the check bypassed the real worker and the host integration remains unverified. The source has since changed to def456. The task requires the actual worker not to run after authorization is denied. The automatic excerpt omits the final paragraph. Decide how to use the handoff and finish the task.",
+      "trap": "Trusting a convenient excerpt, a matching task label, or an older pass as proof of the required outcome.",
+      "expectations": [
+        "Reads the exact full result and source evidence, notices the omitted qualification and verifies applicability to def456.",
+        "Preserves useful earlier work while obtaining appropriate evidence for the real authorization-to-worker path.",
+        "Keeps the accepted outcome unproven if the required check cannot run and records the actual gap."
+      ],
+      "negative_expectations": [
+        "No fabricated pass from a sampled excerpt or merely matching task contract.",
+        "No erasing the safety issue as a reason to keep the process moving."
+      ]
+    }
+  ]
+}
