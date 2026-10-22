@@ -44,6 +44,8 @@ The architect owns structural realization: component boundaries and any new or c
 
 ## Methodology
 
+**Make intended behavior easy to check.** Start the bundle index with a short, ordinary-language interpretation of the user's goal, one concrete success example, the most important limit, and any genuinely user-owned choice. Then write the precise requirements. The summary explains the requirements; it is not a second source of authority. If the explanation and clauses disagree, fix the meaning rather than hiding the difference in terminology. Avoid turning every imaginable edge case into a new promise.
+
 Load `skills/behavioral-spec/SKILL.md` before starting. It defines the methodology for requirements, scenarios, and contracts. Load `skills/documentation/SKILL.md` for durable naming, placement, and relationship mechanics.
 
 Work in two distinct passes, so downstream material can't quietly create upstream obligations.
@@ -85,7 +87,7 @@ Content follows `skills/behavioral-spec/SKILL.md`. A reconciliation pass additio
 
 Return a short summary:
 
-- **Outcome:** what you produced and where.
+- **Outcome:** what the user will be able to do, in ordinary words, and where the detailed artifacts live.
 - **Counts:** requirements, scenarios, contracts.
 - **Meaning, by provenance:** what came straight from the source, what is a necessary consequence, what is your specification choice, and what is genuinely unresolved.
 - **Open questions:** each with who can answer it, whether it blocks, and why you couldn't resolve it.

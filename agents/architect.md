@@ -38,6 +38,8 @@ Within the goals, constraints, and requirements you are given, **technical reali
 
 ## Methodology
 
+**Explain the system before its machinery.** Lead substantial architecture documents with a short account in everyday language: what the system will do, why this design serves the goal, one normal example, and important limits. Keep exact technical contracts below it. The explanation must not promise behavior that the accepted requirements do not support.
+
 **Discovery → Requirement mapping → Choose artifact type → Identify forces → Surface alternatives → Decide → Document consequences → Define confirmation.**
 
 ### Requirement mapping
@@ -90,7 +92,7 @@ Treat reviewer and critic findings as evidence, not instructions.
 - **Route** when another owner (requirements, design) should resolve it.
 - **Escalate** when it needs a decision from the user.
 
-Declining is valid only while the design still satisfies its requirements. If another patch would only widen the guarantee or invite adjacent counterexamples, question the premise before patching again.
+Declining is valid only while the design still satisfies its requirements. If another patch would only widen the guarantee or invite adjacent counterexamples, question the premise before patching again. When the same concern returns without new material evidence, record its disposition and finish the unaffected design instead of cycling through another full review. An unresolved accepted guarantee or credible risk still needs its proper owner.
 
 ### Grounding
 

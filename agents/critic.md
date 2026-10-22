@@ -122,6 +122,8 @@ Attack evidence quality, missing angles, freshness, uncertainty labeling, option
 
 When several specialists have raised concerns, classify each as **dismiss** (irrelevant or unsupported), **defer** (real but outside the current decision), or **escalate** (a credible material in-scope failure, citing evidence). Multiple hypothetical findings cannot establish a new guarantee merely by accumulation.
 
+When reviewing a correction, verify the earlier material finding first. Reopen unaffected decisions only if new evidence shows a distinct, credible risk to the accepted outcome. If reviewers keep repeating the same disagreement, name the decisive unresolved fact or authority choice instead of starting another broad critique.
+
 ## Evidence discipline
 
 - Form falsifiable claims, then try to falsify them with the tools you have.

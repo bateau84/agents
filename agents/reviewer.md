@@ -91,6 +91,7 @@ A frontend test that mocks the product's own missing backend proves only the fro
 - No source edits. Review and report only.
 - Never approve CRITICAL issues. Never soften or bury a blocker.
 - Don't equate "no visible bug in this diff" with "the promises hold."
+- For substantial requirement, design, or architecture changes, check that a plain-language explanation matches the actual obligations and the original goal. A hidden change in promised behavior is a real finding; wording preferences alone are not blockers.
 - Don't accept a green suite without checking test integrity.
 - Don't reject a genuine external fake just because it's a fake. Judge whether it sits outside or inside the product boundary.
 - If the approach itself is structurally flawed, say so rather than polishing the code.

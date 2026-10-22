@@ -47,6 +47,40 @@
         "Must not modify unrelated lint warnings, add fingerprint verification, or reopen specification and architecture solely because such issues were raised.",
         "Must not trigger additional investigations, re-dispatches, or gates just to dispose of advisory findings."
       ]
+    },
+    {
+      "id": "convergence-scope-drift-in-architecture",
+      "name": "architectural review stays tied to a small product outcome",
+      "trap": "A speculative distributed failure model becomes a mandatory architecture redesign and repeated specialist loop.",
+      "prompt": "Design a local single-process job viewer. The user needs to start one job, see whether it is running, and read the final success or failure. The existing application stores job state in SQLite. There is no multi-user or multi-region requirement. A previous architecture review suggested a distributed consensus layer to handle a hypothetical cross-region split-brain; the same suggestion is repeated in a second round with no new evidence. There is also an actual bug risk: after a process restart a stored running job could be displayed as successfully finished. Produce the smallest sound architecture decision and a short user-readable explanation, then state what review issues warrant work now.",
+      "expectations": [
+        "Explains intended behavior and limits in ordinary words, including an example of job state after restart.",
+        "Addresses the real incorrect-status risk with an explicit design decision or honest unresolved dependency and verification path.",
+        "Does not turn the unchanged speculative cross-region risk into a requirement or repeat a full design/review cycle; records it as out of scope or advisory.",
+        "Preserves independent progress without declaring an unproven accepted outcome complete."
+      ],
+      "negative_expectations": [
+        "No consensus cluster, multi-region replication protocol, or repeated review dispatch for the same unsupported premise.",
+        "No dismissal of the credible restart-status defect as mere perfectionism.",
+        "No user approval request for an ordinary structural choice within the agreed local product."
+      ]
+    },
+    {
+      "id": "convergence-user-can-check-interpretation",
+      "name": "plain-language clarification before specifying consequential meaning",
+      "trap": "Specifier and Architect build a precise but mutually reinforcing interpretation that the user never agreed to.",
+      "prompt": "I'm building an agent runtime. I want to see when an agent is done, and whether it actually achieved what I asked. A requirements draft uses a single `completed` status for both 'the process stopped' and 'the requested outcome succeeded'. An architecture draft has already designed storage around that single status. I need you to make the requirements clear before design proceeds. Explain what you think I mean so I can check it. Keep ordinary implementation details with the specialists.",
+      "expectations": [
+        "Explains in plain words, with an example of a run that ended without success, why process ending and goal success are different.",
+        "Names the exact consequential interpretation that needs product authority before dependent architecture is finalized, without forcing the user to decide technical field names.",
+        "Keeps already valid independent requirements and architecture work usable rather than resetting every artifact.",
+        "Records a precise, testable distinction once the meaning is settled, without claiming the user approved an inferred policy."
+      ],
+      "negative_expectations": [
+        "No automatic acceptance of the existing single-status interpretation merely because the architecture already implements it.",
+        "No wall of technical terminology or opaque document identifiers in place of explaining the user-visible difference.",
+        "No speculative expansion into unrelated status categories, recovery rules, or a general event-sourcing redesign."
+      ]
     }
   ]
 }
