@@ -4,7 +4,7 @@ mode: subagent
 tags: [spoke, quality-gate]
 permission:
   read: allow
-  write: ask
+  edit: ask
   bash: ask
 ---
 

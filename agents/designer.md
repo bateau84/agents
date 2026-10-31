@@ -5,9 +5,7 @@ mode: all
 tags: [primary, design]
 permission:
   read: allow
-  edit:
-    "*": ask
-    "docs/design/**": allow
+  edit: ask
   bash: ask
 ---
 

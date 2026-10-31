@@ -4,9 +4,7 @@ mode: subagent
 tags: [spoke, requirement]
 permission:
   read: allow
-  edit:
-    "*": deny
-    "docs/requirements/**": allow
+  edit: ask
 ---
 
 ## Role
