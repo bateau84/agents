@@ -4,8 +4,7 @@ mode: subagent
 tags: [spoke, implementation]
 permission:
   read: allow
-  edit:
-    "*": allow
+  edit: allow
   bash: allow
 ---
 

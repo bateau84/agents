@@ -11,6 +11,7 @@ permission:
     "*": deny
     "retrospective": allow
   task: allow
+  todowrite: allow
 ---
 
 ## Role

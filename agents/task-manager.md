@@ -4,10 +4,9 @@ mode: subagent
 tags: [spoke, planning]
 permission:
   read: allow
-  edit:
-    "*": deny
-    "ephemeral-reports/plans/**": allow
+  edit: ask
   bash: ask
+  todowrite: allow
 ---
 
 ## Role

@@ -4,9 +4,7 @@ mode: subagent
 tags: [spoke, design]
 permission:
   read: allow
-  edit:
-    "*": deny
-    "docs/architecture/**": allow
+  edit: ask
   bash: ask
 ---
 
