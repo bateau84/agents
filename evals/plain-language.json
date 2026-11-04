@@ -41,16 +41,17 @@
     {
       "id": "language-designer-specification-and-copy",
       "name": "design documents and product text explain the same behavior",
-      "prompt": "Use designer to create an Experience Design for a team member exporting their weekly report. Accepted scenario: the person starts an export, can tell that it is still preparing, downloads it when ready, and understands a failure. The confirmed backend contract is POST /exports returning HTTP 202 and an export ID, and GET /exports/{id} returning pending, completed, or failed. HTTP 202 means accepted for processing, not completed. NOT_AUTHORIZED means the current account cannot export that report. No cancellation endpoint exists. Write the implementable design with interface text, states, transitions, error recovery, and accessibility behavior. The product user knows what a weekly report is but does not know HTTP or backend terminology.",
+      "prompt": "Use designer to create an Experience Design for a team member exporting their weekly report. Accepted scenario: the person starts an export, can tell that it is still preparing, downloads it when ready, and understands a failure. The confirmed backend contract is POST /exports returning HTTP 202 and an export ID; GET /exports/{id} returns pending, completed, or failed; and GET /exports/{id}/download returns the completed report as a downloadable file only when the status is completed. No report file is available for pending or failed exports. HTTP 202 means accepted for processing, not completed. NOT_AUTHORIZED means the current account cannot export that report. No cancellation endpoint exists. Write the implementable design with interface text, states, transitions, error recovery, and accessibility behavior. The product user knows what a weekly report is but does not know HTTP or backend terminology.",
       "trap": "Only the walkthrough is readable while implementation notes and interface copy remain opaque, or friendly wording promises success before it is known.",
       "expectations": [
         "The written design explains what the person sees and can do in each state using ordinary language throughout, including implementation notes.",
         "Interface messages distinguish an accepted request, work still preparing, a completed export, and a failed export without exposing unnecessary HTTP jargon.",
-        "Keeps exact endpoint names, status values, HTTP 202, and NOT_AUTHORIZED where implementers need the contract, and explains their practical meaning.",
-        "Provides complete relevant state, recovery, and accessibility guidance; a reader can follow the journey without relying on a mockup."
+        "Keeps the exact start, status, and download endpoints, status values, HTTP 202, and NOT_AUTHORIZED where implementers need them, and explains their practical meaning.",
+        "Provides complete relevant state, recovery, and accessibility guidance; a reader can follow the journey without relying on a mockup.",
+        "Only offers the report download after the export is completed, using the specified GET /exports/{id}/download contract; the design does not have to invent how to retrieve the file."
       ],
       "negative_expectations": [
-        "No claim that the export is ready immediately after HTTP 202, and no invented permission or cancellation capability.",
+        "No claim that the export is ready immediately after HTTP 202, no download offered for pending or failed exports, and no invented download route, permission, or cancellation capability.",
         "No cryptic backend error as the entire user message, and no empty reassurance that implies a failed export succeeded.",
         "No removal of necessary failure states or accessibility behavior to shorten the document."
       ]
