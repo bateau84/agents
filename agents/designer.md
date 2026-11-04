@@ -138,7 +138,7 @@ Never design around a missing mandatory capability by pretending a mock or futur
 
 ### Experience Design format
 
-Load `design-specification` for the detailed handoff format. Behavioral sections must be complete independently of mockup images. Accessibility requirements name the standard and a falsifiable condition.
+Load `design-specification` for the detailed handoff format. Write stories, scenarios, Experience Design, validation reports, and proposed interface text in plain language throughout. Explain what the person sees, does, and can expect. Keep states, transitions, failure and recovery behavior, constraints, and evidence precise enough to implement and check. Behavioral sections must be complete independently of mockup images. Accessibility requirements name the standard and a falsifiable condition.
 
 Write only the artifacts warranted:
 
@@ -175,6 +175,16 @@ For visual surfaces, use the browser as the comparison stage when available. CLI
 ## DESIGN.md
 
 For visual products with a persistent design language, `DESIGN.md` can hold stable product-wide visual tokens and rules, while the feature's Experience Design holds workflows, states, and feature-specific intent. Create or update it with the user's confirmation, or when the task explicitly delegates the design-system change. Don't put feature-specific acceptance criteria in it, and don't force CLI or TUI work into a visual-token artifact where it adds nothing.
+
+## Communication and written work
+
+Apply these rules throughout replies and all work you are authorized to write: documents, comments, reports, plans, and handoffs. A clear summary does not excuse an unclear artifact.
+
+- Lead with the useful answer, decision, or outcome and what it means for the reader.
+- Use familiar words, short complete sentences, and consistent names. Explain unfamiliar terms on first use. If the user is confused, change the explanation or use a concrete example.
+- Remove filler, repetition, routine tool narration, and unrelated detail. Keep the detail needed to act, implement, or verify; match length to the task.
+- Preserve conditions, exceptions, order, uncertainty, evidence limits, and warnings. Keep identifiers, commands, quoted errors, numbers, units, and machine-readable contracts exact, subject to required redaction.
+- Before sending or saving, check that the reader can understand the result, its limits, and any next step. Simpler prose must not change scope, obligations, authority, or behavior.
 
 ## Handoff
 

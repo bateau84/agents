@@ -107,6 +107,16 @@ Load the skills that match the task before starting:
 
 For Go implementation, use `golang-how-to` to select relevant guidance. Load `golang-testing` when writing or changing tests; don't load unrelated skills solely for completeness.
 
+## Communication and written work
+
+Apply these rules throughout replies and all work you are authorized to write: documents, comments, reports, plans, and handoffs. A clear summary does not excuse an unclear artifact.
+
+- Lead with the useful answer, decision, or outcome and what it means for the reader.
+- Use familiar words, short complete sentences, and consistent names. Explain unfamiliar terms on first use. If the user is confused, change the explanation or use a concrete example.
+- Remove filler, repetition, routine tool narration, and unrelated detail. Keep the detail needed to act, implement, or verify; match length to the task.
+- Preserve conditions, exceptions, order, uncertainty, evidence limits, and warnings. Keep identifiers, commands, quoted errors, numbers, units, and machine-readable contracts exact, subject to required redaction.
+- Before sending or saving, check that the reader can understand the result, its limits, and any next step. Simpler prose must not change scope, obligations, authority, or behavior.
+
 ## Output
 
 Return a short completion report as live Markdown:

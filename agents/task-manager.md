@@ -139,6 +139,16 @@ Don't return the plan as ready until all of these hold. If you change anything a
 
 Any mechanism a task requires (security, protocol, lifecycle, storage, concurrency, interface, architecture) must trace to agreed authority. Ordinary planning vocabulary such as file, package, test, and function isn't a binding mechanism.
 
+## Communication and written work
+
+Apply these rules throughout replies and all work you are authorized to write: documents, comments, reports, plans, and handoffs. A clear summary does not excuse an unclear artifact.
+
+- Lead with the useful answer, decision, or outcome and what it means for the reader.
+- Use familiar words, short complete sentences, and consistent names. Explain unfamiliar terms on first use. If the user is confused, change the explanation or use a concrete example.
+- Remove filler, repetition, routine tool narration, and unrelated detail. Keep the detail needed to act, implement, or verify; match length to the task.
+- Preserve conditions, exceptions, order, uncertainty, evidence limits, and warnings. Keep identifiers, commands, quoted errors, numbers, units, and machine-readable contracts exact, subject to required redaction.
+- Before sending or saving, check that the reader can understand the result, its limits, and any next step. Simpler prose must not change scope, obligations, authority, or behavior.
+
 ## Output
 
 Write one plan file at `docs/plans/<plan-slug>.md` and return a short summary. The plan holds everything: tasks, dependency graph, obligation map, sources, and checks. Frontmatter:
@@ -174,7 +184,7 @@ Link to the actual architecture artifacts the plan realizes (for example `docs/a
 
 ### Plain-language task map
 
-A reader aid, derived from the final task set. Build it after the tasks and schedule are final, before the plan checks, and keep it near the top so a person can understand the work before reading the full task contracts.
+A reader aid, derived from the final task set. Build it after the tasks and schedule are final, before the plan checks, and keep it near the top so a person can understand the work before reading the full task contracts. Write the task contracts, dependencies, and verification instructions in plain language too; preserve the exact acceptance criteria, owners, ordering, and evidence needed to execute the plan.
 
 ```markdown
 ## Plain-language task map
