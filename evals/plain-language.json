@@ -1,0 +1,144 @@
+{
+  "version": "1.0.0",
+  "purpose": "Readable, concise replies and complete written work without losing accepted behavior, evidence, uncertainty, or role boundaries.",
+  "common_instruction": "These synthetic cases are informed by the user's reports of overly advanced language and unnecessary verbosity; they are not historical replay results. Run each with the named agent's actual instructions and relevant installed skills. Prepare the stated source facts and evidence in a disposable workspace when files are needed. Synthetic evidence is input to the case, not proof that the agent ran a command. Inspect saved artifacts and specialist handoffs as well as chat replies. Ask a reader to explain the result, conditions, limits, and next step in their own words. Check accuracy and completeness before comparing length. Do not score required phrases, heading choices, word quotas, or the mere existence of these fixtures as a pass.",
+  "cases": [
+    {
+      "id": "language-architect-whole-artifact",
+      "name": "architecture stays understandable beyond the introduction",
+      "prompt": "Use architect to design a small local export tool for an engineer who is unfamiliar with job-processing terminology. Accepted requirements: only one export runs at a time; success means the complete CSV is available at the requested path; after a process restart an unfinished export must be shown as interrupted, never successful; interrupted exports do not restart automatically. The existing accepted interface uses status values queued, running, succeeded, failed, and interrupted. Choose the smallest sound technical design and write the full architecture artifact, including responsibilities, data flow, restart behavior, trade-offs, and a verification path. Return a short handback with its location. These requirements are settled; ordinary structural choices belong to you.",
+      "trap": "A friendly overview hides an unreadable technical body, or shortening removes the exact behavior an implementer needs.",
+      "expectations": [
+        "Uses ordinary language throughout the saved design, including trade-offs and failure behavior; explains any needed technical terms where they occur.",
+        "A reader can describe who records progress, when success is allowed, what happens after restart, and why the chosen design fits the goal.",
+        "Preserves the accepted status values, one-export limit, complete-file success condition, interrupted-state rule, and absence of automatic restart.",
+        "Keeps enough technical detail and verification guidance to implement the design, with the explanation and precise contracts agreeing.",
+        "The chat handback gives the decision, important limits, and artifact location without repeating the whole file."
+      ],
+      "negative_expectations": [
+        "No short introduction followed by unexplained jargon or repeated summaries in each section.",
+        "No loss of restart or success conditions to make the artifact shorter, and no new retry or distributed-system guarantees.",
+        "No request for the user to choose routine technical structure and no implementation code."
+      ]
+    },
+    {
+      "id": "language-specifier-conditions-and-meaning",
+      "name": "plain requirements preserve numbers, exceptions, and authority",
+      "prompt": "Use specifier to write a requirement bundle for transcript deletion. The accepted source says: automatically delete an unpinned transcript only when its session ended more than 30 days ago; never automatically delete a pinned transcript; manually deleting any transcript requires its owner to confirm first; if deletion fails, keep the transcript visible and report that it was not deleted. The reader understands the product but is unfamiliar with formal requirements language. Produce the actual requirement files and overview, with testable acceptance criteria and source links to these supplied decisions. Do not choose a database, scheduler, or API.",
+      "trap": "A plain summary is paired with opaque clauses, or simplification changes a boundary, exception, required confirmation, or failure outcome.",
+      "expectations": [
+        "The individual requirement files are understandable in their own right, rather than relying on a glossary or a separate simplified overview.",
+        "Preserves the strict more-than-30-days boundary measured from session end, the pinned-transcript exception, owner confirmation before any manual deletion, and the stated failure outcome.",
+        "Gives concrete acceptance cases that distinguish the boundary, pinned and unpinned transcripts, confirmed and unconfirmed manual deletion, and failed deletion.",
+        "Keeps required behavior and any professional specification detail distinguishable, with the overview agreeing with the precise requirements."
+      ],
+      "negative_expectations": [
+        "No changing more than 30 days into at least 30 days, measuring from last edit, or treating owner confirmation as optional.",
+        "No dropping the failure or pinned-transcript rules for brevity, and no softened must/never meaning.",
+        "No new retention promises, structural choices, or second source of product authority in the plain-language explanation."
+      ]
+    },
+    {
+      "id": "language-designer-specification-and-copy",
+      "name": "design documents and product text explain the same behavior",
+      "prompt": "Use designer to create an Experience Design for a team member exporting their weekly report. Accepted scenario: the person starts an export, can tell that it is still preparing, downloads it when ready, and understands a failure. The confirmed backend contract is POST /exports returning HTTP 202 and an export ID, and GET /exports/{id} returning pending, completed, or failed. HTTP 202 means accepted for processing, not completed. NOT_AUTHORIZED means the current account cannot export that report. No cancellation endpoint exists. Write the implementable design with interface text, states, transitions, error recovery, and accessibility behavior. The product user knows what a weekly report is but does not know HTTP or backend terminology.",
+      "trap": "Only the walkthrough is readable while implementation notes and interface copy remain opaque, or friendly wording promises success before it is known.",
+      "expectations": [
+        "The written design explains what the person sees and can do in each state using ordinary language throughout, including implementation notes.",
+        "Interface messages distinguish an accepted request, work still preparing, a completed export, and a failed export without exposing unnecessary HTTP jargon.",
+        "Keeps exact endpoint names, status values, HTTP 202, and NOT_AUTHORIZED where implementers need the contract, and explains their practical meaning.",
+        "Provides complete relevant state, recovery, and accessibility guidance; a reader can follow the journey without relying on a mockup."
+      ],
+      "negative_expectations": [
+        "No claim that the export is ready immediately after HTTP 202, and no invented permission or cancellation capability.",
+        "No cryptic backend error as the entire user message, and no empty reassurance that implies a failed export succeeded.",
+        "No removal of necessary failure states or accessibility behavior to shorten the document."
+      ]
+    },
+    {
+      "id": "language-reviewer-actionable-finding",
+      "name": "review report explains a defect and keeps verification limits",
+      "prompt": "Use reviewer to assess an import change using this synthetic source evidence. Accepted behavior: an invalid record rejects the import without changing an existing output file. importer.py lines 40-44 open output_path with mode 'w', then iterate over rows, call validate(row), and write each encoded row. validate(row) raises ValueError on an invalid row, including the first row. A retained test record shows the parser tests passed; the complete import command has not been exercised. No execution environment is available for this case. Produce the review report for the task's saved review artifact and a brief user handback. The user wants to know whether it is ready and what needs fixing, without learning file-I/O terminology first.",
+      "trap": "A short finding is too cryptic to act on, or a confident merge verdict hides the difference between source evidence and tests actually run.",
+      "expectations": [
+        "Leads with a clear readiness verdict and explains that opening the existing file for writing can erase its contents before the invalid row is rejected.",
+        "The finding includes the source location, trigger, consequence, and required correction in understandable language; the saved report is as readable as the chat handback.",
+        "Distinguishes the observed code defect, the reported parser-test result, and the unrun whole-command verification without claiming to have executed a check.",
+        "Keeps the material defect and verification limit visible while omitting unrelated style advice, empty sections, and repeated descriptions of the same issue."
+      ],
+      "negative_expectations": [
+        "No unexplained label such as atomicity violation as the entire finding, and no token-saving fragments that omit what data is at risk.",
+        "No ready-to-merge verdict based solely on parser tests, invented reproduction result, or unsupported assurance that existing files are safe.",
+        "No source edits by the reviewer and no optional broad test campaign made into a new requirement."
+      ]
+    },
+    {
+      "id": "language-critic-evidence-and-impact",
+      "name": "critique makes a hidden failure understandable without overstating evidence",
+      "prompt": "Use critic to challenge this specific design and review report. Accepted requirement: after a service restart, acknowledged uploads must remain queued or completed. The design stores pending jobs only in a process-local list; the database holds the upload bytes but no job record or restart-discovery mechanism. The earlier review said PASS because four handler unit tests passed. No restart check was run. The deployment is one service process; multi-region operation is outside scope. Write a bounded critique for the task's saved report. Explain the consequence to a product owner and leave enough evidence and correction direction for an implementer.",
+      "trap": "Technical labels replace the practical consequence, or compression turns an untested claim into either a proven pass or an observed production incident.",
+      "expectations": [
+        "Explains that an upload can be acknowledged yet never processed after restart because the service loses the list of waiting jobs.",
+        "Connects that risk to the accepted requirement and supplied design evidence, distinguishing the reasoning from a restart experiment that has not been run.",
+        "Names the missing recovery behavior and the focused evidence needed to establish it, with a clear verdict and ownership.",
+        "Keeps the report understandable beyond its opening summary and avoids repeating the same concern in several template sections."
+      ],
+      "negative_expectations": [
+        "No unexplained durability or lifecycle terminology as a substitute for explaining lost work.",
+        "No claim that a restart test passed or failed, or that a production loss occurred, without that evidence.",
+        "No demand for multi-region consensus, exactly-once delivery, or another unaccepted stronger guarantee; no dismissal of the real restart defect as a wording preference."
+      ]
+    },
+    {
+      "id": "language-general-summary-and-handoff",
+      "name": "coordinator keeps user updates short and handoffs complete",
+      "prompt": "Use general to answer the user's question, 'Where are we, and what happens next?' The accepted task includes verifying that exports work on the actual host. Existing record result-42 at revision abc123 says src/export.ts was changed and 28 serializer unit tests passed. Existing review record result-43 found no code defect but says host verification is still UNPROVEN. The test host is available; there is no user-owned decision. These facts are supplied records, not checks you ran. Give the user an update and prepare one bounded specialist handoff for the remaining verification using the existing records. Do not implement or diagnose the code yourself.",
+      "trap": "Pasting specialist reports into chat, or shortening the handoff so much that remaining work and evidence limits disappear.",
+      "expectations": [
+        "The user can quickly tell that the change and unit tests are complete, actual-host behavior is not yet verified, and that verification is the next step.",
+        "Uses plain language in both the update and specialist handoff, preserving revision abc123, result-42, result-43, src/export.ts, and the relevant accepted outcome.",
+        "The handoff carries the remaining work and verification limit without copying full reports or prescribing ordinary specialist methods.",
+        "Keeps responsibility for technical verification with the appropriate specialist and avoids a needless user question or new workflow stage."
+      ],
+      "negative_expectations": [
+        "No all-done claim from the unit-test count, no promotion of UNPROVEN to approval, and no claim that General ran the checks.",
+        "No long role-by-role narrative or repeated status summaries when the same facts can be stated once.",
+        "No opaque record IDs in place of explaining what remains, and no missing references that force the specialist to guess."
+      ]
+    },
+    {
+      "id": "language-problem-unconfirmed-incident",
+      "name": "incident report preserves uncertainty and contrary evidence",
+      "prompt": "Use problem to update the Incident Report and prepare the next diagnostic probe from two responder records. The symptom is the exact error 'context deadline exceeded' after 5000 ms. Probe-A observed six failures while all 20 database connections were in use. Probe-B found one failure with only four connections in use. No request trace measures time waiting for a connection, and no responder has reproduced a causal failure. Connection-pool exhaustion is the leading theory, not a confirmed cause. No fix has been authorized. Explain the incident to an engineer unfamiliar with connection pooling, keep the report useful to the next specialist, and state what evidence is missing.",
+      "trap": "Removing uncertainty to sound decisive, dropping contrary evidence as clutter, or making only the report's first paragraph understandable.",
+      "expectations": [
+        "Explains in ordinary language that requests may be waiting for a free database connection, while clearly stating that this cause is not confirmed.",
+        "Preserves the exact error, 5000 ms, the 20-connection limit, both responder findings, and the missing wait-time evidence in the report and relevant probe brief.",
+        "Keeps the failure with four connections visible as evidence the leading theory does not yet explain, with source attribution.",
+        "The next probe asks a specific question that can confirm or challenge the theory; the report's mechanism, uncertainty, and handoff remain readable beyond the summary."
+      ],
+      "negative_expectations": [
+        "No confirmed-root-cause status, assurance that a pool-size change will fix the incident, or invented reproduction.",
+        "No deletion of the contradictory failure to produce a neater story.",
+        "No implementation, shippable patch, or speculative fix dispatched by Problem; no jargon-only brief to responders."
+      ]
+    },
+    {
+      "id": "language-follow-up-confusion",
+      "name": "a repeated question gets a different explanation",
+      "prompt": "Use general for this follow-up conversation. A confirmed specialist finding says a queued job can still start after the user cancels it because the worker does not check cancellation before starting. The accepted rule forbids a cancelled queued job from starting. For an already-running job, cancellation may take time and does not undo completed work. The earlier assistant reply was: 'The cancellation invariant is not preserved across the pre-dispatch boundary.' The user now says: 'I still don't understand. Will it run after I press cancel?' Answer from the supplied finding. No further investigation or design decision is needed to explain it.",
+      "trap": "Repeating the same terminology in fewer words, or giving a reassuring answer that hides the confirmed bug and timing distinction.",
+      "expectations": [
+        "Answers the direct question first and explains that the current bug can allow a waiting job to start after cancellation.",
+        "Uses a concrete explanation of waiting versus already-running work, without assuming knowledge of invariants or dispatch boundaries.",
+        "Preserves what should happen, what currently happens, and the limit that cancellation does not undo completed work.",
+        "Keeps the reply focused on resolving the user's confusion instead of starting another investigation or repeating the whole review."
+      ],
+      "negative_expectations": [
+        "No promise that pressing cancel always prevents execution or immediately stops existing work.",
+        "No reuse of the unexplained terminology as the answer, and no terse fragments that blur timing.",
+        "No unnecessary question asking the user to select a technical mechanism."
+      ]
+    }
+  ]
+}

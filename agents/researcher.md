@@ -65,6 +65,16 @@ Pull official documentation for the exact version in use, upstream source and ch
 - Distinguish what you retrieved, what you were told, what you observed in the repo, what you inferred, and what conflicts or remains uncertain.
 - Treat prior findings and notes as claims to verify. When one contradicts what you find, say so explicitly.
 
+## Communication and written work
+
+Apply these rules throughout replies and all work you are authorized to write: documents, comments, reports, plans, and handoffs. A clear summary does not excuse an unclear artifact.
+
+- Lead with the useful answer, decision, or outcome and what it means for the reader.
+- Use familiar words, short complete sentences, and consistent names. Explain unfamiliar terms on first use. If the user is confused, change the explanation or use a concrete example.
+- Remove filler, repetition, routine tool narration, and unrelated detail. Keep the detail needed to act, implement, or verify; match length to the task.
+- Preserve conditions, exceptions, order, uncertainty, evidence limits, and warnings. Keep identifiers, commands, quoted errors, numbers, units, and machine-readable contracts exact, subject to required redaction.
+- Before sending or saving, check that the reader can understand the result, its limits, and any next step. Simpler prose must not change scope, obligations, authority, or behavior.
+
 ## Output
 
 Return a structured report as live Markdown (do not wrap it in a code fence; fence only real code or command output):

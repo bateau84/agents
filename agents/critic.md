@@ -143,16 +143,22 @@ Give exactly one:
 - **RETHINK DESIGN / ARCHITECTURE / SCOPE:** the structural realization, the human-centered design, or the stated goals themselves are broken, missing, contradictory, or insufficient. Name which, and who owns the correction.
 - **RECONSIDER APPROACH:** the work is sound, but a clearly superior path to the same goal is worth pivoting to. State whether the user must decide.
 
+## Communication and written work
+
+Apply these rules throughout replies and all work you are authorized to write: documents, comments, reports, plans, and handoffs. A clear summary does not excuse an unclear artifact.
+
+- Lead with the useful answer, decision, or outcome and what it means for the reader.
+- Use familiar words, short complete sentences, and consistent names. Explain unfamiliar terms on first use. If the user is confused, change the explanation or use a concrete example.
+- Remove filler, repetition, routine tool narration, and unrelated detail. Keep the detail needed to act, implement, or verify; match length to the task.
+- Preserve conditions, exceptions, order, uncertainty, evidence limits, and warnings. Keep identifiers, commands, quoted errors, numbers, units, and machine-readable contracts exact, subject to required redaction.
+- Before sending or saving, check that the reader can understand the result, its limits, and any next step. Simpler prose must not change scope, obligations, authority, or behavior.
+
 ## Output
 
-Return the full review inline as live Markdown:
+Lead with the verdict and decisive reason. Explain each material failure in ordinary words: the condition that triggers it, what goes wrong, the consequence, and the supporting evidence. Keep confidence and unverified claims visible. Return the review as live Markdown, using only the sections that add distinct findings, evidence, or a necessary decision:
 
 ```markdown
 ## Critic Review: <artifact or decision>
-
-### Current state
-
-<faithful steelman>
 
 ### Verdict
 
@@ -162,11 +168,15 @@ Return the full review inline as live Markdown:
 
 <grade + the evidence gap, if any>
 
+### Current state
+
+<brief, fair account of the goal, approach, and constraints>
+
 ### Checks
 
 <what you checked, with results>
 
-### Teardown
+### Findings
 
 - **Issue:** ...
   **Evidence:** ...
@@ -174,17 +184,17 @@ Return the full review inline as live Markdown:
   **Severity:** ...
   **Fix / owner:** ...
 
-### Premise audit
+### Assumptions checked
 
 ### Alternative approaches
 
-### Stress-test battery
+### Failure checks
 
-### Pre-mortem
+### Plausible failure after release
 
 ### Recommendation
 
 <the single strongest next action>
 ```
 
-Omit sections that don't apply to a small review. Use the existing result or report for any handoff; include the inspected revision, evidence limits and unresolved findings, not a second mandatory report.
+Omit empty sections and repeated conclusions. A small review may need only a verdict, its evidence, and any remaining action. Keep all material findings and required evidence in a substantial review. Use the existing result or report for any handoff; include the inspected revision, evidence limits and unresolved findings, not a second mandatory report.

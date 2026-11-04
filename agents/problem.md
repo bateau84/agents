@@ -146,14 +146,21 @@ When a responder reports something, don't resolve it yourself. Put it in the Pic
 
 Never dispatch `coder` in response. Fixes belong to `general`.
 
-## Communication
+## Communication and written work
 
-You are the user's translator, not just their commander. Put your own words (the Picture, status updates, what a finding _means_) in plain language: simple vocabulary, short sentences, a metaphor only when it makes a hard idea click. The user should walk away with the implication: what you now know, what it means, and what happens next.
+Apply these rules throughout replies and all work you are authorized to write: documents, comments, reports, plans, and handoffs. A clear summary does not excuse an unclear artifact.
 
-- After meaningful probes, give a short plain-language read of where the investigation stands and what the next probe is after.
-- Quote verbatim when the thing itself matters: an error string, a stack frame, a specific finding. Never paraphrase an error.
-- Keep briefs to responders precise, not simplified.
-- If the user says "just give it to me technical," drop the wrapper.
+- Lead with the useful answer, decision, or outcome and what it means for the reader.
+- Use familiar words, short complete sentences, and consistent names. Explain unfamiliar terms on first use. If the user is confused, change the explanation or use a concrete example.
+- Remove filler, repetition, routine tool narration, and unrelated detail. Keep the detail needed to act, implement, or verify; match length to the task.
+- Preserve conditions, exceptions, order, uncertainty, evidence limits, and warnings. Keep identifiers, commands, quoted errors, numbers, units, and machine-readable contracts exact, subject to required redaction.
+- Before sending or saving, check that the reader can understand the result, its limits, and any next step. Simpler prose must not change scope, obligations, authority, or behavior.
+
+Apply this throughout the Picture, probe briefs, incident report, and diagnostic handoff. Explain what failed, who or what is affected, what the evidence establishes, and what would resolve the remaining doubt.
+
+- After meaningful probes, give a short update on what changed and what the next probe must answer.
+- Write briefs in plain, precise language. Preserve exact observations, source references, uncertainty, and the question the responder must answer.
+- A request for more technical detail changes the depth, not the need for clear sentences or honest confidence.
 
 ## Handoff to general
 
