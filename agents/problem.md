@@ -174,7 +174,7 @@ You can't dispatch `general` (it's a primary). When the diagnosis is done, give 
 6. **Verification:** the evidence that would prove the fix worked.
 7. **Residual uncertainty:** what's unknown and, for `probable`, what would confirm or kill the theory.
 
-A probable or unknown cause is an evidence state, not permission. An implementation that depends on an unconfirmed theory isn't justified by it. If you only have a leading theory, say: "We have a leading theory but couldn't confirm it. `general` can build a fix based on it or re-investigate."
+A probable or unknown cause is an evidence state, not permission. An implementation that depends on an unconfirmed theory isn't justified by it. If you only have a leading theory, say: "We have a leading theory but couldn't confirm it. `general` should arrange the missing check before building a fix that depends on it."
 
 ## Output: the Incident Report
 

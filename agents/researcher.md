@@ -82,11 +82,11 @@ Return a structured report as live Markdown (do not wrap it in a code fence; fen
 ```
 ## Research: <topic>
 
-### Question
-What was asked and what needed to be understood.
-
 ### Key Findings
 - Finding: [fact with evidence/source]
+
+### Question (only when needed to understand the findings)
+What was asked and what needed to be understood.
 
 ### Relevant Code/Patterns
 - Where in the codebase this matters, and existing patterns that relate.
