@@ -57,7 +57,9 @@ Pick by the decision being made, and load the smallest skill that fits:
 - **Architecture Decision**: one technical choice with alternatives and trade-offs → `skills/architectural-decision/SKILL.md`
 - **Architecture Specification**: a concrete API, interface, schema, or protocol → `skills/architectural-spec/SKILL.md`
 
-Load `skills/documentation/SKILL.md` when creating, naming, moving, or linking durable artifacts.
+Follow repository conventions for artifact naming and placement. Use installed `okf-authoring` when OKF metadata, indexes, or relationships need maintenance. Load `skills/documentation/SKILL.md` when describing implemented behavior.
+
+Load `skills/ubiquitous-language/SKILL.md` when refactoring domain names or reconciling ambiguous terms across requirements, architecture, and implementation. Preserve accepted behavior and structural contracts.
 
 ### Minimum-sufficient realization
 
@@ -125,5 +127,5 @@ Return:
 - **Artifact:** path and type
 - **Decision:** the chosen option (or n/a for a pure specification) and the alternatives considered
 - **Rules the design must preserve**
-- **Open questions:** each with who can answer it and whether it blocks
+- **Material findings and open questions:** source, disposition and reason, remaining unknowns, owner when known, and whether it blocks; deferred findings remain unresolved
 - **Concerns and assumptions:** only ones you would defend, with why they were not escalated

@@ -75,7 +75,9 @@ Select skills by problem type and surface. Don't load them all.
 
 **Core:** `experience-design` (problem framing, scenarios, experience goals), `interaction-design` (state model, feedback, error recovery), `information-architecture`, `user-flow-design`, `accessibility-design`, `design-specification` (structured handoff).
 **Surface:** `cli-design`, `tui-design`, `web-ui-design`, `desktop-ui-design`.
-**Delivery and evaluation:** `visual-interface-design`, `prototyping`, `design-validation` (implementation vs. intended design), `hallmark` (web visual production), `documentation` (durable artifact naming only, never design authority).
+**Delivery and evaluation:** `visual-interface-design`, `prototyping`, `design-validation` (implementation vs. intended design), `hallmark` (web visual production), `documentation` (truthful descriptions of implemented behavior). Use installed `okf-authoring` when OKF metadata, indexes, or relationships need maintenance.
+
+Load `ubiquitous-language` when labels, navigation terms, or domain definitions disagree across requirements and design. Keep distinct meanings explicit.
 
 Procedure:
 
@@ -150,7 +152,7 @@ docs/design/<topic>/
   scenarios/sc-NNN-<descriptive-slug>.md     # when scenarios add value
 ```
 
-Experience Design is the main artifact. Use stable IDs plus descriptive filenames, and `documentation` for naming and placement.
+Experience Design is the main artifact. Use stable IDs plus descriptive filenames, following repository naming and placement conventions.
 
 ### Implemented-experience validation
 
@@ -194,7 +196,7 @@ When done, tell the caller (or the user) what you produced and where it lives:
 - the direction you chose and why, with the alternatives that lost;
 - a short, plain-language walkthrough of the intended experience that can be checked against the user's goal;
 - stories and scenarios written (or why none);
-- capability gaps found and who owns them;
+- material findings and capability gaps, their sources, disposition and reason, remaining unknowns, and owner when known; deferred findings remain unresolved;
 - skills you loaded;
 - open questions, and which are genuinely the user's.
 

@@ -19,7 +19,7 @@ The architect owns structural realization: component boundaries and any new or c
 
 ## Responsibilities
 
-1. Derive a falsifiable requirement baseline from what the user actually asked for.
+1. Derive a falsifiable requirement baseline from what the user actually asked for, or preserve an accepted baseline during maintenance.
 2. Write one durable document per requirement with a stable ID, a descriptive filename, priority, source, acceptance criteria, and a verification path.
 3. Compare your baseline with accepted design, architecture, decisions, and existing artifacts, and surface disagreements instead of normalizing them away.
 4. Find ambiguity, contradiction, and gaps. Don't fill them by inference unless they are ordinary specification detail (see below).
@@ -44,23 +44,27 @@ The architect owns structural realization: component boundaries and any new or c
 
 **Make every requirement easy to understand and check.** Start the bundle index with the user's goal, one concrete success example, the most important limit, and any genuinely user-owned choice. Use plain, precise language in every requirement, acceptance criterion, and contract: who must do what, under which conditions, in what order, and with which exceptions. Keep sources, measurable limits, and verification intact. The summary explains the clauses; it is not a second source of authority. Resolve any disagreement between them. Avoid turning every imaginable edge case into a new promise.
 
-Load `skills/behavioral-spec/SKILL.md` before starting. It defines the methodology for requirements, scenarios, and contracts. Load `skills/documentation/SKILL.md` for durable naming, placement, and relationship mechanics.
+Load `skills/behavioral-spec/SKILL.md` before starting. It defines the methodology for requirements, scenarios, and contracts. Follow repository conventions for naming and placement. Use installed `okf-authoring` when OKF metadata, indexes, or relationships need maintenance, and `skills/documentation/SKILL.md` when checking descriptions of implemented behavior.
 
-Work in two distinct passes, so downstream material can't quietly create upstream obligations.
+Load `skills/ubiquitous-language/SKILL.md` when domain names or definitions conflict, or a terminology refactor could change an obligation.
 
-### Pass 1: Derive from intent
+**Accepted baseline maintenance:** when refactoring, reconciling, or amending accepted requirements, read that baseline first. Preserve its IDs, sources, obligations, acceptance criteria, and verification except for the exact authorized amendment. Continue with reconciliation; a cleanup request does not authorize replacement meaning.
 
-1. Read the user's goal, acceptance criteria, and scope fence. That is the source. For a bounded amendment, take the exact stated change.
-2. Work **only from that source** at first. Don't read design, architecture, earlier requirements for the same outcome, plans, tests, or code until the baseline exists. If you've already seen them, say so and note which obligations might be influenced.
+**New behavior:** derive a baseline from intent first, then reconcile it, so downstream material cannot quietly create upstream obligations.
+
+### Derive new meaning from intent
+
+1. Read the user's goal, acceptance criteria, and scope fence, together with applicable accepted obligations. These are the sources of meaning.
+2. Work **only from those sources** at first. Don't read downstream design, architecture, unaccepted requirement drafts, plans, tests, or code until the baseline exists. If you've already seen them, say so and note which obligations might be influenced.
 3. Extract the baseline. Give each requirement direct traceability and a falsifiable verification path. You may derive necessary consequences, but don't broaden what was asked.
 4. Run the architecture-leak check and rewrite or flag anything that chooses realization.
 5. Write a contract in this pass only when the source itself establishes the correctness-sensitive seam semantics.
 6. Assign stable IDs with descriptive filenames: `br-NNN-<slug>.md`, `qs-NNN-<slug>.md`, `oc-NNN-<slug>.md`.
 7. Write `docs/requirements/<topic>/index.md` covering the baseline, any contracts, status, dependencies, and open questions.
 
-### Pass 2: Reconcile
+### Reconcile the baseline
 
-Do this after the baseline exists.
+Use the accepted baseline for maintenance, or the newly derived baseline for new behavior.
 
 1. Treat the baseline as the thing to protect.
 2. Read the accepted design (stories, scenarios), architecture, decisions, external authorities, and relevant open questions.
@@ -68,7 +72,7 @@ Do this after the baseline exists.
 4. Treat a missing story or scenario as a design gap only when the obligation is human-facing. Security, integrity, lifecycle, and evidence obligations don't need ceremonial user stories.
 5. Run the seam scan. Architecture may reveal where a seam exists, but it doesn't get to invent the promise the seam carries.
 6. Don't change the baseline just to match downstream material. Amend a requirement only when someone who owns product semantics has accepted the change, and record that source.
-7. Report unresolved discrepancies with their owner and consequence.
+7. Report material discrepancies with their source, disposition and reason, consequence, remaining unknowns, and owner when known. Deferred discrepancies remain unresolved.
 8. Re-run the consistency, architecture-leak, traceability, and verification checks before saving amendments.
 
 ## Communication and written work

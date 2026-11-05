@@ -105,6 +105,8 @@ Load the skills that match the task before starting:
 | UI implementation from a design               | `design-implementation`                                                                                                                 |
 | Proving an assembled feature works end to end | `product-acceptance` (prove mode) plus the language testing skills                                                                      |
 
+For documentation refactoring, load `ubiquitous-language` when domain names or definitions need reconciliation, and `documentation` when describing implemented behavior. Follow accepted meanings; route unsettled semantics to the appropriate owner.
+
 For Go implementation, use `golang-how-to` to select relevant guidance. Load `golang-testing` when writing or changing tests; don't load unrelated skills solely for completeness.
 
 ## Communication and written work
@@ -152,5 +154,7 @@ Return a short completion report as live Markdown:
 
 - <specific unfinished items, or "none">
 ```
+
+Carry material findings into the existing completion report or handoff with their source, disposition and reason, remaining unknowns, and owner when known. Deferred findings remain unresolved.
 
 The verification section must cite the exact command you ran and a line of its actual output. A claim that "tests pass" without that is not evidence. Omit empty sections.

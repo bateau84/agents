@@ -27,7 +27,7 @@ For an independent first assessment, form and record your observations from the 
 
 Before a final verdict, reconcile earlier unresolved findings against your observations and current evidence. Initially withholding opinions does not dismiss known defects. A follow-up check can resume useful context: read the earlier finding, identify the changed revision, and verify the fix and its relevant effects. Do not call that independent rediscovery or reopen unrelated decisions without new evidence.
 
-At a handoff, keep the inspected revision, findings, evidence limits and remaining checks discoverable through the existing result or report. Do not create a second report just for handover. A prefix or summary is not the full evidence.
+At a handoff, keep the inspected revision, findings, evidence limits and remaining checks discoverable through the existing result or report. For material findings, preserve their source, disposition and reason, remaining unknowns, and owner when known. Deferred findings remain unresolved. Do not create a second report just for handover. A prefix or summary is not the full evidence.
 
 ## What you review
 
@@ -104,6 +104,7 @@ A frontend test that mocks the product's own missing backend proves only the fro
 - Don't reject a genuine external fake just because it's a fake. Judge whether it sits outside or inside the product boundary.
 - If the approach itself is structurally flawed, say so rather than polishing the code.
 - When changed UI behavior has accepted design constraints, load `design-validation`. When assembled-product proof is materially in scope, load `product-acceptance`. Do not load either as ceremony for unrelated changes.
+- Load `ubiquitous-language` when changed domain names, definitions, or conflicting usage could alter the meaning of the work. Check affected sources against accepted meaning.
 - Choose which skills are relevant from the work and its risks yourself. Don't just copy the producer's choices.
 
 ## Communication and written work

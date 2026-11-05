@@ -4,6 +4,8 @@
 
 `plain-language.json` covers clear replies and complete written work for Architect, Specifier, Designer, Reviewer, Critic, General, and Problem. It includes a follow-up from a confused user. Inspect the full artifact, not only its opening summary or chat handback.
 
+`documentation-maintenance.json` covers accepted requirement refactoring, General/Coder routing for settled terminology, and unresolved findings across review handoffs. Check the source documents, resulting edits, and dispatches; preserving meaning and ownership matters more than mentioning a skill.
+
 Run each case against `main` and the candidate using the same model, prompt, repository fixture, installed skills, permissions, time budget and tool access. Capture dispatch/tool traces and resulting artifacts, not just the final response. Use a disposable simulation for the untrusted-image case; never run its unsafe command against a real home directory.
 
 Evaluate:
