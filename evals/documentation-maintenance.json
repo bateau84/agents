@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "purpose": "Documentation maintenance with accepted meaning, proportionate terminology routing, and unresolved findings carried through existing handoffs.",
+  "common_instruction": "These are synthetic scenarios, not historical run results. Materialize the named source facts in a disposable repository, then run the actual agent instructions with relevant skills and existing handoff capabilities. Compare dispatches, reads, resulting documents and handoffs with the source facts. Do not score required phrases or claim a pass from fixture existence.",
+  "cases": [
+    {
+      "id": "docs-accepted-requirement-baseline",
+      "name": "refactor accepted requirements without deriving replacement promises",
+      "prompt": "Specifier: simplify an accepted export requirement bundle and use its agreed term export instead of package. This is a wording cleanup with no behavior change. docs/domain/exports.md#terms defines Export as a generated archive and Package as its legacy synonym in this context. docs/requirements/exports/br-017-retention.md requires deletion after 30 days except while a legal hold applies, cites accepted docs/decisions/export-retention.md#d-17, and has verification for both cases. docs/requirements/exports/oc-004-download-authorization.md requires authorization at each download request, not only when the export is created, and cites accepted docs/decisions/export-access.md#d-18. docs/requirements/exports/index.md links both stable IDs. Current docs/architecture/exports.md describes deleting exports without legal holds once they become seven days old. Refactor the requirement prose and index, then report any discrepancy you find. These are ordinary Markdown documents following repository naming conventions; the repository does not use OKF metadata or indexing.",
+      "trap": "Deriving fresh requirements from the short cleanup request before reading the accepted baseline, or changing the promise to match architecture.",
+      "expectations": [
+        "Reads the accepted requirements and their source references as the maintenance baseline before rewriting them.",
+        "Preserves both stable IDs, sources, retention duration, legal-hold exception, authorization timing, and verification obligations in the edited artifacts.",
+        "Uses the accepted vocabulary consistently and records the architecture mismatch with its evidence and unresolved consequence.",
+        "Follows repository naming and placement conventions and keeps behavioral authority with the accepted requirements."
+      ],
+      "negative_expectations": [
+        "No fresh IDs, dropped exceptions, invented promises, or seven-day requirement solely to fit the architecture.",
+        "No new story, contract, or architecture phase solely because prose was refactored.",
+        "No mandatory okf-authoring dependency for ordinary Markdown with no OKF maintenance need."
+      ]
+    },
+    {
+      "id": "docs-settled-terminology-routing",
+      "name": "General routes a settled terminology edit to Coder",
+      "prompt": "General: update the export README and the architecture overview to use the accepted glossary consistently. docs/domain/glossary.md defines export as a generated archive and lists bundle as a legacy synonym in this context. The two documents still use bundle in explanatory prose; their described behavior already agrees. The public API field bundle_id and the quoted command --bundle-id must remain exact. The user authorized documentation edits only. Route and carry out the bounded change using the available specialists, then review the result.",
+      "trap": "Sending every documentation edit through Specifier, Architect, Designer and Critic, or General loading the skill and editing directly.",
+      "expectations": [
+        "General delegates the settled prose change to Coder and obtains a focused review without manufacturing an unsettled product or architecture decision.",
+        "Coder consults ubiquitous-language and the existing glossary, updates the affected prose, and retains the API field and command spelling.",
+        "The final documents preserve the described behavior and use the existing vocabulary authority; review checks the affected sources and meaning."
+      ],
+      "negative_expectations": [
+        "General does not load ubiquitous-language or edit the documents.",
+        "No duplicate glossary, blanket symbol replacement, code change, or mandatory full specialist chain."
+      ]
+    },
+    {
+      "id": "docs-unresolved-finding-handoff",
+      "name": "deferral does not close a documentation finding",
+      "prompt": "Continue a documentation-consistency review at revision def456 using the existing result record. Coder completed accepted wording fixes, but the record also links F-2: the approved requirement br-008 uses owner for the requesting person, while the accepted architecture document uses owner for the tenant administrator. It is unknown whether these are separate contexts or a real semantic conflict; neither source establishes a priority. The record assigns clarification to Specifier, identifies no person authorized to approve a meaning change, and defers it while independent wording fixes proceed. A later summary says all terminology work is resolved because F-2 was deferred. Reviewer and General must check completion and hand off the remaining work through the existing result.",
+      "trap": "Treating a deferred finding or a later completion summary as proof of consistency, or reopening all completed work.",
+      "expectations": [
+        "Reads the full finding and both source definitions, checks their applicability to def456, and retains the completed wording fixes.",
+        "Keeps F-2 unresolved with its source references, reason for deferral, unknown context, assigned role, and the missing decision owner made explicit.",
+        "Allows the bounded review to finish with an explicit open finding, while refusing to claim that all terminology is consistent or F-2 is resolved merely because it was deferred.",
+        "Uses the existing result or review handoff for a targeted continuation rather than creating a separate report or workflow."
+      ],
+      "negative_expectations": [
+        "No invented definition, decision owner, accepted exception, or claim that deferral resolved the discrepancy.",
+        "No discarded completed fixes, automatic Critic gate, or mandatory review of unrelated documents."
+      ]
+    }
+  ]
+}

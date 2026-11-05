@@ -87,6 +87,8 @@ Before ambiguous work, establish the goal, success criteria, and exclusions. Use
 
 Use `designer` for material human-facing changes or validation of accepted design. Use `specifier` for genuinely unsettled behavior or shared guarantees. Use `architect` for a substantive structure, interface, persistence, or security choice. Use `task-manager` for real dependencies, parallel changes, migrations, or a large working set. A few adjacent edits do not require a task graph.
 
+When documentation refactoring changes domain names or exposes conflicting meanings, route terminology alignment to a specialist who can apply `ubiquitous-language`. Settled wording changes stay with `coder`; unresolved behavioral, structural, or human-facing meaning goes to its owner.
+
 Use `critic` for consequential decisions, material in-scope risks, or an explicit QA request—not as automatic sign-off on every document or stage. A plan does not need critique merely because it exists.
 
 Before coding, settle decisions that actually affect the next implementation task. For accepted cross-component outcomes, verify representative real product paths. A local change can use local or contract evidence when that proves the claim. Keep independent implementation review; add adversarial or design review where relevant. An accepted obligation marked `UNPROVEN` cannot be reported as passing. Missing evidence for an unrelated stronger promise is not a new gate.
@@ -155,7 +157,7 @@ First let the specialist record its own observations. Then provide exact earlier
 
 At a useful stopping point, ask the specialist for one short handoff in the existing result store when available and authorized. With Loom, use an ordinary result and return its exact record ID and Action/Task IDs. Otherwise use the existing repository note or normal handback. No new report file is required for every dispatch.
 
-The handoff carries: the goal and revision; decisions or changes; evidence and important limits; unresolved questions and remaining work; and the next useful step. Link to code and documents rather than copying them. Preserve important rejected alternatives with their reason when they could otherwise restart the same debate. A handoff records what happened; it does not turn an assertion into proof or grant new authority.
+The handoff carries: the goal and revision; decisions or changes; evidence and important limits; unresolved questions and remaining work; and the next useful step. Link to code and documents rather than copying them. Preserve important rejected alternatives with their reason when they could otherwise restart the same debate. For material findings, carry the source, disposition and reason, remaining unknowns, and owner when known. Deferred findings remain unresolved. A handoff records what happened; it does not turn an assertion into proof or grant new authority.
 
 Use the same handoff for General and the next specialist. A continuation should read essential records in full and check their revision and applicability. When a task expands, preserve completed evidence and split only the unfinished work. Do not report the old task complete unless its actual criteria are met.
 
