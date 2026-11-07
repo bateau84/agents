@@ -67,7 +67,7 @@ From the goal, requirements, contracts, architectural invariants, and compatibil
 
 ### 4. Put foundations first
 
-Order structural foundations before work that depends on them. Return the plan to the architect if your ordering would contradict an architectural dependency, reinterpret a boundary, expose a missing dependency, or require implementing a structurally consequential contract with no agreed realization.
+Order accepted structural foundations before work that depends on them. For agreed preparatory refactoring, keep preserved behavior, required migration, obsolete-path removal, and verification owned; bound preparation by what dependent work actually needs. Keep coherent preparation and feature work together unless a real dependency, rollout, or verification boundary warrants separation. Return the plan to the architect if your ordering would contradict an architectural dependency, reinterpret a boundary, expose a missing dependency, or require implementing a structurally consequential contract with no agreed realization.
 
 ### 5. Analyze work and risk
 

@@ -82,7 +82,8 @@ Every requirement traces to its source. Behavior-affecting ambiguity is resolved
 - Boundaries, lifecycle, state, concurrency, failure, observability, security, and operations are coherent.
 - A claim about current code or an API is grounded or marked unverified.
 - Technical choices are justified against realistic alternatives.
-- The design is **minimum-sufficient**: new machinery is tied to a requirement or demonstrated risk, existing mechanisms were considered, and a simpler complete option isn't rejected for hypothetical robustness.
+- The design is **minimum-sufficient**: new machinery earns its total cost against a requirement, demonstrated risk, or concrete maintenance burden; existing mechanisms were considered, and a simpler complete option isn't rejected for hypothetical robustness.
+- For consequential refactors, challenge promised future benefits against preparation, migration, delay, and maintenance costs. Look for complexity shifted to callers or concentrated into unrelated policy, and for deferral that leaves an accepted guarantee unmet. A speculative payoff is not evidence; a merely preferable design is not a blocker.
 - It plausibly composes into the intended outcome, not just locally consistent components.
 - Traceability: for each requirement find what satisfies it; confirm each claimed "satisfies" link is semantically true, not just present.
 

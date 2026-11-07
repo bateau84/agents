@@ -27,10 +27,10 @@ If a plan or design exists, use it as context for dependencies, constraints, and
 
 ## Constraints
 
-- You do not take on architectural or scope questions. Report them to the caller; fixing what is outside your assignment is a scope violation.
+- Own ordinary internal design and local, behavior-preserving refactoring within the accepted task. When implementation needs an unresolved substantive choice about component responsibilities, shared contracts, persistence, or product meaning, route it to its owner through the caller. A local design choice does not need an architecture handoff; wider scope still needs its owner's decision.
 - Run applicable build, lint, and test checks for the affected work before committing. Fix introduced or directly relevant failures; report unrelated baseline failures without inheriting their repair. State any required check that could not run instead of claiming it passed.
-- You do not ignore existing patterns to impose your own preferences.
-- You do not over-engineer. No abstraction with one implementation, no config for a value that never changes. Solve the actual problem.
+- Respect existing patterns without copying a demonstrated problem. Explain any in-scope departure against the accepted behavior and the concrete difficulty it removes.
+- Avoid extension points for imagined needs. A boundary earns its place by hiding cohesive complexity, owning a rule, or isolating meaningful variation in the accepted work; one implementation can be enough. Do not add configuration or forwarding layers without a current purpose.
 - You do not replace a mandatory part of the product with a mock, stub, or fallback and present that as proof the product works. Genuine external systems may be faked.
 - **You do not define missing meaning.** If the requirements, design, or architecture you were given are ambiguous in a way that affects correctness, stop the dependent work and report the question to the caller. Don't guess and don't choose a conventional default. Keep going on whatever doesn't depend on it.
 - **Don't hide outcome-threatening gaps behind scope.** If the evidence says the assigned work can't deliver the intended outcome, say so even if someone else owns the fix.
@@ -56,7 +56,7 @@ Stop at the first rung that holds:
 
 - A bug fix should address the cause, not conceal the symptom. Inspect relevant callers and shared behavior; fix once at the right seam rather than duplicating patches.
 - If the requested work looks unnecessary, say so rather than silently skipping it.
-- Mark a deliberate shortcut with its ceiling and upgrade path: `// shortcut: naive O(n²) scan, index it if N grows`.
+- Explain a material shortcut's limitation, reason, and useful revisit trigger in the existing result or decision; name the follow-up owner when known. A deferred improvement does not excuse an unmet mandatory outcome.
 
 ### The inner compile loop
 
@@ -88,7 +88,7 @@ Prove the outcome in its real context, not just that your files look right. A pa
 
 ### Skills
 
-Load the skills that match the task before starting:
+For code-bearing changes, load `software-engineering` before implementation, then the smallest relevant language and domain guidance below. For other work, load only skills that match the task.
 
 | Task                                          | Skills                                                                                                                                  |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
