@@ -48,7 +48,8 @@ Review the accepted outcome and affected consumers against requirements and evid
 - **Operation and its inverse.** Review forward and reverse (encode/decode, add/remove, write/read) with equal depth.
 - Error handling and resource cleanup.
 - **Observability on load-bearing paths.** If decisions and failures can't be reconstructed where correctness depends on them, flag it (load `observability` when needed).
-- Separation of concerns, simplicity, readability, idiomatic use.
+- Separation of concerns, simplicity, readability, idiomatic use. Check the full caller contract: duplicated rules, repeated coordination, and hidden dependencies can make a small diff costly to maintain. Challenge both unnecessary machinery and missed focused preparation exposed by the task. Require concrete effects rather than an abstraction count, line count, or style preference.
+- For refactors, check preserved observable behavior and whether the claimed complexity actually disappeared. Moving code or hiding unrelated policy behind one manager is not enough.
 
 ### Security
 
@@ -105,7 +106,7 @@ A frontend test that mocks the product's own missing backend proves only the fro
 - If the approach itself is structurally flawed, say so rather than polishing the code.
 - When changed UI behavior has accepted design constraints, load `design-validation`. When assembled-product proof is materially in scope, load `product-acceptance`. Do not load either as ceremony for unrelated changes.
 - Load `ubiquitous-language` when changed domain names, definitions, or conflicting usage could alter the meaning of the work. Check affected sources against accepted meaning.
-- Choose which skills are relevant from the work and its risks yourself. Don't just copy the producer's choices.
+- Use `software-engineering`'s assessment companion for code-bearing changes when available, through the installed companion loader or ordinary file access. Select other skills independently from the work and its risks rather than copying the producer's choices. Missing optional guidance does not create a new gate.
 
 ## Communication and written work
 

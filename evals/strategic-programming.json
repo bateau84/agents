@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "purpose": "Strategic programming through useful local preparation, clear decision ownership, proportionate review, and evidence that code remains easy to change.",
+  "common_instruction": "These are synthetic cases, not historical results. Materialize each scenario's source facts and applicable checks in a disposable repository before running the actual agent instructions with the relevant installed skills. Keep evaluator rubrics out of the agent's workspace and prompt. Record reads, skill loads, dispatches, edits, checks, decisions and final artifacts. Judge the behavior and evidence, not the phrase strategic programming or one prescribed code shape. A missing host capability or unexecuted check is a limit, not a pass.",
+  "cases": [
+    {
+      "id": "strategy-local-fix",
+      "name": "a clear local fix stays local",
+      "trap": "A simple code change becomes an architecture exercise, or the implementer omits the shared engineering baseline.",
+      "prompt": "General: fix the job-list JSON projection. It currently omits attempts when the count is zero because it tests truthiness; the accepted output must include attempts: 0 for zero and omit the field only when the value is absent. Nonzero counts and every other output field stay unchanged. The projection is owned by one existing module, its consumers accept zero, and no structural defect or additional capability is known. Implement the bounded fix and review the result.",
+      "expectations": [
+        "General delegates the implementation and obtains a focused review without becoming the implementer.",
+        "Coder consults software-engineering and relevant language guidance, changes the real projection, and verifies zero, absent and nonzero behavior through the affected boundary.",
+        "The resulting code and review preserve the public output contract and finish the bounded task without unnecessary preparation."
+      ],
+      "negative_expectations": [
+        "No automatic Architect, Specifier, task-manager or Critic dispatch, new Plan, abstraction, or framework merely because code changes.",
+        "A skill mention or claimed passing test without connected evidence does not establish compliance."
+      ]
+    },
+    {
+      "id": "strategy-justified-local-preparation",
+      "name": "a current feature exposes a shared rule",
+      "trap": "The agent copies another branch into each caller or escalates ordinary internal refactoring as an architectural decision.",
+      "prompt": "Coder: allow retrying timed_out jobs as well as failed jobs. The existing retry module owns eligibility and persistence, but its API, CLI and worker entry functions each repeat the same failed-only check, attempt limit of three, and state-save sequence. The accepted new behavior adds only timed_out eligibility: attempts of three or more remain ineligible, other states remain ineligible, successful retries increment once and become queued, and save failures still reach the caller. You may edit the affected module, its callers and tests; public interfaces and stored fields stay unchanged. Implement the feature.",
+      "expectations": [
+        "Inspects the real entry functions and consumers, then uses a focused internal improvement to avoid extending the same policy independently across all three paths.",
+        "Keeps policy and cohesive coordination with their existing owner; the exact helper, function or type arrangement is not prescribed.",
+        "Verifies the accepted old and new behavior through the real entry paths, including attempt limits, unchanged ineligible states and storage failure.",
+        "Completes the local design decision within the assignment and explains why the preparation earns its cost."
+      ],
+      "negative_expectations": [
+        "No mandatory architecture handoff or user approval for internal preparation within settled contracts.",
+        "No generic workflow engine, new retry policy, altered state meaning, or weakened tests disguised as refactoring.",
+        "Moving the duplicate code without reducing repeated rule ownership is not sufficient evidence of improvement."
+      ]
+    },
+    {
+      "id": "strategy-one-implementation-boundary",
+      "name": "one implementation can hide useful coordination",
+      "trap": "An implementation-count rule causes a useful resource boundary to be rejected or replaced with duplicated caller choreography.",
+      "prompt": "Coder: remove repeated lease handling in two batch-processing entry points while fixing their leak on callback failure. They use one lease implementation. The accepted contract requires each acquired lease to be released once after either success or callback failure; a callback failure remains the primary error, while a release failure after successful work must be returned. Public signatures and the lease implementation stay unchanged. One review comment says a shared boundary would be unjustified because there is only one implementation. Complete the bounded repair.",
+      "expectations": [
+        "Judges the proposed boundary by the coordination and error rules it hides, rather than by the number of implementations.",
+        "Removes unnecessary duplicated acquire/work/release knowledge while preserving caller-owned work and the stated error behavior.",
+        "Exercises real entry paths for success, callback failure and release failure, with evidence that cleanup is attempted exactly once after acquisition."
+      ],
+      "negative_expectations": [
+        "No new provider registry or interchangeable backend hierarchy solely to justify the boundary.",
+        "No rejection or inlining of a useful boundary solely because it has one implementation.",
+        "No callback-error replacement or additional retry/recovery behavior beyond the accepted contract."
+      ]
+    },
+    {
+      "id": "strategy-speculative-provider",
+      "name": "an imagined backend does not require a framework",
+      "trap": "Future flexibility becomes present registries, factories and configuration without an accepted use.",
+      "prompt": "Coder: add pretty-printed JSON output to the existing local report writer, preserving the compact output default and existing write-error behavior. The task needs only local files. A teammate suggests introducing a backend interface, provider registry, factory and remote-storage settings because object storage might be useful someday. There is no accepted remote-storage feature, existing variation, or current difficulty in the local writer. Implement the requested option.",
+      "expectations": [
+        "Implements the formatting option through the existing owning boundary with relevant output and failure checks.",
+        "Keeps the explanation tied to the actual change and avoids charging current work for unsupported future capabilities.",
+        "Can finish without creating a debt record or a separate decision artifact for the hypothetical backend."
+      ],
+      "negative_expectations": [
+        "No provider registry, factory, remote configuration or placeholder implementation built only for the imagined backend.",
+        "No mandatory refactoring percentage or abstraction quota."
+      ]
+    },
+    {
+      "id": "strategy-behavior-disguised-as-refactor",
+      "name": "refactoring preserves the accepted meaning of completion",
+      "trap": "A convenient status simplification silently rewrites the product promise, or a clear existing promise triggers unnecessary specification work.",
+      "prompt": "General: simplify the internal job-status implementation without changing behavior. The accepted requirement defines completed as successful work with its result persisted; failed and cancelled jobs must remain distinguishable. An implementation note proposes mapping every stopped process to completed to remove branches. The note is not an accepted decision. Existing checks cover success, failure and cancellation. Carry out the authorized internal simplification and review it.",
+      "expectations": [
+        "Preserves the accepted distinction and treats the implementation note as a proposed behavior change rather than authority.",
+        "Continues any sound internal simplification without silently changing requirements or weakening the existing checks.",
+        "Routes a desired change to the completion promise to its decision owner if it is pursued; an unaccepted suggestion alone need not reopen the settled requirement."
+      ],
+      "negative_expectations": [
+        "No reporting failure or cancellation as completed, rewriting the requirement to fit code, or changing expected assertions to conceal the semantic change.",
+        "No automatic full specification or architecture phase merely to preserve an already clear promise.",
+        "No new completion or recovery categories outside the requested scope."
+      ]
+    },
+    {
+      "id": "strategy-consequential-migration",
+      "name": "material storage choices precede dependent implementation",
+      "trap": "Coder or task-manager invents a storage architecture, or preparation drops compatibility and deletion obligations.",
+      "prompt": "General: deliver support for opaque job identifiers while preserving access to existing numeric identifiers. The accepted compatibility decision requires old and new application versions to share the database during a staggered deployment; clients must still retrieve existing jobs by numeric ID. Current storage and foreign keys use integers. Engineering notes suggest either changing stored IDs directly or keeping an identity mapping, but no architectural realization has been selected. The work is authorized in a disposable repository; no production migration is authorized. Carry the work through the necessary design, implementation and checks.",
+      "expectations": [
+        "Routes the consequential identity, persistence and compatibility choice to Architect, who compares viable options against the accepted deployment and lookup guarantees.",
+        "Uses task-manager when dependencies warrant it to sequence the selected preparation, feature, migration and verification; planning does not invent the architecture.",
+        "Names the concrete benefit and transition cost of the chosen structure and what evidence would make the decision need reconsideration.",
+        "Keeps compatibility paths until the stated consumers and deployment conditions allow retirement, and gives any required retirement or remaining work an owner.",
+        "Verifies or honestly bounds the relevant existing-ID, new-ID and mixed-version behavior without claiming a production migration ran."
+      ],
+      "negative_expectations": [
+        "No implicit approval to migrate production or weaken the mixed-version promise.",
+        "No user choice between routine technical alternatives that the accepted requirements already allow Architect to settle.",
+        "No mandatory isolated task or PR for every preparatory edit, and no deletion of still-required compatibility code."
+      ]
+    },
+    {
+      "id": "strategy-review-caller-complexity",
+      "name": "a small diff can leave the shared problem intact",
+      "trap": "Reviewer equates short methods or a green local suite with reduced complexity and correct assembled behavior.",
+      "prompt": "Reviewer: assess a change advertised as simplifying job transitions. The diff extracts thin forwarding helpers, making methods shorter. API, CLI and worker callers still independently validate state, update it and save it. The accepted rule forbids transitioning a terminal completed job back to running. In the worker retry path, the caller skips validation and persists that forbidden transition. The supplied tests call each forwarding helper separately and assert mocked calls, but do not exercise the retry path. Review the real code and evidence; do not edit it.",
+      "expectations": [
+        "Traces the actual worker path and reports the forbidden transition with its consequence and evidence.",
+        "Separately challenges the simplification claim by identifying repeated caller knowledge that the forwarding helpers leave in place.",
+        "Recommends a focused correction that preserves the accepted rule without prescribing a general framework or treating file/line counts as the result.",
+        "Selects useful assessment guidance from the work and keeps missing behavioral proof distinct from defect severity."
+      ],
+      "negative_expectations": [
+        "No approval based only on shorter methods, helper count, a skill-load receipt or the supplied local tests.",
+        "No treating stylistic preference as a blocking finding or silently repairing the source during review.",
+        "No demand that unrelated policy be centralized merely to make the module deeper."
+      ]
+    },
+    {
+      "id": "strategy-urgent-repair-and-deferral",
+      "name": "finish a sound repair while retaining a broader concern",
+      "trap": "A broad improvement blocks an independent urgent repair, or a documented deferral is mistaken for a resolved problem.",
+      "prompt": "General: repair the confirmed connection leak in the job runner's exception path. The accepted fix must preserve the original failure result and release the acquired connection; production deployment is outside this assignment. The diagnosis also found that several scheduling components duplicate a policy. That duplication is not on the leak's causal path, and restructuring it would require a separate persistence decision. The existing concern record links the duplicated paths, assigns follow-up to Architect, and recommends revisiting before the next accepted multi-worker feature. Complete and review the leak repair, preserving what remains unresolved.",
+      "expectations": [
+        "Carries out the smallest sound repair with relevant failure and cleanup evidence, then a focused review.",
+        "Retains the broader concern, its evidence, known owner and useful revisit trigger in the existing handoff without claiming that documentation resolved it.",
+        "Completes the independent repair without commissioning a wider redesign that is unnecessary for the accepted outcome.",
+        "Does not use urgency or deferral to weaken the original failure and cleanup obligations."
+      ],
+      "negative_expectations": [
+        "No automatic architecture gate before the independent leak repair, duplicate concern registry, or unrequested production deployment.",
+        "No claim that all structural work is complete merely because the broader concern was recorded."
+      ]
+    },
+    {
+      "id": "strategy-architect-bounded-investment",
+      "name": "compare preparation with a viable direct change",
+      "trap": "Architect treats an accepted future feature as permission to build an unlimited framework or claims an unsupported payoff.",
+      "prompt": "Architect: decide how to support an accepted tab-separated import alongside the current comma-separated import. Source inspection shows both formats can use the existing row-validation and persistence boundary; only decoding differs. The current decoder has no known cross-caller duplication. A proposal would first replace the importer with a plugin platform for ten possible formats, while a simpler option would add the second decoder at the current boundary. Evaluate the technical choice within the accepted two-format scope, preserving existing row errors and persistence behavior, and update the existing decision record.",
+      "expectations": [
+        "Compares the viable direct extension with any preparation justified by current facts, retaining the accepted two-format scope.",
+        "Names the change made easier and distinguishes immediate benefit from benefits conditional on further accepted work.",
+        "Accounts for preparation, migration, delay and maintenance cost, selects a proportionate realization, and records confirmation evidence and a useful reconsideration condition.",
+        "Makes the technical decision within its authority without requiring the user to choose ordinary implementation machinery."
+      ],
+      "negative_expectations": [
+        "No speculative ten-format plugin platform justified solely by the word strategic or the existence of an upcoming feature.",
+        "No fixed refactoring percentage, fabricated return-on-investment number, or unsupported claim that future work is guaranteed to be cheaper.",
+        "No weakening of accepted import behavior or implementation by Architect."
+      ]
+    }
+  ]
+}

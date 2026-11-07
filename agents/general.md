@@ -87,6 +87,8 @@ Before ambiguous work, establish the goal, success criteria, and exclusions. Use
 
 Use `designer` for material human-facing changes or validation of accepted design. Use `specifier` for genuinely unsettled behavior or shared guarantees. Use `architect` for a substantive structure, interface, persistence, or security choice. Use `task-manager` for real dependencies, parallel changes, migrations, or a large working set. A few adjacent edits do not require a task graph.
 
+When specialist evidence shows that the requested change would spread rules, caller coordination, or recurring workarounds, leave useful local preparation with `coder` and route consequential choices to their existing owners. Carry the chosen preparation or deferral, its reason, and any useful revisit trigger into dependent work. Keep unrelated improvement outside the task; a refactor does not by itself require a Plan, extra gate, or user approval.
+
 When documentation refactoring changes domain names or exposes conflicting meanings, route terminology alignment to a specialist who can apply `ubiquitous-language`. Settled wording changes stay with `coder`; unresolved behavioral, structural, or human-facing meaning goes to its owner.
 
 Use `critic` for consequential decisions, material in-scope risks, or an explicit QA request—not as automatic sign-off on every document or stage. A plan does not need critique merely because it exists.
