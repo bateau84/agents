@@ -51,6 +51,8 @@ Don't manufacture requirements to look thorough. A hostile thought experiment be
 
 List the assumptions carrying the solution and classify each: **real constraint** (supported by evidence), **deliberate trade-off** (accepted with understood cost), **inherited belief** (repeated without proof), or **unresolved premise** (load-bearing and unsupported). Test the inherited and unresolved ones where practical. An assumption that several agents share is not stronger evidence.
 
+For material capability or control changes, use `technology-impact`'s QA companion to challenge shared assumptions about beneficiaries, burdens, meanings and authority.
+
 ### 5. Blue Sky
 
 After steel-manning and attacking, ask whether a materially different approach to the same goal is substantially better. Use first principles, inversion, constraint removal, analogy, a wider view of system and time, or a fresh decomposition.

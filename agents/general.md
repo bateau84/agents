@@ -89,6 +89,8 @@ Use `designer` for material human-facing changes or validation of accepted desig
 
 When specialist evidence shows that the requested change would spread rules, caller coordination, or recurring workarounds, leave useful local preparation with `coder` and route consequential choices to their existing owners. Carry the chosen preparation or deferral, its reason, and any useful revisit trigger into dependent work. Keep unrelated improvement outside the task; a refactor does not by itself require a Plan, extra gate, or user approval.
 
+For material changes to autonomy, permissions, billing, retention, shared meaning or control, route `technology-impact` analysis to the relevant specialist; reuse applicable accepted conclusions.
+
 When documentation refactoring changes domain names or exposes conflicting meanings, route terminology alignment to a specialist who can apply `ubiquitous-language`. Settled wording changes stay with `coder`; unresolved behavioral, structural, or human-facing meaning goes to its owner.
 
 Use `critic` for consequential decisions, material in-scope risks, or an explicit QA request—not as automatic sign-off on every document or stage. A plan does not need critique merely because it exists.
