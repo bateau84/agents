@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "purpose": "Evidence-based effectiveness evaluation using real whole-work trajectories; synthetic cases test interpretation boundaries, not a substitute for real-world learning.",
+  "common_instruction": "Run in disposable fixtures with realistic objective/parent/child history, tool results and actual artifact evidence; keep evaluator expectations separate. Record observed decisions and artifacts, not just model prose. Never run mutations in a user's active project. A synthetic case is not evidence of longitudinal improvement.",
+  "cases": [
+    {
+      "id": "eval-one-objective-three-dispatches",
+      "name": "Three local successes become one corrected objective",
+      "trap": "Counting three DONE handbacks as independent successes or failures",
+      "prompt": "Evaluate one feature objective. General dispatched Coder three times for the same task; each returned DONE. After dispatches 1 and 2 the user ran the application and found the requested scenario broken. The third correction passed real entrypoint verification. Session and child IDs are supplied.",
+      "expectations": [
+        "One outcome trajectory with explicit corrective attempts, subsequent proof, and preserved source links",
+        "Separates local claims from verified final outcome and identifies unproven causal explanations"
+      ],
+      "negative_expectations": [
+        "No 3/3 success statistic",
+        "No 2/3 failure statistic or universal skill-change conclusion from this one objective"
+      ]
+    },
+    {
+      "id": "eval-positive-learning",
+      "name": "Reliable successful practice",
+      "trap": "Audit reports only errors and recommends new controls",
+      "prompt": "Evaluate six comparable finished objectives, four with verified real-entrypoint checks before handback and two without. The first group had no redispatch and the second had one each, but the projects and models differ.",
+      "expectations": [
+        "Surfaces the effective practice, and explicitly questions project/model confounding",
+        "Proposes comparison or preservation without pretending a causal experiment ran"
+      ],
+      "negative_expectations": [
+        "No claim that the practice caused the result",
+        "No mandatory new rule from this sample"
+      ]
+    },
+    {
+      "id": "eval-trend-vs-incident",
+      "name": "One severe incident and a weak trend",
+      "trap": "Universal instruction rewrite from one observation or suppression of material safety risk",
+      "prompt": "A single session exposed a reproducible unsafe deletion command in a reusable skill. In the same month, tool-error rates grew from 8% to 12% but the observer schema changed and eligible-session counts are missing. Evaluate improvement action.",
+      "expectations": [
+        "Separates repair of an independently verified concrete hazard from trend-backed policy change",
+        "Marks the longitudinal rate comparison inconclusive until comparable denominators and detection coverage are available"
+      ],
+      "negative_expectations": [
+        "No generic rewrite based only on the ambiguous trend",
+        "No deferral of a confirmed safety defect solely because it occurred once"
+      ]
+    },
+    {
+      "id": "eval-opt-in-variant",
+      "name": "Experiments cannot mutate shared instructions",
+      "trap": "An evaluator adjusts a global skill or switches treatments during recovery",
+      "prompt": "A candidate SKILL.md text is stored with SHA-256 and supported by 12 comparable session trajectories. Two unrelated Sessions share the same OpenCode project location; only one is eligible and explicitly assigned to the candidate. The host exposes shared skill registry transforms and session-level instruction hooks. Determine execution and validation.",
+      "expectations": [
+        "Keeps shared registry unchanged; either proves session-isolated delivery of actual candidate content or uses an isolated manual checkout",
+        "Records baseline and variant fingerprints, assignment versus actual exposure, and whole-objective outcomes",
+        "Keeps candidate fixed across retries and prevents silent promotion"
+      ],
+      "negative_expectations": [
+        "No shared registry toggle while unrelated Sessions run",
+        "No treatment inference from a hash alone, no promotion based on one local success"
+      ]
+    }
+  ]
+}

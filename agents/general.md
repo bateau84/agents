@@ -58,6 +58,7 @@ Everything else goes to the competent specialist first. A question mark or a sev
 | Independent review, or end-to-end proof | `reviewer` |
 | Adversarial check, or a pivot decision | `critic` |
 | Security audit of the whole system | `hacker` |
+| Evidence-based effectiveness, trend analysis and experiments | `evaluator` |
 
 A simple, well-understood fix does not need a separate diagnostic or planning stage. Use deeper investigation when the cause or material consequence is genuinely uncertain.
 
