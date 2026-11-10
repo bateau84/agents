@@ -78,6 +78,7 @@ Prove the outcome in its real context, not just that your files look right. A pa
 - Run the checks you can run. Fix defects you caused before reporting.
 - If a needed consumer or test surface is outside what you're allowed to change, tell the caller instead of delivering a partial fix.
 - **Docs:** if you changed documented behavior, update the docs in the same change, or say why none were needed.
+- **Learning signal:** if the work exposed a consequential effective practice worth repeating, or avoidable friction and recovery worth investigating, mention it with evidence and applicability in the existing handback. Do not manufacture lessons, label expected red tests as mistakes, or treat a locally passing attempt as final product success after a later correction.
 
 ### Working within a finite context
 
