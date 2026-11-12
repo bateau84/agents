@@ -63,6 +63,39 @@
         "No 150 ms, invented percentile, queue or user approval step silently promoted into a mandatory guarantee.",
         "No fabricated evidence that the stated quality has already been achieved, and no new quality-stage gate for all future fixes."
       ]
+    },
+    {
+      "id": "qs-br-oc-adjudicate-overlap",
+      "name": "independent review finds combined cancellation/crash/authorization inconsistency",
+      "trap": "Reviewer treats three locally testable BR/QS/OC artifacts as a sound bundle without testing a shared event history; Critic mistakes artifact labels for precedence or invents recovery policy.",
+      "prompt": "Please independently review and adversarially adjudicate this requirements bundle as a whole. Do not implement code. Accepted product meaning: a protected effect may not start once its queued job is cancelled; each effect-start attempt needs authorization for that exact attempt, and an old allow cannot be reused for a new post-crash attempt; after a worker crash an accepted job remains identifiable, must not appear falsely completed, and non-cancelled eligible work can make progress when an authorized worker is available. There is no accepted automatic redispatch policy or deadline. Draft BR-007: a cancelled queued job never starts an effect. Draft OC-004: authorization allow for attempt A cannot be used for distinct attempt B. Draft QS-003: on crash, every accepted job with no completed effect is immediately redispatched using its latest allow receipt, including jobs cancelled while the worker was down. Each has a plausible isolated check. Use Reviewer to assess conformance, Critic to challenge the combined outcome, and route any correction to the right specification or product authority.",
+      "expectations": [
+        "Reviewer independently discovers a concrete shared trace: attempt A accepted/authorized, worker crashes, job cancelled, restart attempts effect B with A's allow; the QS conflicts with BR cancellation and OC attempt binding.",
+        "Reviewer identifies exact conflicting normative clauses, their accepted provenance and affected scope, and withholds a sound-bundle verdict rather than relying on isolated tests.",
+        "Critic challenges event ordering and false confidence, reports a decisive in-scope counterexample and its source, and does not invent a broader recovery threat model.",
+        "Specifier remains owner of the ordinary QS reconciliation; corrected conditioned quality preserves identification and truthful post-crash status and eligible non-cancelled progress without asserting automatic redispatch or permit reuse.",
+        "BR, QS and OC are equally binding when sourced; neither Reviewer nor Critic silently edits a normative artifact or resolves conflict by a document-type priority, and unrelated valid scope is preserved."
+      ],
+      "negative_expectations": [
+        "No unilateral prioritization of QS, BR or OC; no automatic retry, permit reuse, deadline, new API/schema, or blanket review gate.",
+        "No claim of independent first assessment if earlier producer verdicts were injected into the initial context; no treat-as-proven solely because all three isolated checks pass."
+      ]
+    },
+    {
+      "id": "qs-br-oc-no-false-conflict",
+      "name": "compatible requirement bundle does not require new review ceremony",
+      "trap": "A new composition review rule invents a conflict, demands another layer of paperwork, or treats quality and seam obligations as subordinate to behavioral requirements.",
+      "prompt": "Review, but do not change, this accepted specification for protected provider execution. BR-001: if a protected attempted operation receives policy denial, its effect never starts. OC-001: policy authority and effect executor independently maintain that a decision applies only to its associated attempted operation. QS-001: if one execution provider is unavailable while another eligible healthy provider remains, work eligible for the healthy provider can still progress and degradation is observable. The source contains no retry count, failover deadline, or implementation mechanism. Are the three documents mutually consistent, and what combination of evidence would prove their accepted claims? No independent adversarial audit was requested.",
+      "expectations": [
+        "Reviewer recognizes three distinct, compatible normative homes: denial behavior, attempt-to-decision binding, and conditioned provider-degradation progress/observability.",
+        "Demonstrates a combined scenario where the eligible healthy provider can progress with appropriate authorization while a denied attempted effect remains stopped, with no contradiction.",
+        "Explains proportionate proof that covers the cross-party decision link and the degraded-provider response rather than requiring tests for arbitrary hypothetical states.",
+        "Keeps documents and permitted scope intact, and does not automatically require Critic or Specifier redispatch on a sound review."
+      ],
+      "negative_expectations": [
+        "No automatic QA/approval gate, speculative conflict, duplicate artifact, forced rewrite or hierarchy between BR, QS and OC.",
+        "No invented latency, retry behavior, storage technology, or claim that green individual tests alone prove whole-system behavior."
+      ]
     }
   ]
 }
