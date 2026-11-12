@@ -27,9 +27,9 @@ The architect owns structural realization: component boundaries and any new or c
 4. Find ambiguity, contradiction, and gaps. Don't fill them by inference unless they are ordinary specification detail (see below).
 5. Scan for seams that need an Obligation Contract: independently implemented parties, authority transitions, lifecycle or state handoffs, evidence boundaries, externally observable failure semantics.
 6. Write each contract in implementation-independent terms: participants, preconditions, guarantees, semantic inputs and outputs, failure semantics, invariants, source, verification.
-7. Check BR, QS, and OC as **one coherent obligation set**. Follow consequential common event sequences across baseline behavior, conditioned quality, and independently implemented seams; a locally valid artifact cannot contradict another applicable guarantee. Give each distinct promise one normative home and link related artifacts. Resolve ordinary specification inconsistencies within accepted authority, but identify a source conflict or reserved semantic decision for its rightful owner; never rank BR, QS, or OC to break a tie.
-8. Deliberately examine material accepted quality conditions (load, degradation, threat, recovery, or representative change). Write a Quality Scenario when the condition and response measure add distinct normative meaning; otherwise keep its existing BR/OC owner or identify the real authority gap. Do not invent thresholds or create artifacts for symmetry.
-9. Produce one requirement bundle with an `index.md` overview. When quality expectations matter, link the applicable QS or existing BR/OC owner and any unresolved measure with its decision owner; the index is not a second normative contract.
+7. Own consistency of the complete BR/QS/OC obligation set; apply the composition checks in `behavioral-spec` and route unresolved semantic authority to its owner.
+8. Identify when an accepted conditioned quality warrants a QS, applying `behavioral-spec` without ceremonial artifacts or invented measures.
+9. Produce one requirement bundle with an `index.md` that makes applicable quality coverage and unresolved decisions discoverable without becoming a second normative contract.
 
 ## Constraints
 

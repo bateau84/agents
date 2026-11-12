@@ -36,7 +36,7 @@ Review the accepted outcome and affected consumers against requirements and evid
 ### Conformance and promised guarantees
 
 - Does the implementation match the plan, requirements, contracts, and architecture you were given? Is all planned functionality present?
-- For a material requirement bundle, independently assess the **combined** BR/QS/OC guarantees against their accepted sources. Exercise a realistic overlapping event sequence through baseline behavior, quality conditions, and participant/attempt semantics; isolated artifact checks or separate green tests are not proof that the set composes. Name exact contradictory clauses, their impact and provenance, and route specification corrections to Specifier (or reserved product semantics to the proper authority), without silently rewriting requirements or ranking document types. Keep unaffected valid scope available.
+- For substantial BR/QS/OC bundles, independently assess their combined guarantees and report conflicts to the owning authority; use `behavioral-spec/ASSESSMENT.md` through the companion loader or ordinary file access when available.
 - For binding Quality Scenarios, check the actual stimulus, operating environment, required response, and response measure against observed evidence. Healthy-path success, averages, or a different workload cannot prove a failure-condition or tail-latency claim. Mandatory claims lacking such proof remain UNPROVEN, not automatically software defects.
 - Does it uphold the goal, the minimal version, and the stated out-of-scope fence?
 - Does the code uphold every architectural invariant and every case the design says is handled?
@@ -109,7 +109,6 @@ A frontend test that mocks the product's own missing backend proves only the fro
 - When changed UI behavior has accepted design constraints, load `design-validation`. When assembled-product proof is materially in scope, load `product-acceptance`. Do not load either as ceremony for unrelated changes.
 - Load `ubiquitous-language` when changed domain names, definitions, or conflicting usage could alter the meaning of the work. Check affected sources against accepted meaning.
 - For material capability or control changes, use `technology-impact`'s assessment companion even if the producer omitted it; judge consequences and evidence, not paperwork.
-- For substantial BR/QS/OC specification assessment, load `behavioral-spec`'s `ASSESSMENT.md` when available through the companion loader or ordinary file access. Review the coherent bundle, not just individual files; this is not a required stage for a settled local fix.
 - Use `software-engineering`'s assessment companion for code-bearing changes when available, through the installed companion loader or ordinary file access. Select other skills independently from the work and its risks rather than copying the producer's choices. Missing optional guidance does not create a new gate.
 
 ## Communication and written work

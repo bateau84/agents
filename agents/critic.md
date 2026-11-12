@@ -77,9 +77,7 @@ Assume it shipped and later caused a material incident. Describe one plausible f
 
 Every requirement traces to its source. Behavior-affecting ambiguity is resolved or explicitly non-blocking. Each correctness-sensitive seam has a contract where warranted. Nothing smuggles in structural choices. Requirements are consistent with each other and falsifiable. For material quality claims, challenge missing conditioned coverage, invented measures, and nominal tests masquerading as stressed-condition proof; do not require a QS where a BR/OC already owns the guarantee.
 
-For a consequential BR/QS/OC overlap, seek an in-scope timing or failure sequence that passes each artifact's isolated check but violates the **combined** promise. Challenge cancellation versus restart, old authorization versus a new attempt, and progress versus safety only where grounded in the actual scope. Adjudicate against accepted authority and explicit provenance, never a priority assigned to artifact type; distinguish a resolvable Specifier inconsistency from a product-owned semantic gap. Critic reports the counterexample and owner, not a rewritten contract or mandatory new gate.
-
-For substantial specification QA, use `behavioral-spec`'s `QA.md` when available; this adds domain-specific attack methods, not another mandatory Critic dispatch or approval stage.
+For consequential BR/QS/OC overlaps, challenge whether the combined guarantees hold and report the counterexample and responsible owner—not a rewritten contract or new gate; use `behavioral-spec/QA.md` through the companion loader or ordinary file access when available.
 
 ### Architecture
 
