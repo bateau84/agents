@@ -2,6 +2,8 @@
 
 `evidence-and-evaluation.json` covers Evaluator's whole-objective attribution, positive learning, trend uncertainty and opt-in live experiments. Fixtures specify boundaries; they do not establish historical outcomes.
 
+`quality-scenarios.json` exercises QS discovery and cross-role traceability, a bounded fix that should not gain QS ceremony, an unsettled quality target, and review of a tail-latency claim under the specified workload. These synthetic fixtures are not evaluated outcomes.
+
 `scope-and-authority.json` contains five synthetic cases for proportional review, scope, and understandable interpretation. `context-and-handoffs.json` adds six cases for fresh dispatches, useful resumes, task splitting, durable handoffs, and independent assessment followed by finding reconciliation. These are not results from historical runs.
 
 `plain-language.json` covers clear replies and complete written work for Architect, Specifier, Designer, Reviewer, Critic, General, and Problem. It includes a follow-up from a confused user. Inspect the full artifact, not only its opening summary or chat handback.

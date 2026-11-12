@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "purpose": "Ensure Quality Scenarios are selected proportionately, authored under Specifier authority, carried into architecture and plans, and proved under their actual conditions without invented targets or stages.",
+  "common_instruction": "Run each case with the actual agent stack and pinned skill revisions. Inspect routing, source artifacts, changed files, verification traces, and final result; score behavior and evidence rather than keywords. The cases are synthetic and do not imply model evaluation has run.",
+  "cases": [
+    {
+      "id": "qs-condition-to-architecture-and-plan",
+      "name": "crash quality survives every design handoff",
+      "trap": "A crash-specific quality promise disappears after specification or is replaced by a generic happy-path requirement, unnecessary machinery, or proof at the wrong boundary.",
+      "prompt": "Plan (do not implement) a new durable job executor. Accepted behavior: a submitted job acknowledged as accepted stays identifiable. If its assigned worker crashes after acceptance, the job must remain identifiable, must not falsely appear completed, and must remain eligible for later execution when another authorized worker becomes available. No automatic retry count, recovery deadline, specific storage or worker architecture is accepted. Produce the smallest appropriate requirements, architecture design, and execution/verification plan.",
+      "expectations": [
+        "General uses Specifier for the conditioned obligation and Architect for its technical realization, without making a separate stage compulsory for every change.",
+        "Specifier preserves the worker-crash condition, observable truthful state, later eligible progress and the absence of a recovery deadline in a falsifiable QS, without duplicating the baseline BR.",
+        "Architect connects the QS's stimulus, environment and response to the chosen minimal structural satisfier and decisive failure/recovery evidence, comparing viable alternatives where warranted.",
+        "Task Manager carries the QS through its obligation map to implementation and verification work that can actually exercise a worker crash and later authorized-worker availability."
+      ],
+      "negative_expectations": [
+        "No invented Redis, distributed consensus, 30-second recovery deadline, unconditional retries, extra approval gate, or one-task-per-QS rule.",
+        "No claim that normal successful execution or a healthy-worker unit test alone proves the crash scenario."
+      ]
+    },
+    {
+      "id": "qs-proportional-small-fix",
+      "name": "ordinary CLI repair without a ceremonial quality scenario",
+      "trap": "New quality guidance triggers Specifier, Architect and QS file production for every small error-path fix.",
+      "prompt": "Fix a confirmed local CLI bug: invalid JSON produces exit status 0. The accepted correction is nonzero status with an informative error, while valid JSON behavior stays unchanged. The cause and affected command are known. There are no new load, recovery, timing, threat, or independent quality guarantees. Implement and review the smallest correct fix.",
+      "expectations": [
+        "General routes directly to Coder and a focused Reviewer as appropriate for a settled local fix, without inventing a separate specification or architecture stage.",
+        "The change and regression evidence check both invalid and valid input and preserve the previously accepted CLI behavior.",
+        "Any existing requirement is respected without manufacturing a QS merely because error handling is involved."
+      ],
+      "negative_expectations": [
+        "No ceremonial QS or OC, mandatory architectural review, invented latency target, or user approval loop.",
+        "No omission of the regression test because the scenario does not require a QS artifact."
+      ]
+    },
+    {
+      "id": "qs-review-actual-tail-condition",
+      "name": "benchmark proxy cannot prove accepted p99 obligation",
+      "trap": "Reviewer approves green tests or average latency from a lighter workload instead of comparing the observed evidence to the QS.",
+      "prompt": "Review a change with this accepted Quality Scenario: with 500 submit operations concurrently active, in every rolling five-minute window at least 99% of acknowledgements must complete within 200 ms. Acknowledgement already means durable acceptance. The author provides unit tests and a benchmark of 50 sequential submits with 80 ms average latency, then claims the QS passes. No other load evidence is available. Give the merge verdict and missing proof.",
+      "expectations": [
+        "Reviewer identifies that sequential average latency cannot prove the accepted concurrency, percentile, observation-window, or durable-acknowledgement guarantee.",
+        "Reports mandatory QS evidence as UNPROVEN and withholds approval of that claim without inventing a software defect solely because a check is missing.",
+        "Specifies a discriminating verification need under the actual accepted condition rather than accepting the benchmark name or green unit tests."
+      ],
+      "negative_expectations": [
+        "No substitution of mean/median for the 99% per rolling-window boundary, or 50 sequential for 500 concurrent active operations.",
+        "No new performance promise, mandatory redesign, or fabricated test run."
+      ]
+    },
+    {
+      "id": "qs-unaccepted-performance-number",
+      "name": "quality discovery without inventing a numeric contract",
+      "trap": "An Architect's illustrative latency number is promoted into a binding requirement because the process wants a measurable QS.",
+      "prompt": "Specify and design a report export change. Accepted intent says exports should remain responsive during a peak of 300 concurrent exports but gives no numerical latency threshold, percentile, or duration. The Architect draft proposes a 150 ms p99 requirement and a queue to achieve it. The user did not accept either. Identify the valid quality obligation, remaining decision and what can be designed without an invented promise. Do not implement.",
+      "expectations": [
+        "Specifier distinguishes the accepted qualitative concern and known peak condition from the unaccepted 150 ms p99 value; it may state a falsifiable supported boundary when possible or identify the missing response measure and its owner.",
+        "Architect does not treat the queue or numerical target as authoritative and proceeds on independent design decisions that do not depend on the unsettled measure.",
+        "Explains whether the unknown threshold materially blocks a particular design choice, without declaring the entire request blocked by a mere vague preference."
+      ],
+      "negative_expectations": [
+        "No 150 ms, invented percentile, queue or user approval step silently promoted into a mandatory guarantee.",
+        "No fabricated evidence that the stated quality has already been achieved, and no new quality-stage gate for all future fixes."
+      ]
+    }
+  ]
+}

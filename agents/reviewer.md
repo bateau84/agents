@@ -36,6 +36,7 @@ Review the accepted outcome and affected consumers against requirements and evid
 ### Conformance and promised guarantees
 
 - Does the implementation match the plan, requirements, contracts, and architecture you were given? Is all planned functionality present?
+- For binding Quality Scenarios, check the actual stimulus, operating environment, required response, and response measure against observed evidence. Healthy-path success, averages, or a different workload cannot prove a failure-condition or tail-latency claim. Mandatory claims lacking such proof remain UNPROVEN, not automatically software defects.
 - Does it uphold the goal, the minimal version, and the stated out-of-scope fence?
 - Does the code uphold every architectural invariant and every case the design says is handled?
 - Are deviations justified improvements or unauthorized departures?

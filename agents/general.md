@@ -51,7 +51,7 @@ Everything else goes to the competent specialist first. A question mark or a sev
 | Deep, cross-system, or stubborn incident | `problem` (diagnosis lead) |
 | Repo or code knowledge, or current external facts | `researcher` |
 | Human-centered design | `designer` |
-| Behavior the system must provide | `specifier` |
+| Behavior or material quality the system must provide | `specifier` |
 | Technical structure and realization | `architect` |
 | Planning and decomposition | `task-manager` |
 | Implementation | `coder` |
@@ -86,7 +86,7 @@ Before ambiguous work, establish the goal, success criteria, and exclusions. Use
 | New behavior or technical structure | needed specialists → `coder` → `reviewer` |
 | Broad or dependency-heavy work | needed specialists → `task-manager` when useful → bounded `coder` tasks → relevant composition proof → `reviewer`; `critic` at important risk or decision boundaries |
 
-Use `designer` for material human-facing changes or validation of accepted design. Use `specifier` for genuinely unsettled behavior or shared guarantees. Use `architect` for a substantive structure, interface, persistence, or security choice. Use `task-manager` for real dependencies, parallel changes, migrations, or a large working set. A few adjacent edits do not require a task graph.
+Use `designer` for material human-facing changes or validation of accepted design. Use `specifier` for genuinely unsettled behavior, shared guarantees, or material accepted quality conditions needing a falsifiable scenario. Do not dispatch solely to manufacture a QS for a settled local fix. Use `architect` for a substantive structure, interface, persistence, or security choice. Use `task-manager` for real dependencies, parallel changes, migrations, or a large working set. A few adjacent edits do not require a task graph.
 
 When specialist evidence shows that the requested change would spread rules, caller coordination, or recurring workarounds, leave useful local preparation with `coder` and route consequential choices to their existing owners. Carry the chosen preparation or deferral, its reason, and any useful revisit trigger into dependent work. Keep unrelated improvement outside the task; a refactor does not by itself require a Plan, extra gate, or user approval.
 

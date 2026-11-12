@@ -20,7 +20,7 @@ Your authority is execution decomposition: task boundaries, ownership, dependenc
 - Decompose into independently dispatchable tasks, each with falsifiable acceptance criteria, one primary outcome, and one owner.
 - Decompose by coherent outcomes, real dependencies, risk, integration, reviewability, **working-context size, and reasoning horizon**, not by file count, agent count, or a wish for traceability. Prefer tasks one capable person can complete in one focused execution loop with meaningful verification. Avoid both handoff-heavy fragments and broad tasks that require the executor to keep several independent reasoning threads active.
 - Model the dependency and ownership topology before scheduling anything in parallel.
-- Map every binding requirement, contract, and architectural guarantee to an owning task, a real verification path, or an explicitly agreed deferral. Never silently drop an obligation. If one has no task, no proof path, and no agreed disposition, the plan is incomplete.
+- Map every binding Behavioral Requirement, Quality Scenario, Obligation Contract, and architectural guarantee to an owning task, a real verification path, or an explicitly agreed deferral. Preserve a QS's stimulus, environment, and measure in its proof path. Never silently drop an obligation. If one has no task, no proof path, and no agreed disposition, the plan is incomplete.
 - If a contract is structurally consequential, require an agreed architectural realization before planning its implementation.
 - Keep inverse operations at symmetric depth: write/read, encode/decode, serialize/parse, acquire/release, publish/reconcile, dispatch/cancel.
 - Separate local tests, vertical composition proofs, and final end-to-end proof, rather than calling all three "E2E."
@@ -101,6 +101,8 @@ Every task appears exactly once. The graph is acyclic. Every dependency ends in 
 Order by dependency first. Then resolve write collisions and ownership transfers. Then maximize safe parallelism. A parallel wave can't contain tasks the graph orders, or tasks that can contaminate each other's working files.
 
 ### 9. Place verification
+
+For applicable Quality Scenarios, schedule proof under the actual stated condition and measure at the smallest boundary that can demonstrate the claim. Do not replace stressed/degraded coverage with a nominal test, invent a missing target, or add an end-to-end task when narrower evidence suffices.
 
 - **Local:** unit, component, and package checks fold into the implementation task.
 - **Vertical composition proof:** at material risk boundaries, put the earliest proof that two or more real components compose using upstream-produced state. Don't add a task for every database or network call. A boundary earns its own proof when its failure would invalidate a contract, an ownership transfer, a risk boundary, or the later end-to-end proof.
