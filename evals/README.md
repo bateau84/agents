@@ -2,6 +2,8 @@
 
 `evidence-and-evaluation.json` covers Evaluator's whole-objective attribution, positive learning, trend uncertainty and opt-in live experiments. Fixtures specify boundaries; they do not establish historical outcomes.
 
+`quality-scenarios.json` exercises QS discovery, cross-role traceability, bounded fixes that should not gain QS ceremony, unsettled targets, evidence under actual conditions, and BR/QS/OC composition during review and adversarial adjudication. The overlap case also tests specialist routing from an outcome-only request; the compatible case guards against false conflicts or new gates. These synthetic fixtures are not evaluated outcomes.
+
 `scope-and-authority.json` contains five synthetic cases for proportional review, scope, and understandable interpretation. `context-and-handoffs.json` adds six cases for fresh dispatches, useful resumes, task splitting, durable handoffs, and independent assessment followed by finding reconciliation. These are not results from historical runs.
 
 `plain-language.json` covers clear replies and complete written work for Architect, Specifier, Designer, Reviewer, Critic, General, and Problem. It includes a follow-up from a confused user. Inspect the full artifact, not only its opening summary or chat handback.
@@ -27,6 +29,8 @@ For the language cases, ask the intended reader to explain the outcome, limits, 
 Record the baseline and candidate revisions, model, installed skill/Loom versions, transcripts, outcomes, unnecessary work and reviewer rationale. Include cases where resuming is appropriate; lower token use or fewer dispatches alone does not prove a better result. Keep PASS/FAIL/UNPROVEN evidence status separate from severity.
 
 For strategic-programming cases, materialize the source facts before either run, keep the evaluator rubric separate, and inspect preserved behavior and actual ownership of rules or coordination. An agent-only comparison keeps skills fixed; a combined agents-and-skills comparison must name both revisions and limit its conclusions to that combined change. A skill load is useful discovery evidence, not evidence that the method was followed.
+
+When an agent change depends on not-yet-merged skill methodology, use the exact candidate skill commit that contains it (or merge that skill change first). Record both agent and skill SHAs for each evaluation side in the run evidence. Compare both repositories together to measure the assembled change, or hold the same skill revision fixed on both sides to isolate the agent change; do not imply either comparison proves the other.
 
 To test whether preparation helps later work, run a second related feature in a fresh session against each resulting repository, without showing the first agent that follow-up task. Compare correctness and the total preparation, implementation, review, and follow-up effort; include a case where direct implementation is sufficient. The optional companion `software-engineering/evals/artifact-workflow.md` in [bateau84/skills](https://github.com/bateau84/skills/tree/main/skills/software-engineering/evals) describes a concrete two-change exercise. It is evaluation material, not an installed-agent or Loom dependency. These JSON cases alone do not establish later-change benefit.
 

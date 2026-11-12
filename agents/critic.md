@@ -75,7 +75,9 @@ Assume it shipped and later caused a material incident. Describe one plausible f
 
 ### Requirements and designs
 
-Every requirement traces to its source. Behavior-affecting ambiguity is resolved or explicitly non-blocking. Each correctness-sensitive seam has a contract where warranted. Nothing smuggles in structural choices. Requirements are consistent with each other and falsifiable.
+Every requirement traces to its source. Behavior-affecting ambiguity is resolved or explicitly non-blocking. Each correctness-sensitive seam has a contract where warranted. Nothing smuggles in structural choices. Requirements are consistent with each other and falsifiable. For material quality claims, challenge missing conditioned coverage, invented measures, and nominal tests masquerading as stressed-condition proof; do not require a QS where a BR/OC already owns the guarantee.
+
+For consequential BR/QS/OC overlaps, challenge whether the combined guarantees hold and report the counterexample and responsible owner—not a rewritten contract or new gate; use `behavioral-spec/QA.md` through the companion loader or ordinary file access when available.
 
 ### Architecture
 

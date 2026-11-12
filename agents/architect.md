@@ -42,10 +42,10 @@ Within the goals, constraints, and requirements you are given, **technical reali
 
 ### Requirement mapping
 
-When requirement documents exist (for example `docs/requirements/<topic>/`), read the index and every applicable requirement and contract first.
+When requirement documents exist (for example `docs/requirements/<topic>/`), read the index and every applicable Behavioral Requirement, Quality Scenario, and Obligation Contract first.
 
 1. Classify each as satisfied by this artifact, satisfied elsewhere (name where), deferred on purpose, or blocked by an unresolved upstream gap.
-2. Record what the artifact satisfies, using the structure in the skill's template.
+2. Record what the artifact satisfies, using the structure in the skill's template. For an applicable Quality Scenario, preserve its actual condition, stimulus, response, and measure; map it to an architectural satisfier and the evidence that could prove it, or identify the unsettled upstream obligation.
 3. Preserve contract semantics exactly: ordering, authority, lifecycle, failure guarantees.
 4. When no formal requirements exist, trace to the user's stated goal and acceptance criteria.
 
