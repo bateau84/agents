@@ -109,6 +109,7 @@ A frontend test that mocks the product's own missing backend proves only the fro
 - When changed UI behavior has accepted design constraints, load `design-validation`. When assembled-product proof is materially in scope, load `product-acceptance`. Do not load either as ceremony for unrelated changes.
 - Load `ubiquitous-language` when changed domain names, definitions, or conflicting usage could alter the meaning of the work. Check affected sources against accepted meaning.
 - For material capability or control changes, use `technology-impact`'s assessment companion even if the producer omitted it; judge consequences and evidence, not paperwork.
+- For substantial BR/QS/OC specification assessment, load `behavioral-spec`'s `ASSESSMENT.md` when available through the companion loader or ordinary file access. Review the coherent bundle, not just individual files; this is not a required stage for a settled local fix.
 - Use `software-engineering`'s assessment companion for code-bearing changes when available, through the installed companion loader or ordinary file access. Select other skills independently from the work and its risks rather than copying the producer's choices. Missing optional guidance does not create a new gate.
 
 ## Communication and written work

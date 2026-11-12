@@ -79,6 +79,8 @@ Every requirement traces to its source. Behavior-affecting ambiguity is resolved
 
 For a consequential BR/QS/OC overlap, seek an in-scope timing or failure sequence that passes each artifact's isolated check but violates the **combined** promise. Challenge cancellation versus restart, old authorization versus a new attempt, and progress versus safety only where grounded in the actual scope. Adjudicate against accepted authority and explicit provenance, never a priority assigned to artifact type; distinguish a resolvable Specifier inconsistency from a product-owned semantic gap. Critic reports the counterexample and owner, not a rewritten contract or mandatory new gate.
 
+For substantial specification QA, use `behavioral-spec`'s `QA.md` when available; this adds domain-specific attack methods, not another mandatory Critic dispatch or approval stage.
+
 ### Architecture
 
 - Every mandatory requirement is satisfied, deliberately deferred, or visibly blocked.
