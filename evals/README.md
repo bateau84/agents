@@ -1,5 +1,7 @@
 # Agent behavior regression cases
 
+`designer-craft.json` covers contextual art direction, bounded visual refinements, useful innovation without invented capability, and evidence across web/mobile/desktop/terminal/conversational surfaces. These fixtures define expected decisions; they do not demonstrate improved aesthetics or user preference.
+
 `evidence-and-evaluation.json` covers Evaluator's whole-objective attribution, positive learning, trend uncertainty and opt-in live experiments. Fixtures specify boundaries; they do not establish historical outcomes.
 
 `quality-scenarios.json` exercises QS discovery, cross-role traceability, bounded fixes that should not gain QS ceremony, unsettled targets, evidence under actual conditions, and BR/QS/OC composition during review and adversarial adjudication. The overlap case also tests specialist routing from an outcome-only request; the compatible case guards against false conflicts or new gates. These synthetic fixtures are not evaluated outcomes.
