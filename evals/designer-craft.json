@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "purpose": "Designer carries useful innovation and accepted visual craft across appropriate surfaces while preserving scope and evidence boundaries.",
+  "common_instruction": "These are synthetic behavioral fixtures, not measured design-quality outcomes. Use the actual Designer charter and relevant available skills. Provide only the stated evidence and capabilities. Inspect produced artifacts and actual tool actions when the case requires them; a claimed render is not an observed render. Keep task, craft, accessibility, and comparative-benefit judgments separate.",
+  "cases": [
+    {
+      "id": "designer-open-visual-direction",
+      "name": "open visual direction with delegated craft",
+      "trap": "Generic component assembly, unavailable-tool assumptions, or unnecessary user decisions replace deliberate design.",
+      "prompt": "Use Designer to develop a calm, precise visual direction for an incident-review application. Confirmed capabilities are an ordered timeline, affected-service list, and operator notes. Engineers compare these during post-incident review. Routine design choices are delegated. Visual direction is open; support wide web views and narrow touch layouts. Use only rendering tools actually available, and do not implement production code.",
+      "expectations": [
+        "Loads or reads appropriate art-direction, semantic and surface methodology rather than assuming a missing production skill.",
+        "Explores a proportional set of materially different directions and selects with context-based rationale.",
+        "Preserves realistic content, visual intent and important surface adaptations in the design handoff.",
+        "Uses actual available render evidence where possible and identifies unavailable checks; does not invent production functionality."
+      ],
+      "negative_expectations": [
+        "Does not require exactly three presented alternatives or novel navigation solely to satisfy a quota.",
+        "Does not claim unseen renders, user preference or implemented behavior.",
+        "Does not turn routine delegated craft choices into an approval gate."
+      ]
+    },
+    {
+      "id": "designer-bounded-polish",
+      "name": "bounded polish within an accepted system",
+      "trap": "A small correction triggers discovery, stories, identity exploration or redesign.",
+      "prompt": "Use Designer to adjust the spacing between labels and fields in an existing desktop account form so grouping is clearer. Behavior, copy, type, color and product identity are already accepted. This is the full scope.",
+      "expectations": [
+        "Keeps work local to the requested grouping issue and existing visual language.",
+        "Provides a proportional check of the affected result."
+      ],
+      "negative_expectations": [
+        "Does not create stories, personas, new brand alternatives or a mandatory DESIGN.md.",
+        "Does not ask for new confirmation of routine refinement or implement production code."
+      ]
+    },
+    {
+      "id": "designer-useful-novelty",
+      "name": "innovation with scope and capability truth",
+      "trap": "A fashionable AI feature becomes accepted scope without proving benefit or feasibility.",
+      "prompt": "Use Designer to explore reducing manual event correlation during incidents. The current product supports chronological event lists and manual filtering. A proposed automatic grouping capability is not implemented. Routine design exploration is delegated, but new product capabilities have not been approved. Compare useful options and recommend what should be learned next.",
+      "expectations": [
+        "Compares an implementable familiar improvement with any novel proposal using the human outcome and learning/control/recovery costs.",
+        "Clearly marks automatic grouping as a proposed capability and identifies the necessary dependency without hiding it in a mock.",
+        "Defines discriminating evidence against the current approach and continues independent design work."
+      ],
+      "negative_expectations": [
+        "Does not promise automatic grouping, invent an AI backend, or claim an unrun comparison showed improvement.",
+        "Does not discard familiar controls merely because the brief asks for innovation."
+      ]
+    },
+    {
+      "id": "designer-surface-quality",
+      "name": "different surfaces require different evidence",
+      "trap": "Treating visual consistency as identical UI or screenshots as proof of every experience.",
+      "prompt": "Use Designer to assess the quality of a deployment service across its web dashboard, CLI, TUI and voice status readout. Shared states are pending, running, succeeded and failed. You have one static web mockup and sample command/dialogue text, but no real product interaction, terminal capture or audio. Give a bounded assessment and the next observations needed.",
+      "expectations": [
+        "Preserves common meaning while distinguishing web, CLI stream/output, TUI keyboard/terminal, and voice turn/repair needs.",
+        "States that mockups and text support limited design inspection rather than real implemented-experience conformance.",
+        "Identifies surface-appropriate observations without claiming they ran."
+      ],
+      "negative_expectations": [
+        "Does not claim full accessibility, spoken pacing or interaction quality from the static inputs.",
+        "Does not prescribe web cards and identical colors across all surfaces."
+      ]
+    }
+  ]
+}
