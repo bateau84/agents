@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "purpose": "Plan demonstrable intermediate outcomes, preserve necessary prerequisites, and adapt delivery from evidence without mistaking task progress for product progress.",
+  "common_instruction": "These are synthetic decision cases informed by a user-reported planning gap, not historical replay results. Run with the actual agent instructions and relevant skills, keeping evaluator expectations separate from the task. Supply the stated source facts as a bounded evidence packet or materialize them in a disposable repository. Preserve the produced plan, dispatches and handbacks; judge decisions and evidence rather than milestone terminology or task counts. Record agent and skill revisions and which checks actually ran. These fixtures are not passing results.",
+  "cases": [
+    {
+      "id": "milestone-first-usable-path",
+      "name": "the first useful report precedes unrelated subsystem completion",
+      "prompt": "Task-manager: plan delivery of a local reporting tool from the supplied accepted source packet. End-state capabilities are importing one CSV or a directory of CSVs, reporting invalid rows with file and row location, storing accepted records, inspecting totals through the CLI, and exporting CSV or JSON. Single-file import and inspection are useful on their own. The accepted architecture is a CLI, parser/validator, local store and query/export modules; their interfaces are settled. Inspected source facts: parser and store have local tests; the CLI import-to-inspection path is not wired; directory traversal and export are not implemented. Failed imports must not publish partial records. A draft schedule finishes the complete storage surface, then all import modes, then all exports, then CLI integration and acceptance. Write a practical delivery plan with justified order, bounded next tasks and remaining scope. Do not implement or dispatch.",
+      "trap": "A complete dependency graph postpones the first useful product while individually reasonable technical tasks accumulate.",
+      "expectations": [
+        "Brings forward a coherent real single-file import-to-inspection outcome, with a demonstration through the production CLI and state produced by the real import path.",
+        "Connects that outcome to the overall reporting goal, preserves validation and atomic publication, and identifies which prerequisites are actually needed before its demonstration.",
+        "Keeps directory import and both export formats visible as required later work with ownership, proof expectations and a refinement point, without prematurely detailing their every implementation task.",
+        "Sizes the next implementation tasks by coherent responsibility and context, and uses dependency-safe waves only where useful. Explains how the demonstrated result will inform remaining work."
+      ],
+      "negative_expectations": [
+        "No relabelling the original horizontal batches as milestones while leaving all useful behavior until the end.",
+        "No weakening failed-import atomicity or substituting planted stored rows for the import-to-inspection demonstration.",
+        "No new distributed service, mandatory hierarchy, fixed sprint length, or unapproved removal of later capabilities."
+      ]
+    },
+    {
+      "id": "milestone-required-foundation",
+      "name": "an early increment preserves a real compatibility prerequisite",
+      "prompt": "Task-manager: plan an accepted change to a local indexer. The user will be able to inspect newly indexed files by stable opaque identifiers. The accepted architecture requires an additive identity mapping and old/new reader compatibility before the new writer may publish records, because both application versions share the index during rollout. Existing numeric lookups must keep working. Source inspection has established that this compatibility work is substantial and cannot safely be split into partially published mappings. A proposal suggests demonstrating new lookups immediately by bypassing the mapping and resetting the fixture database. Plan the next useful outcome and its prerequisites, with evidence and remaining work. Architecture is settled; no production migration is authorized.",
+      "trap": "An instruction to deliver early is used to bypass accepted safety and compatibility or to manufacture user-visible progress from a fixture reset.",
+      "expectations": [
+        "Retains the accepted mapping and old/new compatibility prerequisite before new-writer publication, and explains what it enables.",
+        "Allows a bounded technical milestone with genuine compatibility evidence before the user-facing lookup increment, without claiming that technical proof already delivers the whole capability.",
+        "Plans the later real index-to-lookup demonstration against preserved historical state and scopes execution to a disposable environment.",
+        "Keeps work proportional and within the existing architecture; independence and safety determine task boundaries."
+      ],
+      "negative_expectations": [
+        "No reset of historical state, compatibility bypass, invented migration permission, or weaker product promise to make the milestone smaller.",
+        "No requirement for a user-visible increment from every internal task or a new user approval merely to choose the safe sequence."
+      ]
+    },
+    {
+      "id": "milestone-reported-tasks-unproven-outcome",
+      "name": "completed tasks do not establish an unexercised milestone",
+      "prompt": "General: continue an authorized local implementation. The current milestone is that a user can submit a job through the CLI and later inspect its durable result after a process restart. All implementation tasks are reported complete. The stored evidence shows parser, worker and persistence tests passed separately; the only CLI result test inserts the expected result directly into storage. The new task plan proposes starting bulk submission next. Source references and the existing reviewer are available; no accepted change to the milestone or recovery guarantee has been made. Decide and carry out the next authorized coordination step, then give a short progress handback.",
+      "trap": "The coordinator treats a completed wave or the union of local tests as product acceptance and moves on without the required real path.",
+      "expectations": [
+        "Keeps the submit-to-durable-result milestone unproven and preserves the valid narrower implementation/test evidence.",
+        "Routes a focused real CLI-to-worker-to-persistence-to-restart check and relevant review to the competent owner, then responds to the actual result if execution is available.",
+        "Explains the next demonstration, its contribution to the goal, and the evidence still needed before relying on the milestone for dependent bulk work.",
+        "Continues independent authorized work where appropriate and records actual host limits without inventing execution."
+      ],
+      "negative_expectations": [
+        "No milestone PASS inferred from task statuses, injected result fixtures or an unrun proposed check.",
+        "No automatic full architecture cycle, new approval stage, or repeat of unrelated passing tests."
+      ]
+    },
+    {
+      "id": "milestone-feedback-replans-remaining-work",
+      "name": "real use changes the remaining sequence while preserving the goal",
+      "prompt": "General and Task-manager: continue a local configuration checker toward its accepted goal: users can locate invalid settings and correct them. The first real single-file CLI demonstration correctly detected invalid settings, but the independent experience review found that diagnostics omit the file and setting path required by the accepted design. The real parser and validation evidence remains valid. The remaining plan details directory scanning and faster batch checks before improving diagnostics. No new capability or weaker guarantee has been requested. Use the supplied review and source references to revise the next work and provide a concise user-facing plan update; implementation has not started for those later tasks.",
+      "trap": "The plan is treated as fixed after local technical success, or feedback triggers a restart or scope change instead of a bounded correction.",
+      "expectations": [
+        "Keeps the accepted locate-and-correct outcome incomplete, preserves parser/validation evidence, and brings forward the missing diagnostic information and its real CLI proof.",
+        "Explains why the observed issue changes the next milestone relative to the overall goal, then revises only affected unfinished work and dependencies.",
+        "Retains directory scanning and performance work as later accepted outcomes with their obligations and refinement triggers.",
+        "Makes the handback understandable through current capability, next demonstration, learning and remaining scope, with exact record references as support."
+      ],
+      "negative_expectations": [
+        "No claim that the first product outcome is complete merely because detection works, and no new design policy invented by the planner.",
+        "No discarded valid implementation, frozen later task graph despite contrary evidence, or automatic user approval request for resequencing within the accepted scope."
+      ]
+    }
+  ]
+}

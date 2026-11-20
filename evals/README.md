@@ -1,5 +1,7 @@
 # Agent behavior regression cases
 
+`milestone-delivery.json` covers early usable increments, necessary technical prerequisites, milestone evidence beyond task status, and replanning from actual use. Run the existing `strategy-local-fix` case alongside it to check that small changes do not acquire milestone ceremony. These cases define expected decisions, not demonstrated improvements in delivery speed or historical diagnoses.
+
 `designer-craft.json` covers contextual art direction, bounded visual refinements, useful innovation without invented capability, and evidence across web/mobile/desktop/terminal/conversational surfaces. These fixtures define expected decisions; they do not demonstrate improved aesthetics or user preference.
 
 `evidence-and-evaluation.json` covers Evaluator's whole-objective attribution, positive learning, trend uncertainty and opt-in live experiments. Fixtures specify boundaries; they do not establish historical outcomes.

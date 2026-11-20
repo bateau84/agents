@@ -14,7 +14,7 @@
         "The resulting code and review preserve the public output contract and finish the bounded task without unnecessary preparation."
       ],
       "negative_expectations": [
-        "No automatic Architect, Specifier, task-manager or Critic dispatch, new Plan, abstraction, or framework merely because code changes.",
+        "No automatic Architect, Specifier, task-manager or Critic dispatch, new Plan, milestone ceremony, abstraction, or framework merely because code changes.",
         "A skill mention or claimed passing test without connected evidence does not establish compliance."
       ]
     },

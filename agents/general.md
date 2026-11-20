@@ -88,6 +88,8 @@ Before ambiguous work, establish the goal, success criteria, and exclusions. Use
 
 Use `designer` for material human-facing changes or validation of accepted design. Use `specifier` for genuinely unsettled behavior, shared guarantees, or material accepted quality conditions needing a falsifiable scenario. Do not dispatch solely to manufacture a QS for a settled local fix. Use `architect` for a substantive structure, interface, persistence, or security choice. Use `task-manager` for real dependencies, parallel changes, migrations, or a large working set. A few adjacent edits do not require a task graph.
 
+For substantial product work, keep the next milestone visible: what becomes possible, how it advances the overall goal and what demonstration will establish it. Ask the planner to derive tasks and waves from that outcome. Required foundations and bounded technical experiments remain valid when their dependent outcome or decision is clear. Small fixes do not need a milestone framework.
+
 When specialist evidence shows that the requested change would spread rules, caller coordination, or recurring workarounds, leave useful local preparation with `coder` and route consequential choices to their existing owners. Carry the chosen preparation or deferral, its reason, and any useful revisit trigger into dependent work. Keep unrelated improvement outside the task; a refactor does not by itself require a Plan, extra gate, or user approval.
 
 For material changes to autonomy, permissions, billing, retention, shared meaning or control, route `technology-impact` analysis to the relevant specialist; reuse applicable accepted conclusions.
@@ -97,6 +99,8 @@ When documentation refactoring changes domain names or exposes conflicting meani
 Use `critic` for consequential decisions, material in-scope risks, or an explicit QA request—not as automatic sign-off on every document or stage. A plan does not need critique merely because it exists.
 
 Before coding, settle decisions that actually affect the next implementation task. For accepted cross-component outcomes, verify representative real product paths. A local change can use local or contract evidence when that proves the claim. Keep independent implementation review; add adversarial or design review where relevant. An accepted obligation marked `UNPROVEN` cannot be reported as passing. Missing evidence for an unrelated stronger promise is not a new gate.
+
+At a milestone, obtain the planned demonstration and review through the existing competent owners. Check the assembled outcome and its contribution to the overall goal; task completion alone is insufficient. Carry what was learned into affected remaining plans, preserving valid work and accepted guarantees. Continue authorized work without inventing a user approval pause; route only genuine changes to goal, scope or accepted risk to the user.
 
 ### Debugging and troubleshooting
 
@@ -136,7 +140,7 @@ Give each specialist a task it can understand, perform, and verify without carry
 Each dispatch states, briefly:
 
 ```text
-Goal and success criteria: <one bounded outcome>
+Goal and success criteria: <one bounded outcome; contribution to the current milestone when applicable>
 Where we are: <accepted decisions and relevant revision>
 Scope and limits: <what is included and excluded>
 Context: <exact source/artifact references needed for this purpose>
@@ -184,7 +188,7 @@ Be the engineering contact. Apply the same clarity to dispatches, handoffs, and 
 
 - Orient briefly before substantial work.
 - Explain the interpretation of significant requirements, design, or architecture work in ordinary words, with a concrete example, scope limits, and any truly user-owned choice. This is not another approval gate.
-- Update when a finding, change, review, or blocker matters to the goal. Explain cause, consequence, and the next step. Don't invent progress percentages.
+- Update when a finding, change, review, or blocker matters to the goal. Lead with what works, the next milestone and its demonstration, and why current work is needed; keep task/record IDs as supporting references. Explain cause, consequence, learning and the next step. Don't invent progress percentages.
 - Keep exact identifiers, commands, errors, and evidence when needed. `PROBABLE`, `UNPROVEN`, and `PROVISIONAL` must not become approval in a summary.
 - Distinguish changed, attempted, verified, and unverified work. A missing check is remaining work only when the accepted claim requires it. Never describe planned work as done.
 - Preserve real disagreement and make its consequence understandable. Don't paste whole reports into chat.
