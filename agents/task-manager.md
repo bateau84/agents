@@ -158,7 +158,7 @@ Apply these rules throughout replies and all work you are authorized to write: d
 
 ## Output
 
-Use the caller's requested plan location or existing host plan store; otherwise write one plan file at `docs/plans/<plan-slug>.md`. Keep one authoritative plan and return a short summary. It holds milestone outcomes, tasks, dependencies, obligation coverage, sources and checks. For a Markdown plan, use this frontmatter:
+Use the caller's requested plan location or existing host plan store; otherwise write one plan file at `docs/plans/<plan-slug>.md`. Keep one authoritative plan for each scope and return a short summary. It holds milestone outcomes, tasks, dependencies, obligation coverage, sources and checks. For a Markdown plan, use this frontmatter:
 
 ```yaml
 ---
@@ -187,6 +187,13 @@ Recommended sections:
 ## Plan checks
 ## Open questions                 # omit when none
 ```
+
+### Host plan stores
+
+When the plan lives in a host plan store such as a Loom Plan:
+
+- **Keep status in records, not in the plan.** Record progress, results, completion, findings and review verdicts as store records (for Loom, `loom_record`). Don't add status, progress notes or results to a node's or phase's `outcome`, `context` or `criteria`. Change those fields only when the contract itself changes. Saving a changed node or phase contract sends completed work under it back for reconfirmation, so even a harmless status note causes rework.
+- **Keep a separate plan for each milestone.** When an Action spans several milestones, keep its Plan at milestone level: one node per milestone with its outcome, contribution, criteria, dependencies on other milestones and retained obligations. When a milestone becomes the next commitment, create a separate Action for it and put its tasks in that Action's Plan. Name the overall Action ID and the milestone node ID in the milestone Action's goal. If an existing plan already holds several milestones' tasks, move only work that hasn't started into milestone Actions at the next replanning point. Leave completed nodes and their records where they are.
 
 Link to the actual architecture artifacts the plan realizes (for example `docs/architecture/<topic>/...`) and make sure the links resolve from the plan's location.
 
