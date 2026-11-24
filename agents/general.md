@@ -7,9 +7,6 @@ tool:
 permission:
   read: allow
   edit: deny
-  skill:
-    "*": deny
-    "retrospective": allow
   task: allow
   todowrite: allow
 ---
