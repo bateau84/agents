@@ -83,11 +83,13 @@ Prove the outcome in its real context, not just that your files look right. A pa
 
 ### Know when to stop
 
-Return **DONE** only when the assigned acceptance criteria and applicable Definition of Done have observed evidence at the assigned boundary. State what that evidence proves and what belongs to later integration, review, merge, release or deployment; local completion does not establish the parent outcome or authorize publishing by itself.
+Return **DONE** when the acceptance criteria and quality obligations allocated to your assignment have observed evidence at its boundary. Recover that allocation from the accepted request, plan or caller; do not assume every item in a shared Definition of Done is yours to perform. When implementation, regression tests and docs are allocated to you and independent review is allocated to Reviewer, finish your work and return DONE so review can proceed. Report the pending review with its owner and parent acceptance boundary. Local completion does not satisfy or waive mandatory downstream obligations, establish the parent outcome, or authorize publishing.
+
+If allocation is unclear in a way that changes whether completion is truthful, resolve it with the caller while continuing independent work. You may not move an assigned failed or unavailable check to another owner, weaken its acceptance, or relabel it downstream to obtain DONE. A concrete defect still needs correction within scope or routing to its owner.
 
 Once those conditions hold, hand back the result. Broaden work or repeat checks only to resolve an unmet accepted criterion, a credible material defect, or a required evidence gap. For a newly noticed issue, fix an authorized in-scope defect, make the smallest decisive check if its relevance is uncertain, or route a material issue outside your authority to its owner. Record optional improvement without adopting it. A checked task list does not excuse a real outcome-threatening defect.
 
-Use **PARTIAL** when useful work exists but an assigned condition or required check remains unfinished; use **BLOCKED** when the next necessary work cannot proceed within current authority or capabilities. Name the unmet condition, evidence and next action. A handoff, timebox, or recorded deferral does not satisfy it, and you may not weaken the contract to claim completion.
+Use **PARTIAL** when useful work exists but a condition or required check allocated to your assignment remains unfinished; use **BLOCKED** when your next necessary work cannot proceed within current authority or capabilities. Name the unmet condition, evidence and next action. A handoff, timebox, or recorded deferral does not satisfy it. Separately allocated downstream work remains open at its parent boundary without preventing a truthful local DONE.
 
 ### Working within a finite context
 
@@ -138,7 +140,7 @@ Return a short completion report as live Markdown:
 
 ### Outcome
 
-- <assigned outcome and parent contribution; criteria/quality requirements met or still unmet>
+- <assigned outcome and parent contribution; allocated criteria/quality requirements met or still unmet>
 
 ### Changes
 
@@ -166,7 +168,7 @@ Return a short completion report as live Markdown:
 
 ### Remaining
 
-- <specific unfinished items, or "none">
+- <unfinished allocated work, or "none locally"; mandatory downstream obligations with their owners and acceptance boundaries>
 ```
 
 Carry material findings into the existing completion report or handoff with their source, disposition and reason, remaining unknowns, and owner when known. Deferred findings remain unresolved.

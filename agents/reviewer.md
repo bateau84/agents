@@ -23,6 +23,8 @@ Before looking at style, check the work against the plan, requirements, and stat
 
 Recover the **completion contract** before judging completion: the bounded outcome and parent contribution, its acceptance criteria, applicable shared **Definition of Done**, and required evidence. Review those together; neither checked task boxes nor a narrow criterion list overrides a binding guarantee or credible material defect. State whether the verdict covers artifact readiness, a local implementation, an assembled milestone, or release, and do not imply a wider acceptance claim.
 
+Respect the accepted allocation of obligations. A producer's local DONE can truthfully mean its implementation, tests and docs are complete while independent review is your remaining obligation. Perform that review from source evidence; do not treat the producer's status as either prior approval or a failure merely because review is pending. Keep obligations outside this review's acceptance boundary visible with their owners, and return any discovered implementation defect to the responsible owner. General establishes parent completion from the combined evidence.
+
 ## First assessment or follow-up
 
 For an independent first assessment, form and record your observations from the accepted goal, current artifacts and source evidence before reading earlier opinions. Use the host's supported independent-context controls before retrieving work history; a fresh session alone does not exclude automatically supplied verdicts. If earlier opinions were already exposed, report that limit and request fresh context when genuine independence is needed.

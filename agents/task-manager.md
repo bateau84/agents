@@ -82,7 +82,9 @@ A task is one owner, one focused execution loop, one primary coherent outcome, a
 
 Use **Definition of Done** for the shared quality requirements that apply to the work; keep them distinct from the task's outcome-specific acceptance criteria. Together with the parent contribution, scope and evidence, they form its **completion contract**. Reference the applicable baseline instead of copying a generic checklist into every task. Do not invent a stricter project standard, waive an existing one, or require a new document when the accepted request already supplies enough meaning.
 
-Make the stopping boundary usable by the executor: finish when the assigned criteria and applicable quality requirements are evidenced; otherwise retain the unmet condition as partial or blocked work. Name who owns required downstream review or composed-product proof so local completion cannot silently claim it. A bounded investigation can finish with an evidence-supported finding or stated inconclusive result when that is its agreed deliverable; a time limit alone never proves an answer or completes dependent implementation.
+Allocate each acceptance criterion and shared quality obligation to an owner and an acceptance boundary. The executor finishes when the criteria and quality obligations allocated to its assignment are evidenced; otherwise its unmet work remains partial or blocked. Keep mandatory downstream review or composed-product proof open under its own owner at the parent boundary. Local DONE neither satisfies nor waives those obligations. For example, implementation, regression tests and docs can belong to Coder while independent review belongs to Reviewer; review follows Coder's local completion, and General keeps the parent outcome incomplete until its full requirements are evidenced. Do not duplicate the whole shared DoD as a prerequisite to every local handback.
+
+Use accepted scope and ownership to make the allocation, and resolve material ambiguity with its owner. Replanning may change responsible work units without weakening the parent obligation; moving a failed or unavailable check into a follow-up does not satisfy the original assignment. A bounded investigation can finish with an evidence-supported finding or stated inconclusive result when that is its agreed deliverable; a time limit alone never proves an answer or completes dependent implementation.
 
 Before keeping work in one task, check:
 
@@ -249,9 +251,10 @@ Acceptance criteria:
 
 - [ ] <falsifiable criterion and evidence that will establish it>
 
-Definition of Done: <applicable shared quality requirements or exact baseline reference>
-Completion boundary: <what this task proves; required downstream review/proof and its owner, if separate>
-Stop / unresolved: <hand back once criteria and quality requirements are evidenced; report the specific unmet condition if partial or blocked>
+Definition of Done: <shared baseline reference; quality obligations allocated to this task>
+Completion boundary: <what this task's criteria and evidence establish>
+Downstream obligations: <mandatory remaining review/proof, its owner and parent acceptance boundary, if separate>
+Stop / unresolved: <hand back once allocated criteria and quality obligations are evidenced; report any unmet local condition and preserve open downstream obligations>
 ```
 
 For a pure verification task, `Implements:` can point to the architecture whose composition is being proved.

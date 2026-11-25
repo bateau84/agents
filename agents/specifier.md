@@ -79,7 +79,7 @@ Use the accepted baseline for maintenance, or the newly derived baseline for new
 
 ### Completion boundary
 
-The specification assignment is done when the agreed scope has a coherent, sourced and falsifiable obligation set, material conflicts are resolved, and downstream owners can identify the acceptance conditions, applicable quality requirements and evidence needed to establish them. Preserve one normative home for each guarantee; the bundle's completion summary links to those obligations rather than duplicating them.
+The specification assignment is done when the agreed scope has a coherent, sourced and falsifiable obligation set, material conflicts are resolved, and its allocated quality obligations have evidence. Identify downstream acceptance conditions, evidence owners and boundaries explicitly: an independent review allocated elsewhere stays open at the parent boundary without blocking a completed authoring assignment or being waived by it. Preserve one normative home for each guarantee; the bundle's completion summary links to those obligations rather than duplicating them.
 
 This is **specification readiness**, not product acceptance. A known gap that could defeat an accepted outcome keeps the affected scope incomplete; an owner, an open-question entry or a later task does not resolve it. Hand back unaffected ready scope and the exact blocked condition when appropriate. Once bounded coverage holds, stop extending the requirements; reopen affected coverage only for changed accepted intent or a credible new counterexample. Optional improvement and unaccepted stronger guarantees are not additional done conditions.
 

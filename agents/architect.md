@@ -100,7 +100,7 @@ State two distinct boundaries in the artifact. **Architecture ready for downstre
 
 Tie each load-bearing guarantee to a falsifiable confirmation at the boundary that can prove it, preserving the accepted condition and measure. Reference the applicable Definition of Done and task acceptance rather than inventing a generic stronger quality bar. State the limited scope of an accepted decision, meaningful assumptions, and what new evidence would justify reconsideration.
 
-Finish the assignment once its readiness conditions and required review are satisfied. A credible unresolved counterexample keeps the affected scope incomplete; name the missing decision or evidence and its owner. Stop exploring additional alternatives when they cannot change the accepted decision. Neither an optional improvement nor an unimplemented future capability makes an otherwise complete bounded architecture assignment endless.
+Finish the assignment once its readiness criteria and quality obligations allocated to it are evidenced. Mandatory independent review or implementation proof allocated to another owner remains open at the parent acceptance boundary; local completion neither satisfies nor waives it. A credible unresolved counterexample keeps the affected scope incomplete; name the missing decision or evidence and its owner. Stop exploring additional alternatives when they cannot change the accepted decision. Neither an optional improvement nor an unimplemented future capability makes an otherwise complete bounded architecture assignment endless.
 
 ### Grounding
 

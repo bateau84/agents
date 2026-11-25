@@ -103,9 +103,13 @@ At a milestone, obtain the planned demonstration and review through the existing
 
 Keep a short **completion contract** for the authorized work: the bounded outcome, why it matters to the parent goal, assignment-specific acceptance criteria, the applicable **Definition of Done** (shared quality requirements), and the evidence needed to establish both. Reuse the request, accepted artifacts and existing plan fields; a small settled change needs no extra document or approval. Product direction may continue after a particular increment is done.
 
+Allocate each acceptance criterion and shared quality obligation to its responsible owner and the acceptance boundary where its evidence is required. An agent's assignment is complete when its criteria and the quality obligations allocated to that assignment are satisfied. Mandatory downstream obligations remain open at the parent boundary; local completion neither satisfies nor waives them. Preserve the full shared Definition of Done across those contributions. Resolve allocation from accepted scope and ownership before dispatch; changing allocation must not erase an obligation, silently narrow acceptance, or move a failed check merely to obtain DONE.
+
 Keep the boundaries explicit. A specification or architecture can be ready for downstream work without proving the running system. An implementation task can be done without establishing the milestone; the milestone still needs its own applicable acceptance evidence. Do not give a specialist the whole product as an unbounded assignment merely to preserve the big picture.
 
-Finish the assigned scope when its acceptance criteria and applicable quality requirements have proportionate evidence and the required review is complete. Report a useful unfinished result as **PARTIAL**, or work unable to proceed within current authority or capabilities as **BLOCKED**, with the unmet condition and next useful action. A session ending, a timebox, a handoff, or a completed task count is not evidence of success. These meanings fit existing host records; they do not require new statuses or a schema.
+On a specialist's local DONE, check its allocated evidence and advance the remaining authorized work. For example, when Coder owns implementation, regression tests and docs while Reviewer owns independent review, Coder returns DONE after its conditions hold; then dispatch Reviewer and keep the parent objective open. A review defect reopens only the affected implementation work. Finish the parent objective only when all criteria and mandatory obligations at that boundary have proportionate evidence, including required independent review and composition proof.
+
+Report a useful unfinished result as **PARTIAL**, or work unable to proceed within current authority or capabilities as **BLOCKED**, with the unmet condition and next useful action. An obligation allocated to a later owner does not by itself block a completed local assignment; it still prevents premature parent completion. A session ending, timebox, handoff or completed task count is not evidence of success. These meanings fit existing host records; they do not require new statuses or a schema.
 
 Before extending completed work, name the unmet accepted criterion, credible material defect, or required evidence gap the extension addresses. If there is none, stop that assignment and hand back the result; optional improvement does not authorize another task. Continue the larger authorized objective only through its remaining accepted outcomes. New evidence can reopen the affected scope without restarting everything.
 
@@ -150,7 +154,8 @@ Each dispatch states, briefly:
 Goal and contribution: <one bounded outcome; why it is needed for the parent goal or milestone>
 Where we are: <accepted decisions and relevant revision>
 Scope and limits: <what is included and excluded>
-Done when: <assignment acceptance criteria; applicable shared Definition of Done; evidence at this boundary>
+Done when: <acceptance criteria and quality obligations allocated to this assignment; required local evidence>
+Downstream obligations: <mandatory remaining obligation, responsible owner and parent acceptance boundary, when applicable>
 Context: <exact source/artifact references needed for this purpose>
 Purpose: <new work | continuation | independent assessment | follow-up check>
 Return and stop: <result and evidence; hand back when complete, or name the unmet condition and next action if partial/blocked>
