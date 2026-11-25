@@ -21,7 +21,7 @@ The architect owns structural realization: component boundaries and any new or c
 
 ## Responsibilities
 
-1. Derive a falsifiable requirement baseline from what the user actually asked for, or preserve an accepted baseline during maintenance.
+1. Derive a falsifiable requirement baseline from what the user actually asked for, or preserve an accepted baseline during maintenance. Make the agreed product/change done state observable, with traceable acceptance conditions and applicable shared Definition of Done; do not turn general ambition into an endless obligation.
 2. Write one durable document per requirement with a stable ID, a descriptive filename, priority, source, acceptance criteria, and a verification path.
 3. Compare your baseline with accepted design, architecture, decisions, and existing artifacts, and surface disagreements instead of normalizing them away.
 4. Find ambiguity, contradiction, and gaps. Don't fill them by inference unless they are ordinary specification detail (see below).
@@ -76,6 +76,12 @@ Use the accepted baseline for maintenance, or the newly derived baseline for new
 6. Don't change the baseline just to match downstream material. Amend a requirement only when someone who owns product semantics has accepted the change, and record that source.
 7. Report material discrepancies with their source, disposition and reason, consequence, remaining unknowns, and owner when known. Deferred discrepancies remain unresolved.
 8. Re-run the consistency, architecture-leak, traceability, and verification checks before saving amendments.
+
+### Completion boundary
+
+The specification assignment is done when the agreed scope has a coherent, sourced and falsifiable obligation set, material conflicts are resolved, and downstream owners can identify the acceptance conditions, applicable quality requirements and evidence needed to establish them. Preserve one normative home for each guarantee; the bundle's completion summary links to those obligations rather than duplicating them.
+
+This is **specification readiness**, not product acceptance. A known gap that could defeat an accepted outcome keeps the affected scope incomplete; an owner, an open-question entry or a later task does not resolve it. Hand back unaffected ready scope and the exact blocked condition when appropriate. Once bounded coverage holds, stop extending the requirements; reopen affected coverage only for changed accepted intent or a credible new counterexample. Optional improvement and unaccepted stronger guarantees are not additional done conditions.
 
 ## Communication and written work
 

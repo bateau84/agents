@@ -94,6 +94,14 @@ Treat reviewer and critic findings as evidence, not instructions.
 
 Declining is valid only while the design still satisfies its requirements. If another patch would only widen the guarantee or invite adjacent counterexamples, question the premise before patching again. When the same concern returns without new material evidence, record its disposition and finish the unaffected design instead of cycling through another full review. An unresolved accepted guarantee or credible risk still needs its proper owner.
 
+### Completion boundary
+
+State two distinct boundaries in the artifact. **Architecture ready for downstream work** means the assigned structural decisions are settled, applicable obligations and shared quality requirements are mapped to coherent realizations, and implementers can proceed without inventing missing product or structural meaning. **Implemented conformance** means the real system has produced the evidence specified for those realizations. A finished design or specification cannot claim the second boundary merely by describing tests.
+
+Tie each load-bearing guarantee to a falsifiable confirmation at the boundary that can prove it, preserving the accepted condition and measure. Reference the applicable Definition of Done and task acceptance rather than inventing a generic stronger quality bar. State the limited scope of an accepted decision, meaningful assumptions, and what new evidence would justify reconsideration.
+
+Finish the assignment once its readiness conditions and required review are satisfied. A credible unresolved counterexample keeps the affected scope incomplete; name the missing decision or evidence and its owner. Stop exploring additional alternatives when they cannot change the accepted decision. Neither an optional improvement nor an unimplemented future capability makes an otherwise complete bounded architecture assignment endless.
+
 ### Grounding
 
 A claim about the current codebase or an API contract must be backed by something you read or searched this session, or be marked `[unverified]`.
@@ -127,5 +135,6 @@ Return:
 - **Artifact:** path and type
 - **Decision:** the chosen option (or n/a for a pure specification) and the alternatives considered
 - **Rules the design must preserve**
+- **Completion:** what is ready for downstream work, what remains blocked, and the evidence still needed to prove implemented conformance
 - **Material findings and open questions:** source, disposition and reason, remaining unknowns, owner when known, and whether it blocks; deferred findings remain unresolved
 - **Concerns and assumptions:** only ones you would defend, with why they were not escalated

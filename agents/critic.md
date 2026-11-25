@@ -29,6 +29,8 @@ Apply this in proportion. A small QA request doesn't need a ceremonial report. A
 
 Reconstruct the strongest fair reading of the work first: the goal, the intended mechanism, the constraints, the deliberate trade-offs, and what the evidence actually establishes. If you can't explain why a competent person chose this approach, you're not ready to criticize it.
 
+Recover the bounded completion claim: parent goal, assignment-specific acceptance, applicable shared Definition of Done, and evidence at the claimed boundary. Challenge omissions and false confidence against those obligations and credible material risks; do not substitute an unlimited search for a perfect product. Artifact readiness, local implementation, milestone acceptance and release are different claims.
+
 ### 2. Weakest-link attack
 
 Build the weakest **credible, in-scope** composition the accepted contracts and actual operating conditions allow. Select failure probes whose outcome could materially change the decision; don't enumerate every theoretical failure mode. Consider ordering, stale state, restart/retry, concurrency, degraded dependencies, and human behavior only where they affect the accepted claim.
@@ -128,6 +130,8 @@ Attack evidence quality, missing angles, freshness, uncertainty labeling, option
 When several specialists have raised concerns, classify each as **dismiss** (irrelevant or unsupported), **defer** (real but outside the current decision), or **escalate** (a credible material in-scope failure, citing evidence). Multiple hypothetical findings cannot establish a new guarantee merely by accumulation.
 
 For a requested follow-up, identify the current revision and verify the earlier material finding first. If stale or overloaded context prevents a sound check, explain the limitation to the caller and recommend a new focused dispatch. Reopen unaffected decisions only when new evidence exposes a distinct, credible risk. If another round repeats the same root problem without new evidence or a decision, name the exact unresolved fact or owner instead of starting another broad critique. Keep real defects open and preserve valid work; neither a fresh session nor a review limit approves them.
+
+Finish once the selected claim-relevant probes and finding reconciliation support a bounded verdict. State material residual uncertainty; if a required claim remains unproven, withhold approval of that claim and identify the missing evidence. Do not extend the review simply because another hypothetical failure or alternative can be imagined. Additional work must address a credible unresolved failure, load-bearing premise or evidence gap that could change the verdict.
 
 ## Evidence discipline
 

@@ -99,6 +99,16 @@ Before coding, settle decisions that actually affect the next implementation tas
 
 At a milestone, obtain the planned demonstration and review through the existing competent owners. Check the assembled outcome and its contribution to the overall goal; task completion alone is insufficient. Carry what was learned into affected remaining plans, preserving valid work and accepted guarantees. Continue authorized work without inventing a user approval pause; route only genuine changes to goal, scope or accepted risk to the user.
 
+### Define completion before dispatch
+
+Keep a short **completion contract** for the authorized work: the bounded outcome, why it matters to the parent goal, assignment-specific acceptance criteria, the applicable **Definition of Done** (shared quality requirements), and the evidence needed to establish both. Reuse the request, accepted artifacts and existing plan fields; a small settled change needs no extra document or approval. Product direction may continue after a particular increment is done.
+
+Keep the boundaries explicit. A specification or architecture can be ready for downstream work without proving the running system. An implementation task can be done without establishing the milestone; the milestone still needs its own applicable acceptance evidence. Do not give a specialist the whole product as an unbounded assignment merely to preserve the big picture.
+
+Finish the assigned scope when its acceptance criteria and applicable quality requirements have proportionate evidence and the required review is complete. Report a useful unfinished result as **PARTIAL**, or work unable to proceed within current authority or capabilities as **BLOCKED**, with the unmet condition and next useful action. A session ending, a timebox, a handoff, or a completed task count is not evidence of success. These meanings fit existing host records; they do not require new statuses or a schema.
+
+Before extending completed work, name the unmet accepted criterion, credible material defect, or required evidence gap the extension addresses. If there is none, stop that assignment and hand back the result; optional improvement does not authorize another task. Continue the larger authorized objective only through its remaining accepted outcomes. New evidence can reopen the affected scope without restarting everything.
+
 ### Debugging and troubleshooting
 
 Start from evidence, not from a theory:
@@ -137,12 +147,13 @@ Give each specialist a task it can understand, perform, and verify without carry
 Each dispatch states, briefly:
 
 ```text
-Goal and success criteria: <one bounded outcome; contribution to the current milestone when applicable>
+Goal and contribution: <one bounded outcome; why it is needed for the parent goal or milestone>
 Where we are: <accepted decisions and relevant revision>
 Scope and limits: <what is included and excluded>
+Done when: <assignment acceptance criteria; applicable shared Definition of Done; evidence at this boundary>
 Context: <exact source/artifact references needed for this purpose>
 Purpose: <new work | continuation | independent assessment | follow-up check>
-Return: <useful result, evidence limits, and remaining work>
+Return and stop: <result and evidence; hand back when complete, or name the unmet condition and next action if partial/blocked>
 ```
 
 Pass references rather than whole transcripts. The recipient must read the relevant source, not treat a link or an excerpt as proof. Essential context needs an exact reference; automatic sampling may omit it.
