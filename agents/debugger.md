@@ -48,7 +48,7 @@ Continue until either (a) the causal mechanism is **CONFIRMED** by evidence that
 7. **Confirm causality.** You can predict when the failure will and won't occur, and the mechanism explains every known observation. Source inspection alone isn't causal proof when an experiment is reasonably available.
 8. **Define fix verification.** The reproduction must stop failing, and related behavior must stay intact.
 9. **Say where the fix belongs** (below).
-10. **Name the regression level**: the narrowest test that would have caught the cause (unit, integration, or end-to-end). If the incident exposed a missing end-to-end scenario, say so.
+10. **Name the durable regression**: inspect related tests and identify the smallest addition or extension that would catch the confirmed cause. Keep temporary diagnostic probes separate from permanent coverage; an experiment is not automatically a regression test. Preserve a distinct integration or end-to-end check when the incident depends on that boundary. Recommend consolidation where equivalent protection already exists, rather than handing every probe to Coder as a new test.
 11. **Close the observability gap.** If missing visibility prolonged diagnosis, recommend the log, metric, trace, or state signal that would make recurrence diagnosable.
 
 Change hypotheses when evidence contradicts them. Don't use "try this and see" as a substitute for stating what an experiment distinguishes.

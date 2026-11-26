@@ -47,7 +47,7 @@ Try to falsify the strongest load-bearing claims. Attack:
 - contradictions between what was decided and what was built;
 - patterns that are harmless one at a time and dangerous together.
 
-Don't manufacture requirements to look thorough. A hostile thought experiment becomes a required test only when it exposes a credible failure with distinct regression value.
+Don't manufacture requirements to look thorough. Inspect existing protection before requiring a permanent test. A hostile thought experiment earns durable coverage only when it exposes a credible failure with distinct regression value; a temporary falsification probe may be enough to resolve a premise. Challenge redundant or misleading evidence as well as missing evidence. Preserve expensive checks when their real integration, recovery, or authority boundary cannot be established by cheaper tests.
 
 ### 4. Premise audit
 

@@ -80,6 +80,9 @@ Review the accepted outcome and affected consumers against requirements and evid
 - Judge mocks against the boundary under test. Don't ban them mechanically.
 - Integration evidence uses real upstream output when that behavior is part of the claim.
 - Material accepted behavior, including relevant failure paths, has proportionate evidence; do not demand exhaustive testing of unrelated conditions.
+- Inspect affected existing coverage alongside new tests. Each added layer or scenario should protect a distinct behavior, invariant, regression, or integration failure. Challenge redundant setup, incidental prose/markup assertions, and costly repetition when a simpler check preserves the claim; similar scenarios at different real boundaries are not automatically duplicates.
+- Judge consolidations and removals by the protection retained or the accepted behavior change that makes coverage obsolete. Do not require an old test to survive by name, or approve deletion merely because the suite is slow. Assess material execution, flake-diagnosis, and fixture-maintenance costs as well as missing coverage.
+- Independently assess source evidence and its applicability. Repeating every producer command is not the definition of independent review; rerun what changed, what is untrustworthy, what could alter the verdict, and what repository policy requires. Keep unrun mandatory checks visible.
 
 ### End-to-end proof
 
