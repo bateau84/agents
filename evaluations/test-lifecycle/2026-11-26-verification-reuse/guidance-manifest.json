@@ -1,0 +1,137 @@
+{
+  "files": [
+    {
+      "path": "product-acceptance/ASSESSMENT.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/product-acceptance/ASSESSMENT.md",
+      "sha256": "9f35c597bbb9af7c0423786580dcf5900c3a69735a2276abbc6ecd6d23b903c7"
+    },
+    {
+      "path": "product-acceptance/QA.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/product-acceptance/QA.md",
+      "sha256": "1ced1d9bd1bd9ab407b21e43a29c05669ede6891b35761841cd4a8e28f310972"
+    },
+    {
+      "path": "product-acceptance/SKILL.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/product-acceptance/SKILL.md",
+      "sha256": "25afa32c04a8de5c8d40716dc06c7b78a7dea1a5c15c338d79144d12e7655c6c"
+    },
+    {
+      "path": "product-acceptance/references/proof-and-example.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/product-acceptance/references/proof-and-example.md",
+      "sha256": "993bc8abba9585faf07642bf118819e144f5947f978edc822d400d68bd2b81fc"
+    },
+    {
+      "path": "python-common-practice/ASSESSMENT.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/python-common-practice/ASSESSMENT.md",
+      "sha256": "e4869d11ca8f6facaf699ce3e5eb53ec5ea4254ea622fe359eac036f1af7af31"
+    },
+    {
+      "path": "python-common-practice/QA.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/python-common-practice/QA.md",
+      "sha256": "939ec84308449876ea9a8b6d8c356a4949cd32a78c8df5a007cabd185e7ad15d"
+    },
+    {
+      "path": "python-common-practice/SKILL.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/python-common-practice/SKILL.md",
+      "sha256": "d397d88c400ee7cbb163aa671c326a2559243fe5dc10d94238674955333adec1"
+    },
+    {
+      "path": "python-testing/ASSESSMENT.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/python-testing/ASSESSMENT.md",
+      "sha256": "36fb6b732849b7017bc4ac88606a8920bba5816842b6a9963f8e2e794a0463cc"
+    },
+    {
+      "path": "python-testing/QA.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/python-testing/QA.md",
+      "sha256": "a794113cb814cd837006069d4532f9d4a9ab851bc9b07e476d0180128fbc6041"
+    },
+    {
+      "path": "python-testing/SKILL.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/python-testing/SKILL.md",
+      "sha256": "6ca43d888b9dd148064d510c9c8638d484b43feb4d78c5f4072ccfe4504a3587"
+    },
+    {
+      "path": "reviewer.md",
+      "repository": "bateau84/agents",
+      "revision": "0b7652ca64ad60004b99f831f1e3387b5bc5cd3b",
+      "repository_path": "agents/reviewer.md",
+      "sha256": "582926c3910869f7c64f207cf7a81690ee3f85ad4c479ad0e99fbe241fb79273"
+    },
+    {
+      "path": "software-engineering/ASSESSMENT.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/software-engineering/ASSESSMENT.md",
+      "sha256": "126a9135bd68bdb65aa45b3db181af6726abf8220e20bb836a1987b9e77ba555"
+    },
+    {
+      "path": "software-engineering/QA.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/software-engineering/QA.md",
+      "sha256": "b7193f67a6dfe904ee52455b8221e3dcae1d648b2706c6a2a3ee4e7a91f60178"
+    },
+    {
+      "path": "software-engineering/SKILL.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/software-engineering/SKILL.md",
+      "sha256": "36a9bee677661f929ebd9adbaba406df9955748b230b26dc983be76c70038a0c"
+    },
+    {
+      "path": "test-driven-development/ASSESSMENT.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/test-driven-development/ASSESSMENT.md",
+      "sha256": "9227651a7c45dd0603558584e402900c7abebf532508a02275619ba846780922"
+    },
+    {
+      "path": "test-driven-development/QA.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/test-driven-development/QA.md",
+      "sha256": "9a19457d5736f36779efe7106c81c891bc57245dc5ccd7c0467c1d5a0de2f079"
+    },
+    {
+      "path": "test-driven-development/SKILL.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/test-driven-development/SKILL.md",
+      "sha256": "40fcb2cd01572d7ca93569c6d1c2eaf7ecfce1e421c40afe959ec4839341c994"
+    },
+    {
+      "path": "test-driven-development/references/mutation-testing.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/test-driven-development/references/mutation-testing.md",
+      "sha256": "55f49fc85971b4e54fdd6cda8d974017d164339fba8070ca3446590dd5141c20"
+    },
+    {
+      "path": "test-driven-development/references/test-lifecycle.md",
+      "repository": "bateau84/skills",
+      "revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+      "repository_path": "skills/test-driven-development/references/test-lifecycle.md",
+      "sha256": "e3dfa3bc0db0f5b5628a3b1e5406b2d2d2f452766bc2c79759d1a1f2d491885b"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+test_cli_serializes_the_domain_result (test_api.APIContractTests.test_cli_serializes_the_domain_result) ... ok
+test_minimum_boundary (test_domain.DomainTests.test_minimum_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.066s
+
+OK

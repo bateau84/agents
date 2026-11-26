@@ -1,0 +1,15 @@
+{
+  "revision": "fabd069d3eb6d599b86c7e517faa3e4a14a8dfb0",
+  "clean": true,
+  "tracked_sha256": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "README.md": "da656040d6d1338a2ffc49850447864f9d5abb5fe185280b52b32d17a9092e90",
+    "api.py": "a5e9ededfc541e1d6be2b75cee334929394b52a99d54c0124038b68fd22d9ca7",
+    "domain.py": "d1889f610b70540436a1074c20f3ef56ecd336b90e7ca5ea7fde15a38ed7fd97",
+    "tests/test_api.py": "3525c83471a9e327e4e535d92f6bf4f4c667362e329c5f449affd78100d9d3ea",
+    "tests/test_domain.py": "6acc7bbfc316f2404a08caf3a085685e3dcd56c350503768bac70bc5f22767c8"
+  },
+  "command_count": 10,
+  "trace_sha256": "966b2767b667deaf8dc55cfe76799798ef2fb825f7b40d58308a82471d45eb81",
+  "review_sha256": "4436da09e9254a3d06ead77d4e30e0a483bf3af31cc0155bf48ba84d15c90bb5"
+}

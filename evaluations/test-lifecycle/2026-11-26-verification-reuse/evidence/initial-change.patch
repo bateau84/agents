@@ -1,0 +1,33 @@
+diff --git a/domain.py b/domain.py
+index 4aa6277..8250024 100644
+--- a/domain.py
++++ b/domain.py
+@@ -1,2 +1,2 @@
+ def qualifies(amount: int, minimum: int) -> bool:
+-    return amount > minimum
++    return amount >= minimum
+diff --git a/tests/test_api.py b/tests/test_api.py
+index ccdad01..50f8c18 100644
+--- a/tests/test_api.py
++++ b/tests/test_api.py
+@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
+
+ class APIContractTests(unittest.TestCase):
+     def test_cli_serializes_the_domain_result(self):
+-        for amount, expected in [(9, False), (11, True)]:
++        for amount, expected in [(9, False), (10, True), (11, True)]:
+             with self.subTest(amount=amount):
+                 completed = subprocess.run(
+                     [sys.executable, "-B", str(ROOT / "api.py")],
+diff --git a/tests/test_domain.py b/tests/test_domain.py
+index 2f29dff..4bd1b14 100644
+--- a/tests/test_domain.py
++++ b/tests/test_domain.py
+@@ -3,6 +3,6 @@ from domain import qualifies
+
+ class DomainTests(unittest.TestCase):
+     def test_minimum_boundary(self):
+-        for amount, expected in [(9, False), (11, True)]:
++        for amount, expected in [(9, False), (10, True), (11, True)]:
+             with self.subTest(amount=amount):
+                 self.assertIs(qualifies(amount, 10), expected)
