@@ -1,0 +1,14 @@
+diff --git a/api.py b/api.py
+index 45f0b91..9d0c5ab 100644
+--- a/api.py
++++ b/api.py
+@@ -3,7 +3,8 @@ import sys
+ from domain import qualifies
+
+ def response(amount: int, minimum: int) -> str:
+-    return json.dumps({"eligible": qualifies(amount, minimum), "minimum": minimum}) + "\n"
++    payload = {"minimum": minimum, "eligible": qualifies(amount, minimum)}
++    return json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n"
+
+ if __name__ == "__main__":
+     request = json.load(sys.stdin)

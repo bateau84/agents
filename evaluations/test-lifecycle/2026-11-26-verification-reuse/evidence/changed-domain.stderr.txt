@@ -1,0 +1,6 @@
+test_minimum_boundary (test_domain.DomainTests.test_minimum_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

@@ -22,7 +22,8 @@ If a plan or design exists, use it as context for dependencies, constraints, and
 - **Explicit over implicit.** Make intent clear to the next reader.
 - **Fail loudly.** Surface, log, and handle errors. Never swallow them.
 - **Observable where it matters.** Preserve existing diagnostics and add only the signals needed for changed, load-bearing operational behavior. Do not add logging, metrics, traces, or audit infrastructure merely because a boundary exists. Load `observability` when instrumentation is materially in scope.
-- **Test as you go.** Verify changed behavior and credible regressions. Use `test-driven-development` when test-first work materially helps; do not add an elaborate test process to a trivial change.
+- **Test as you go.** Verify changed behavior and credible regressions. Inspect affected coverage before adding tests; extend an existing case when it can protect the behavior clearly. Use `test-driven-development` for test-first work and test-suite maintenance; do not add an elaborate test process to a trivial change.
+- **Maintain the tests you touch.** Tests are maintained code with execution, diagnosis, and upkeep costs. Prefer the least costly layer that faithfully proves the claim. Consolidate redundant cases and replace brittle assertions within scope, preserving distinct regressions, domain invariants, and integration boundaries. Retire coverage only when equivalent protection remains or an accepted behavior change makes it obsolete; shorter runtime alone is not a deletion reason.
 - **Honest green.** A test must exercise the real code on real input. A fabricated pass (hand-injected state, a mock of the component under test, a skipped hard case) is a gap to report, not a checkmark.
 
 ## Constraints
@@ -67,6 +68,8 @@ After each coherent change, run the cheapest relevant build or test check; expan
 - Python: `python -m pytest <relevant_test>` or `ruff check .`
 - TypeScript: `npx tsc --noEmit` or `npm test`
 
+Keep focused feedback separate from broader integration and required final checks. Reuse recorded evidence only while the relevant code, dependencies, configuration, environment, and claim remain applicable; a passing label alone is insufficient. When test cost is material, record the selected commands and observed duration or known cost in the existing handback. Preserve required repository gates and explain unavailable checks; do not silently skip them to save time.
+
 If it fails, read the error, fix the cause (the code, or a genuinely wrong assertion, never by weakening a correct test or skipping the failing case), and re-run. If repeated attempts add no useful evidence, change the approach or isolate the unresolved cause. Continue authorized corrections that can establish the outcome; report a genuine scope, authority, capability or context boundary with the exact remaining failure. A retry limit cannot make failed work done.
 
 ### Verify before you hand off
@@ -110,7 +113,7 @@ For code-bearing changes, load `software-engineering` before implementation, the
 | Go API/Swagger docs                           | `golang-swagger`                                                                                                                        |
 | Python implementation                         | `python-how-to` (loads the right sub-skills)                                                                                            |
 | Python, focused                               | `python-design-patterns`                                                                                                                |
-| Test-driven workflow (any language)           | `test-driven-development`                                                                                                               |
+| Test-driven workflow or test-suite maintenance (any language) | `test-driven-development`                                                                                                     |
 | Logging/metrics/tracing (any language)        | `observability`                                                                                                                         |
 | Git merge/rebase/cherry-pick conflict         | `git-conflicts`                                                                                                                         |
 | Any task involving a git commit               | `git-commit-discipline`: commit coherent changes; don't force one commit per tiny subtask                                             |

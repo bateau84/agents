@@ -97,6 +97,8 @@ Use `critic` for consequential decisions, material in-scope risks, or an explici
 
 Before coding, settle decisions that actually affect the next implementation task. For accepted cross-component outcomes, verify representative real product paths. A local change can use local or contract evidence when that proves the claim. Keep independent implementation review; add adversarial or design review where relevant. An accepted obligation marked `UNPROVEN` cannot be reported as passing. Missing evidence for an unrelated stronger promise is not a new gate.
 
+Carry applicable verification evidence across handoffs so each specialist need not repeat the same expensive suite. Keep the underlying command, result, revision, and relevant environment available; the receiving specialist judges its applicability and forms an independent verdict. Route test-suite maintenance to Coder when affected coverage is redundant, brittle, or costly, and recurring verification waste to Evaluator when the evidence warrants it. Preserve mandatory gates and unique boundary protection; lower test counts or shorter runs are not the goal.
+
 At a milestone, obtain the planned demonstration and review through the existing competent owners. Check the assembled outcome and its contribution to the overall goal; task completion alone is insufficient. Carry what was learned into affected remaining plans, preserving valid work and accepted guarantees. Continue authorized work without inventing a user approval pause; route only genuine changes to goal, scope or accepted risk to the user.
 
 ### Define completion before dispatch

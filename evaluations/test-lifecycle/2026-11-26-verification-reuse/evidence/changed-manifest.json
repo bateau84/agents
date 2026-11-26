@@ -1,0 +1,37 @@
+{
+  "revision": "ca2a4af768f5f525c09636975b67eeab21afd0b1",
+  "parent_revision": "fabd069d3eb6d599b86c7e517faa3e4a14a8dfb0",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "dependencies": "Python standard library only",
+  "tracked_sha256": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "README.md": "da656040d6d1338a2ffc49850447864f9d5abb5fe185280b52b32d17a9092e90",
+    "api.py": "642468e22f64ba334aa218072f72b85efda6a1fe3b459906eda0a8918190e5ac",
+    "domain.py": "d1889f610b70540436a1074c20f3ef56ecd336b90e7ca5ea7fde15a38ed7fd97",
+    "tests/test_api.py": "3525c83471a9e327e4e535d92f6bf4f4c667362e329c5f449affd78100d9d3ea",
+    "tests/test_domain.py": "6acc7bbfc316f2404a08caf3a085685e3dcd56c350503768bac70bc5f22767c8"
+  },
+  "runs": [
+    {
+      "label": "domain",
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_domain.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "observed_wall_seconds": 0.03653063399997336,
+      "stdout": "changed-domain.stdout.txt",
+      "stderr": "changed-domain.stderr.txt"
+    }
+  ],
+  "other_results": "No API-serialization or full-suite execution exists for this revision at handoff."
+}

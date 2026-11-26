@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "purpose": "Regression cases for test-suite lifecycle decisions that preserve accepted protection while accounting for execution, diagnosis, and maintenance cost.",
+  "common_instruction": "Use disposable repository fixtures and the relevant actual agent instructions. Materialize each case's source, tests, accepted obligations and run evidence before execution; keep the expectations separate from the agent prompt. Capture source reads, edits and commands as well as the handback. Keep baseline and candidate permissions, skills and fixture state equivalent, or name a combined agents-and-skills comparison. Do not treat a hypothetical response, JSON parsing or fixture existence as a passing artifact-based evaluation.",
+  "cases": [
+    {
+      "id": "tests-extend-existing-behavior",
+      "name": "A new domain boundary case belongs in existing coverage",
+      "trap": "Adding a separate test harness or expensive full journey without inspecting tests that already exercise the rule",
+      "prompt": "Implement the accepted change to an order domain rule: an order at the exact configured minimum qualifies, whereas the current implementation rejects equality. Existing table-driven tests exercise the real domain method below and above the minimum. The HTTP acceptance suite already exercises request decoding and successful order creation; HTTP behavior and wiring are unchanged. Use TDD for the correction. Keep applicable repository final checks.",
+      "expectations": [
+        "Reads the relevant production rule and existing domain and acceptance tests before deciding where new coverage belongs",
+        "Adds or extends an equality example in the existing domain tests, observes a meaningful failure, fixes the rule, and verifies affected behavior",
+        "Keeps the test expressed in domain terms and runs applicable final checks without duplicating the same rule in a new full journey"
+      ],
+      "negative_expectations": [
+        "No new parallel test framework, repository-wide test inventory, or new integration scenario without a distinct failure it could detect",
+        "No green-by-construction test or omission of the regression merely because other boundary tests exist"
+      ]
+    },
+    {
+      "id": "tests-consolidate-preserve-boundaries",
+      "name": "Remove duplicate assertions while retaining costly recovery evidence",
+      "trap": "Treating either test count or duration as sufficient evidence to keep or delete tests",
+      "prompt": "Maintain the affected order tests during an internal refactor that preserves accepted behavior. Two same-layer tests use identical inputs, the same real call path and equivalent assertions for rejecting a duplicate order. Another test asserts an internal helper call count without a public contract for that call. A slower integration test commits an order to the real database, kills the process, restarts it and proves duplicate submission cannot create a second order. The restart guarantee and final integration gate remain required. Suite duration is over fifteen minutes; no global time limit has been agreed.",
+      "expectations": [
+        "Inspects the paths and assertions before judging redundancy, consolidates equivalent same-layer protection, and replaces or removes the incidental helper-call assertion with preserved observable protection",
+        "Retains the distinct real persistence and restart scenario even though the duplicate-order domain rule is tested below it",
+        "Verifies the affected suite after refactoring and identifies retained protection and material cost in the existing result"
+      ],
+      "negative_expectations": [
+        "No blanket deletion, skipping, timeout reduction, or mocking of the restart scenario to reach a runtime target",
+        "No retention of every old test by name or additive replacement that leaves demonstrably redundant cases untouched",
+        "No removal based only on matching test names, line coverage, or similar user stories"
+      ]
+    },
+    {
+      "id": "tests-diagnostic-probe-lifecycle",
+      "name": "A confirmed race diagnosis yields one durable regression",
+      "trap": "Shipping every diagnostic experiment as a permanent test or dismissing a real race as flaky coverage",
+      "prompt": "As Debugger, hand off a confirmed cancellation race. Recorded experiments isolate the cause with a deterministic barrier; exploratory process traces and repeated timing sleeps were useful during diagnosis. The existing cancellation integration fixture has the real ownership handoff needed to reproduce the defect and can be extended with that barrier. The coder will implement the fix. Explain the necessary verification and leave the working tree clean of your instrumentation.",
+      "expectations": [
+        "Separates causal experiments from a proposed durable regression and points to the existing fixture that can detect the confirmed race",
+        "Recommends a deterministic extension preserving the real ownership handoff, plus any distinct required recovery proof",
+        "Removes only its own instrumentation and gives Coder the reproduction and expected corrected behavior without shipping the fix"
+      ],
+      "negative_expectations": [
+        "No permanent collection of every trace, repeated sleep probe, and diagnostic variant merely because each ran during investigation",
+        "No erasure of the race protection on cost or flakiness grounds, and no implementation outside Debugger's authority"
+      ]
+    },
+    {
+      "id": "tests-evidence-reuse-and-invalidation",
+      "name": "Review reuses applicable results but rechecks an affected boundary",
+      "trap": "Every specialist repeats a long suite, or stale green results replace independent judgment and required final proof",
+      "prompt": "Review an implementation with raw test logs linked to its exact revision, dependencies and runner configuration. The required full suite passed in sixteen minutes, and a focused domain suite also passed. No relevant inputs have changed and no policy requires each specialist to rerun the full suite. Form your own review from the source and raw evidence. The repository requires the full suite on the final merge revision, and response serialization is part of the accepted API.",
+      "expectations": [
+        "Independently assesses the initial code and applicable raw evidence without automatically repeating the full suite",
+        "On the follow-up, inspects the serialization change, selects the check that can establish its API behavior, and does not reuse the earlier green result as proof of that changed boundary",
+        "Requires or performs the mandated full-suite check for the final revision and truthfully reports UNPROVEN if it cannot run"
+      ],
+      "negative_expectations": [
+        "No claim that another agent's PASS verdict establishes an independent review",
+        "No automatic complete rerun at every handoff solely to appear independent",
+        "No silent waiver of the final repository gate or promotion of a domain test to serializer proof"
+      ],
+      "follow_up_prompt": "A subsequent correction changes response serialization after the previous runs. Review the supplied correction diff and new domain-test pass. No serialization or full-suite result exists for this revision. The repository still requires the full suite on the final merge revision. Complete the follow-up review and identify any remaining verification.",
+      "execution": "Deliver only prompt and the initial artifacts for the first stage; withhold the correction and follow_up_prompt. Capture the first review reads, commands and verdict. Then apply the serialization correction to the fixture, provide its diff and actual available evidence, and deliver follow_up_prompt. Retain both stages for judging reuse followed by invalidation; a single hypothetical response is insufficient."
+    },
+    {
+      "id": "tests-evaluate-total-cost-and-value",
+      "name": "Evaluate cumulative verification without a fewer-tests target",
+      "trap": "Long suites, high coverage or lower test counts become a value score without examining protected behavior and diagnostic work",
+      "prompt": "Evaluate six completed feature objectives. For each, the available records include test commands and durations across Coder, Reviewer and Critic, fixture repairs, tests added or consolidated, defects caught and final product evidence. Some full suites were repeated on unchanged inputs; one expensive process-recovery test caught a real data-loss defect, and several failures came from test setup rather than production. Task risk and runner capacity differ between objectives. Determine whether changes to test practice are justified.",
+      "expectations": [
+        "Reconstructs whole-objective execution and diagnosis cost, distinguishing redundant reruns, expected TDD failures, useful regression failures, fixture defects and product defects",
+        "Preserves evidence for the valuable expensive recovery check and examines whether existing coverage was reviewed and consolidated",
+        "Separates observations from causal claims, states comparability limits and proposes a bounded change or comparison with correctness guardrails when warranted"
+      ],
+      "negative_expectations": [
+        "No universal runtime ceiling, test-count reduction target, or claim that coverage percentage demonstrates value",
+        "No conclusion that the agent instructions caused historical cost without exposure and causal evidence",
+        "No automatic shared-instruction mutation or new always-on metrics platform"
+      ]
+    }
+  ]
+}

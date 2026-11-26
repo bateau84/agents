@@ -1,0 +1,29 @@
+{
+  "case_id": "tests-evidence-reuse-and-invalidation",
+  "case_source": "evals/test-lifecycle.json",
+  "agents_revision": "0b7652ca64ad60004b99f831f1e3387b5bc5cd3b",
+  "skills_revision": "876824087f0632bf7d83bd1df9864655d47e9b2e",
+  "skills_merged_revision": "5886b80a281987ad27d759a341d71a3ba5483f94",
+  "scope": "One guided staged candidate qualification; source fixture plus observed Reviewer actions.",
+  "stage1": {
+    "revision": "fabd069d3eb6d599b86c7e517faa3e4a14a8dfb0",
+    "recorded_commands": 10,
+    "test_executions": 0,
+    "observed": "Independently inspected source and assertions, matched all tracked hashes and runtime to raw evidence, and reused the applicable passing run."
+  },
+  "stage2": {
+    "revision": "ca2a4af768f5f525c09636975b67eeab21afd0b1",
+    "recorded_commands": 8,
+    "test_executions": 2,
+    "observed": "Identified old results and new domain-only evidence as insufficient for changed serialization; ran the real CLI check and mandatory full gate once each; both passed on the changed revision."
+  },
+  "guidance_changed_during_run": false,
+  "target_edited_product_source_or_tests": false,
+  "limitations": [
+    "Sixteen minutes is the original case cost assumption; actual fast fixture durations are separately recorded. No artificial delay or measured production savings.",
+    "Guided synthetic case with explicit repository obligations; not an old-versus-new, unprompted, or population-level effectiveness comparison.",
+    "The initial target had fork_turns=none; the follow-up resumed the same target after the first report and source hash closure. No evaluator rubric or later correction was supplied in stage one.",
+    "No separate resolved provider model identifier or sampling seed was exposed; there was no model override.",
+    "Only the existing staged reuse case ran. Other roles, whole-objective metrics and long-running product suites are outside this qualification."
+  ]
+}
