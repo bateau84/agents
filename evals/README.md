@@ -1,5 +1,7 @@
 # Agent behavior regression cases
 
+`definition-of-done.json` covers shared quality requirements versus local acceptance, sufficient-evidence stopping, continued work on unmet criteria and real defects, parent-goal traceability, artifact readiness versus implemented conformance, bounded investigations, and truthful partial/blocked handbacks. Run the existing small-fix and milestone cases alongside it to catch extra ceremony and false product completion. These synthetic cases are informed by the user's reported tendency toward unrelated work; they do not establish that missing completion guidance caused any historical run or that the candidate saves time.
+
 `milestone-delivery.json` covers early usable increments, necessary technical prerequisites, milestone evidence beyond task status, and replanning from actual use. Run the existing `strategy-local-fix` case alongside it to check that small changes do not acquire milestone ceremony. These cases define expected decisions, not demonstrated improvements in delivery speed or historical diagnoses.
 
 `designer-craft.json` covers contextual art direction, bounded visual refinements, useful innovation without invented capability, and evidence across web/mobile/desktop/terminal/conversational surfaces. These fixtures define expected decisions; they do not demonstrate improved aesthetics or user preference.
